@@ -2,14 +2,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "SimplePalet",
+    name: "SimplePallet",
     platforms: [
         .macOS(.v13)
     ],
     products: [
         .executable(
-            name: "SimplePalet",
-            targets: ["SimplePalet"]
+            name: "SimplePallet",
+            targets: ["SimplePallet"]
         )
     ],
     dependencies: [
@@ -17,9 +17,9 @@ let package = Package(
     ],
     targets: [
         .executableTarget(
-            name: "SimplePalet",
+            name: "SimplePallet",
             dependencies: [],
-            path: "SimplePalet"
+            path: "SimplePallet"
         )
     ]
 )

@@ -89,9 +89,9 @@ Simple palet は以下のポリシーに基づいています：
 ### プロジェクト構成
 
 ```
-SimplePalet/
-├── SimplePalet/
-│   ├── SimplePaletApp.swift              # エントリーポイント
+SimplePallet/
+├── SimplePallet/
+│   ├── SimplePalletApp.swift              # エントリーポイント
 │   ├── App/                               # UI関連
 │   │   ├── MenuBarController.swift
 │   │   ├── SettingsView.swift

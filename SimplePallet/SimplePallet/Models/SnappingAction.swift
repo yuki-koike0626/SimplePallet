@@ -21,6 +21,6 @@ enum SnappingAction: String, CaseIterable, Codable {
 
     /// KeyboardShortcutsライブラリで使用するユニークな識別子
     var shortcutName: String {
-        return "com.yuki.SimplePalet.\(rawValue)"
+        return "com.yuki.SimplePallet.\(rawValue)"
     }
 }

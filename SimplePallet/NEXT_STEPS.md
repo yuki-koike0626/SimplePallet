@@ -31,10 +31,10 @@ Simple palet MVP の基本実装が完了しました！🎉
 ### 2. ビルドして動作確認
 ```bash
 # Xcode でプロジェクトを開く
-open SimplePalet.xcodeproj  # プロジェクト作成後
+open SimplePallet.xcodeproj  # プロジェクト作成後
 
 # または Xcode GUI から
-# File → Open → SimplePalet.xcodeproj
+# File → Open → SimplePallet.xcodeproj
 ```
 
 ### 3. テスト
@@ -75,7 +75,7 @@ import StoreKit
 
 class PurchaseManager: ObservableObject {
     static let shared = PurchaseManager()
-    static let productID = "com.yuki.SimplePalet.yearly"
+    static let productID = "com.yuki.SimplePallet.yearly"
 
     @Published var hasPurchased: Bool = false
     @Published var products: [Product] = []
@@ -116,14 +116,14 @@ if #available(macOS 13.0, *) {
 **実装すべきテスト:**
 
 ```swift
-// SimplePaletTests/ScreenUtilTests.swift
+// SimplePalletTests/ScreenUtilTests.swift
 class ScreenUtilTests: XCTestCase {
     func testFrameCalculation() {
         // 矩形計算のロジックをテスト
     }
 }
 
-// SimplePaletTests/AppSettingsTests.swift
+// SimplePalletTests/AppSettingsTests.swift
 class AppSettingsTests: XCTestCase {
     func testShortcutSaving() {
         // UserDefaults への保存/読み込みをテスト

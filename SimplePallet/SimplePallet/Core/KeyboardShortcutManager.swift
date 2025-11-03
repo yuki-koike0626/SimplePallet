@@ -68,7 +68,7 @@ class KeyboardShortcutManager {
 // MARK: - KeyboardShortcuts Extension
 
 extension KeyboardShortcuts.Name {
-    static let maximize = Self("com.yuki.SimplePalet.maximize", default: .init(.upArrow, modifiers: [.command]))
-    static let left = Self("com.yuki.SimplePalet.left", default: .init(.leftArrow, modifiers: [.command]))
-    static let right = Self("com.yuki.SimplePalet.right", default: .init(.rightArrow, modifiers: [.command]))
+    static let maximize = Self("com.yuki.SimplePallet.maximize", default: .init(.upArrow, modifiers: [.command]))
+    static let left = Self("com.yuki.SimplePallet.left", default: .init(.leftArrow, modifiers: [.command]))
+    static let right = Self("com.yuki.SimplePallet.right", default: .init(.rightArrow, modifiers: [.command]))
 }

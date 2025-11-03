@@ -13,11 +13,12 @@
 		308944922EB88A670028FFC7 /* KeyboardShortcutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3089448E2EB88A670028FFC7 /* KeyboardShortcutManager.swift */; };
 		308944932EB88A670028FFC7 /* WindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308944902EB88A670028FFC7 /* WindowManager.swift */; };
 		308944942EB88A670028FFC7 /* AccessibilityPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3089448D2EB88A670028FFC7 /* AccessibilityPermission.swift */; };
+		308944972EB8BDDF0028FFC7 /* HowToUseModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308944952EB8BDDF0028FFC7 /* HowToUseModal.swift */; };
 		30CDC26C2EB72AD200F63660 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CDC25D2EB72AD200F63660 /* SettingsView.swift */; };
 		30CDC26D2EB72AD200F63660 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CDC2662EB72AD200F63660 /* AppSettings.swift */; };
 		30CDC26E2EB72AD200F63660 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CDC25E2EB72AD200F63660 /* ToastView.swift */; };
 		30CDC26F2EB72AD200F63660 /* MenuBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CDC25C2EB72AD200F63660 /* MenuBarController.swift */; };
-		30CDC2712EB72AD200F63660 /* SimplePaletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CDC26B2EB72AD200F63660 /* SimplePaletApp.swift */; };
+		30CDC2712EB72AD200F63660 /* SimplePalletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CDC26B2EB72AD200F63660 /* SimplePalletApp.swift */; };
 		30CDC2752EB72AD200F63660 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30CDC2682EB72AD200F63660 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -27,21 +28,22 @@
 		3089448E2EB88A670028FFC7 /* KeyboardShortcutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardShortcutManager.swift; sourceTree = "<group>"; };
 		3089448F2EB88A670028FFC7 /* ScreenCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCalculator.swift; sourceTree = "<group>"; };
 		308944902EB88A670028FFC7 /* WindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowManager.swift; sourceTree = "<group>"; };
-		30CDC24E2EB7287500F63660 /* SimplePalet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimplePalet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		308944952EB8BDDF0028FFC7 /* HowToUseModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToUseModal.swift; sourceTree = "<group>"; };
+		30CDC24E2EB7287500F63660 /* SimplePallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimplePallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30CDC25C2EB72AD200F63660 /* MenuBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarController.swift; sourceTree = "<group>"; };
 		30CDC25D2EB72AD200F63660 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		30CDC25E2EB72AD200F63660 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		30CDC2652EB72AD200F63660 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30CDC2662EB72AD200F63660 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		30CDC2682EB72AD200F63660 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		30CDC26A2EB72AD200F63660 /* SimplePalet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimplePalet.entitlements; sourceTree = "<group>"; };
-		30CDC26B2EB72AD200F63660 /* SimplePaletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePaletApp.swift; sourceTree = "<group>"; };
+		30CDC26A2EB72AD200F63660 /* SimplePallet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimplePallet.entitlements; sourceTree = "<group>"; };
+		30CDC26B2EB72AD200F63660 /* SimplePalletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePalletApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		30CDC2502EB7287500F63660 /* SimplePalet */ = {
+		30CDC2502EB7287500F63660 /* SimplePallet */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = SimplePalet;
+			path = SimplePallet;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -58,17 +60,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		308944962EB8BDDF0028FFC7 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				308944952EB8BDDF0028FFC7 /* HowToUseModal.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
 		30CDC2452EB7287500F63660 = {
 			isa = PBXGroup;
 			children = (
+				308944962EB8BDDF0028FFC7 /* Modal */,
 				30CDC25F2EB72AD200F63660 /* App */,
 				30CDC2642EB72AD200F63660 /* Core */,
 				30CDC2652EB72AD200F63660 /* Info.plist */,
 				30CDC2672EB72AD200F63660 /* Models */,
 				30CDC2692EB72AD200F63660 /* Resources */,
-				30CDC26A2EB72AD200F63660 /* SimplePalet.entitlements */,
-				30CDC26B2EB72AD200F63660 /* SimplePaletApp.swift */,
-				30CDC2502EB7287500F63660 /* SimplePalet */,
+				30CDC26A2EB72AD200F63660 /* SimplePallet.entitlements */,
+				30CDC26B2EB72AD200F63660 /* SimplePalletApp.swift */,
+				30CDC2502EB7287500F63660 /* SimplePallet */,
 				30CDC24F2EB7287500F63660 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,7 +87,7 @@
 		30CDC24F2EB7287500F63660 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				30CDC24E2EB7287500F63660 /* SimplePalet.app */,
+				30CDC24E2EB7287500F63660 /* SimplePallet.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,9 +133,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		30CDC24D2EB7287500F63660 /* SimplePalet */ = {
+		30CDC24D2EB7287500F63660 /* SimplePallet */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 30CDC2592EB7287600F63660 /* Build configuration list for PBXNativeTarget "SimplePalet" */;
+			buildConfigurationList = 30CDC2592EB7287600F63660 /* Build configuration list for PBXNativeTarget "SimplePallet" */;
 			buildPhases = (
 				30CDC24A2EB7287500F63660 /* Sources */,
 				30CDC24B2EB7287500F63660 /* Frameworks */,
@@ -135,14 +146,14 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				30CDC2502EB7287500F63660 /* SimplePalet */,
+				30CDC2502EB7287500F63660 /* SimplePallet */,
 			);
-			name = SimplePalet;
+			name = SimplePallet;
 			packageProductDependencies = (
 				308944892EB889B20028FFC7 /* KeyboardShortcuts */,
 			);
-			productName = SimplePalet;
-			productReference = 30CDC24E2EB7287500F63660 /* SimplePalet.app */;
+			productName = SimplePallet;
+			productReference = 30CDC24E2EB7287500F63660 /* SimplePallet.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -160,7 +171,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 30CDC2492EB7287500F63660 /* Build configuration list for PBXProject "SimplePalet" */;
+			buildConfigurationList = 30CDC2492EB7287500F63660 /* Build configuration list for PBXProject "SimplePallet" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -177,7 +188,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				30CDC24D2EB7287500F63660 /* SimplePalet */,
+				30CDC24D2EB7287500F63660 /* SimplePallet */,
 			);
 		};
 /* End PBXProject section */
@@ -203,8 +214,9 @@
 				30CDC26E2EB72AD200F63660 /* ToastView.swift in Sources */,
 				3089448C2EB88A4E0028FFC7 /* SnappingAction.swift in Sources */,
 				30CDC26F2EB72AD200F63660 /* MenuBarController.swift in Sources */,
-				30CDC2712EB72AD200F63660 /* SimplePaletApp.swift in Sources */,
+				30CDC2712EB72AD200F63660 /* SimplePalletApp.swift in Sources */,
 				308944912EB88A670028FFC7 /* ScreenCalculator.swift in Sources */,
+				308944972EB8BDDF0028FFC7 /* HowToUseModal.swift in Sources */,
 				308944922EB88A670028FFC7 /* KeyboardShortcutManager.swift in Sources */,
 				308944932EB88A670028FFC7 /* WindowManager.swift in Sources */,
 				308944942EB88A670028FFC7 /* AccessibilityPermission.swift in Sources */,
@@ -355,7 +367,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.SimplePalet.SimplePalet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SimplePallet.SimplePallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -388,7 +400,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.SimplePalet.SimplePalet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SimplePallet.SimplePallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -403,7 +415,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		30CDC2492EB7287500F63660 /* Build configuration list for PBXProject "SimplePalet" */ = {
+		30CDC2492EB7287500F63660 /* Build configuration list for PBXProject "SimplePallet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				30CDC2572EB7287600F63660 /* Debug */,
@@ -412,7 +424,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		30CDC2592EB7287600F63660 /* Build configuration list for PBXNativeTarget "SimplePalet" */ = {
+		30CDC2592EB7287600F63660 /* Build configuration list for PBXNativeTarget "SimplePallet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				30CDC25A2EB7287600F63660 /* Debug */,
