@@ -8,7 +8,7 @@ import AppKit
  グローバルキーボードショートカットで最前面ウィンドウをスナップする機能を提供。
  */
 @main
-struct SimplePaletApp: App {
+struct SimplePalletApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
     var body: some Scene {

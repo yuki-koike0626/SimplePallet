@@ -26,8 +26,8 @@ class AppSettings: ObservableObject {
     }
 
     private enum Keys {
-        static let isEnabled = "SimplePalet.IsEnabled"
-        static let launchAtLogin = "SimplePalet.LaunchAtLogin"
+        static let isEnabled = "SimplePallet.IsEnabled"
+        static let launchAtLogin = "SimplePallet.LaunchAtLogin"
     }
 
     private init() {

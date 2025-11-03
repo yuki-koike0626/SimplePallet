@@ -9,13 +9,13 @@
 
 - ✅ 新しいファイルの作成（AccessibilityPermission.swift, WindowManager.swift, etc.）
 - ✅ 古いファイルの削除（HotKeyManager.swift, AXPermission.swift, etc.）
-- ✅ 既存ファイルの更新（SimplePaletApp.swift, SettingsView.swift, etc.）
+- ✅ 既存ファイルの更新（SimplePalletApp.swift, SettingsView.swift, etc.）
 
 ## 🔧 残りのセットアップ手順
 
 ### 1. KeyboardShortcutsライブラリの追加
 
-1. Xcodeで `SimplePalet.xcodeproj` を開く
+1. Xcodeで `SimplePallet.xcodeproj` を開く
 2. プロジェクトナビゲーターでプロジェクトファイルを選択
 3. 「Package Dependencies」タブを選択
 4. 「+」ボタンをクリック
@@ -25,7 +25,7 @@
    ```
 6. 「Up to Next Major Version」を選択し、バージョンは最新を使用（2.0.0以上）
 7. 「Add Package」をクリック
-8. ターゲット「SimplePalet」に `KeyboardShortcuts` を追加
+8. ターゲット「SimplePallet」に `KeyboardShortcuts` を追加
 9. パッケージの解決とダウンロードが完了するまで待つ
 
 ### 2. 新しいファイルをXcodeプロジェクトに追加
@@ -34,22 +34,22 @@
 
 #### Modelsフォルダのファイルを追加:
 1. Xcodeのプロジェクトナビゲーターで「Models」フォルダを右クリック
-2. 「Add Files to "SimplePalet"...」を選択
-3. `/Users/koikeyuuki/Simple-palet/SimplePalet/SimplePalet/Models/SnappingAction.swift` を選択
+2. 「Add Files to "SimplePallet"...」を選択
+3. `/Users/koikeyuuki/Simple-palet/SimplePallet/SimplePallet/Models/SnappingAction.swift` を選択
 4. 「Copy items if needed」のチェックを**外す**
-5. 「Add to targets:」で「SimplePalet」にチェック
+5. 「Add to targets:」で「SimplePallet」にチェック
 6. 「Add」をクリック
 
 #### Coreフォルダのファイルを追加:
 1. Xcodeのプロジェクトナビゲーターで「Core」フォルダを右クリック
-2. 「Add Files to "SimplePalet"...」を選択
+2. 「Add Files to "SimplePallet"...」を選択
 3. 以下のファイルを**全て**選択（Commandキーを押しながら複数選択）:
    - `AccessibilityPermission.swift`
    - `ScreenCalculator.swift`
    - `WindowManager.swift`
    - `KeyboardShortcutManager.swift`
 4. 「Copy items if needed」のチェックを**外す**
-5. 「Add to targets:」で「SimplePalet」にチェック
+5. 「Add to targets:」で「SimplePallet」にチェック
 6. 「Add」をクリック
 
 ### 3. Xcodeプロジェクトから古いファイルの参照を削除
@@ -92,9 +92,9 @@
 
 ### 新しいファイル構造
 ```
-SimplePalet/
+SimplePallet/
 ├── App/
-│   ├── SimplePaletApp.swift
+│   ├── SimplePalletApp.swift
 │   ├── MenuBarController.swift
 │   ├── SettingsView.swift
 │   └── ToastView.swift

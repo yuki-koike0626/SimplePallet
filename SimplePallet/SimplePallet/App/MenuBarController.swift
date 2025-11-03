@@ -31,12 +31,26 @@ class MenuBarController {
     private func setupMenu() {
         let menu = NSMenu()
 
+        // 使い方を見る
+        let howToUseItem = NSMenuItem(title: "使い方を見る", action: #selector(showHowToUse), keyEquivalent: "")
+        howToUseItem.target = self
+        menu.addItem(howToUseItem)
+
+        menu.addItem(NSMenuItem.separator())
+
         // 終了
-        let quitItem = NSMenuItem(title: "SimplePaletを終了", action: #selector(quit), keyEquivalent: "q")
+        let quitItem = NSMenuItem(title: "SimplePalletを終了", action: #selector(quit), keyEquivalent: "q")
         quitItem.target = self
         menu.addItem(quitItem)
 
         statusItem?.menu = menu
+    }
+
+    /**
+     使い方モーダルを表示
+     */
+    @objc private func showHowToUse() {
+        HowToUseModalManager.shared.show()
     }
 
     /**
