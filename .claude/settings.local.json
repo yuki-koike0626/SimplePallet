@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xcodebuild:*)",
+      "Bash(cat:*)",
+      "Bash(plutil:*)",
+      "Bash(tccutil reset Accessibility com.SimplePalet.SimplePalet)",
+      "Bash(killall:*)",
+      "Bash(open:*)",
+      "Bash(codesign:*)",
+      "Bash(sqlite3:*)",
+      "Bash(system_profiler:*)",
+      "Bash(defaults read:*)",
+      "Bash(defaults write com.SimplePalet.SimplePalet \"SimplePalet.Shortcut.left\" -string '{\"\"keyCode\"\":123,\"\"modifiers\"\":2304}')",
+      "Bash(defaults write com.SimplePalet.SimplePalet \"SimplePalet.Shortcut.left\" '{\"\"keyCode\"\":123,\"\"modifiers\"\":2304}')",
+      "Bash(defaults write com.SimplePalet.SimplePalet \"SimplePalet.Shortcut.right\" '{\"\"keyCode\"\":124,\"\"modifiers\"\":2304}')",
+      "Bash(defaults write com.SimplePalet.SimplePalet \"SimplePalet.Shortcut.maximize\" '{\"\"keyCode\"\":126,\"\"modifiers\"\":2304}')",
+      "Bash(defaults write com.SimplePalet.SimplePalet \"SimplePalet.Shortcut.right\" -string '{\"\"keyCode\"\":124,\"\"modifiers\"\":2304}')",
+      "Bash(defaults write com.SimplePalet.SimplePalet \"SimplePalet.Shortcut.maximize\" -string '{\"\"keyCode\"\":126,\"\"modifiers\"\":2304}')",
+      "Bash(git init:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
