@@ -17,9 +17,9 @@ class MenuBarController {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
 
         if let button = statusItem?.button {
-            // メニューバーアイコン（SF Symbols を使用）
-            button.image = NSImage(systemSymbolName: "rectangle.3.group", accessibilityDescription: "Simple palet")
-            button.image?.isTemplate = true
+            // メニューバーアイコン（カスタムアイコンを使用）
+            button.image = NSImage(named: "MenuBarIcon")
+            button.image?.isTemplate = true // システムテーマに応じて色が変わる
         }
 
         setupMenu()
