@@ -12,52 +12,48 @@ struct HowToUseModalView: View {
     var body: some View {
         VStack(spacing: 24) {
             // ヘッダー
-            HStack {
-                Text("Simple palet の使い方")
+            VStack(alignment: .leading, spacing: 12) {
+                Text("Simple Pallet の使い方")
                     .font(.title)
                     .fontWeight(.bold)
 
-                Spacer()
-
-                Button(action: {
-                    dismiss()
-                }) {
-                    Image(systemName: "xmark.circle.fill")
-                        .font(.title2)
-                        .foregroundColor(.secondary)
-                }
-                .buttonStyle(.plain)
+                Text("SimplePalletとは、macOS向けのシンプルなウィンドウ管理アプリです。キーボードショートカットで最前面ウィンドウを「最大化 / 左半分 / 右半分」に瞬間的に切り替えることができます。")
+                    .font(.body)
+                    .foregroundColor(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.bottom, 8)
 
             Divider()
 
-            ScrollView {
-                VStack(alignment: .leading, spacing: 20) {
-                    // ショートカットキー
+            HStack(alignment: .top, spacing: 20) {
+                // 左側: ショートカットキー
+                VStack(alignment: .leading, spacing: 16) {
                     sectionHeader("ショートカットキー")
 
                     shortcutRow(
-                        icon: "arrow.up.square.fill",
+                        icon: "rectangle.fill",
                         shortcut: "⌘ + ↑",
                         description: "最大化"
                     )
 
                     shortcutRow(
-                        icon: "arrow.left.square.fill",
+                        icon: "rectangle.lefthalf.filled",
                         shortcut: "⌘ + ←",
                         description: "左半分"
                     )
 
                     shortcutRow(
-                        icon: "arrow.right.square.fill",
+                        icon: "rectangle.righthalf.filled",
                         shortcut: "⌘ + →",
                         description: "右半分"
                     )
+                }
+                .frame(maxWidth: .infinity)
 
-                    Divider()
-                        .padding(.vertical, 8)
-
+                // 右側: アプリ間移動と推奨設定
+                VStack(alignment: .leading, spacing: 16) {
                     // アプリ間移動
                     sectionHeader("アプリ間移動")
 
@@ -77,41 +73,44 @@ struct HowToUseModalView: View {
                                     .background(Color.secondary.opacity(0.2))
                                     .cornerRadius(6)
 
-                                Text("でアプリを切り替え")
+                                Text("で切り替え")
                                     .foregroundColor(.primary)
+                                    .font(.caption)
                             }
 
-                            Text("ウィンドウ間を素早く移動できます")
+                            Text("アプリを素早く移動")
                                 .font(.caption)
                                 .foregroundColor(.secondary)
                         }
+
+                        Spacer()
                     }
-                    .padding()
+                    .padding(12)
                     .background(Color.blue.opacity(0.1))
                     .cornerRadius(12)
 
                     Divider()
-                        .padding(.vertical, 8)
 
                     // 推奨設定
                     sectionHeader("推奨設定")
 
-                    VStack(alignment: .leading, spacing: 12) {
+                    VStack(alignment: .leading, spacing: 10) {
                         recommendationRow(
                             icon: "desktopcomputer",
                             title: "デスクトップは一つだけ",
-                            description: "Mission Control で複数デスクトップを使わず、一つのデスクトップで作業するとウィンドウ管理が簡単になります"
+                            description: "Mission Control で複数デスクトップを使わず、一つのデスクトップで作業"
                         )
 
                         recommendationRow(
                             icon: "rectangle.3.group",
                             title: "アプリ間移動を活用",
-                            description: "⌘+Tab でアプリを切り替えることで、効率的にウィンドウを管理できます"
+                            description: "⌘+Tab でアプリを切り替えて効率的にウィンドウを管理"
                         )
                     }
                 }
-                .padding(.horizontal, 4)
+                .frame(maxWidth: .infinity)
             }
+            .padding(.horizontal, 4)
 
             Divider()
 
@@ -127,7 +126,7 @@ struct HowToUseModalView: View {
             }
         }
         .padding(24)
-        .frame(width: 500, height: 600)
+        .frame(width: 680, height: 620)
     }
 
     // MARK: - Helper Views
@@ -141,14 +140,18 @@ struct HowToUseModalView: View {
     private func shortcutRow(icon: String, shortcut: String, description: String) -> some View {
         HStack(spacing: 12) {
             Image(systemName: icon)
-                .font(.title)
+                .font(.title2)
                 .foregroundColor(.green)
-                .frame(width: 40)
+                .frame(width: 35)
 
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: 3) {
                 Text(shortcut)
-                    .font(.system(.body, design: .monospaced))
+                    .font(.system(.callout, design: .monospaced))
                     .fontWeight(.semibold)
+                    .padding(.horizontal, 8)
+                    .padding(.vertical, 4)
+                    .background(Color.secondary.opacity(0.2))
+                    .cornerRadius(6)
 
                 Text(description)
                     .font(.caption)
@@ -157,32 +160,34 @@ struct HowToUseModalView: View {
 
             Spacer()
         }
-        .padding()
+        .padding(12)
         .background(Color.secondary.opacity(0.1))
-        .cornerRadius(12)
+        .cornerRadius(10)
     }
 
     private func recommendationRow(icon: String, title: String, description: String) -> some View {
-        HStack(alignment: .top, spacing: 12) {
+        HStack(alignment: .top, spacing: 10) {
             Image(systemName: icon)
-                .font(.title2)
+                .font(.title3)
                 .foregroundColor(.orange)
-                .frame(width: 30)
+                .frame(width: 28)
 
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: 3) {
                 Text(title)
-                    .font(.subheadline)
+                    .font(.caption)
                     .fontWeight(.semibold)
 
                 Text(description)
-                    .font(.caption)
+                    .font(.caption2)
                     .foregroundColor(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
             }
+
+            Spacer()
         }
-        .padding()
+        .padding(10)
         .background(Color.orange.opacity(0.1))
-        .cornerRadius(12)
+        .cornerRadius(10)
     }
 }
 
@@ -212,7 +217,7 @@ class HowToUseModalManager {
 
         // ウィンドウを作成
         let window = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 500, height: 600),
+            contentRect: NSRect(x: 0, y: 0, width: 680, height: 620),
             styleMask: [.titled, .closable, .fullSizeContentView],
             backing: .buffered,
             defer: false
