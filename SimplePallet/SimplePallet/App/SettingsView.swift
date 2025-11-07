@@ -10,11 +10,12 @@ import KeyboardShortcuts
 struct SettingsView: View {
     @ObservedObject private var settings = AppSettings.shared
     @State private var hasPermission = AccessibilityPermission.isGranted()
+    @State private var showSavedMessage = false
 
     var body: some View {
         VStack(spacing: 20) {
             // ヘッダー
-            Text("Simple palet 設定")
+            Text("SimplePallet 設定")
                 .font(.title)
                 .padding(.top)
 
@@ -33,11 +34,14 @@ struct SettingsView: View {
 
             Spacer()
 
+            // 保存ボタン
+            saveButton
+
             // フッター
             footer
         }
         .padding()
-        .frame(width: 500, height: 450)
+        .frame(width: 500, height: 500)
         .onAppear {
             checkPermission()
         }
@@ -119,9 +123,38 @@ struct SettingsView: View {
         }
     }
 
+    private var saveButton: some View {
+        VStack(spacing: 8) {
+            Button(action: {
+                saveSettings()
+            }) {
+                HStack {
+                    Image(systemName: "checkmark.circle.fill")
+                    Text("この設定で保存する")
+                }
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 10)
+            }
+            .buttonStyle(.borderedProminent)
+            .controlSize(.large)
+
+            if showSavedMessage {
+                HStack(spacing: 6) {
+                    Image(systemName: "checkmark.circle.fill")
+                        .foregroundColor(.green)
+                        .font(.caption)
+                    Text("設定を保存しました")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                }
+                .transition(.opacity)
+            }
+        }
+    }
+
     private var footer: some View {
         VStack(spacing: 5) {
-            Text("Simple palet v1.0")
+            Text("SimplePallet v1.0")
                 .font(.caption)
                 .foregroundColor(.secondary)
 
@@ -136,6 +169,21 @@ struct SettingsView: View {
 
     private func checkPermission() {
         hasPermission = AccessibilityPermission.isGranted()
+    }
+
+    private func saveSettings() {
+        // 設定は既にリアルタイムで保存されているため、
+        // ここではユーザーに保存完了を通知するだけ
+        withAnimation {
+            showSavedMessage = true
+        }
+
+        // 2秒後にメッセージを非表示
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            withAnimation {
+                showSavedMessage = false
+            }
+        }
     }
 }
 
