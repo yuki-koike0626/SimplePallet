@@ -1,5 +1,6 @@
 import Foundation
 import Combine
+import ServiceManagement
 
 /**
  アプリ全体の設定を管理
@@ -38,13 +39,35 @@ class AppSettings: ObservableObject {
     /**
      ログイン時の自動起動設定を更新
 
-     macOS 13以降ではSMAppServiceを使用する必要がある。
+     macOS 13以降ではSMAppServiceを使用する。
      */
     private func updateLoginItem() {
-        // TODO: macOS 13+ では SMAppService.mainApp を使用
-        #if DEBUG
-        print("ログイン時起動: \(launchAtLogin)")
-        #endif
+        if #available(macOS 13, *) {
+            do {
+                if launchAtLogin {
+                    // ログイン項目に登録
+                    try SMAppService.mainApp.register()
+                    #if DEBUG
+                    print("✅ ログイン時起動を有効化しました")
+                    #endif
+                } else {
+                    // ログイン項目から削除
+                    try SMAppService.mainApp.unregister()
+                    #if DEBUG
+                    print("❌ ログイン時起動を無効化しました")
+                    #endif
+                }
+            } catch {
+                #if DEBUG
+                print("⚠️ ログイン時起動の設定に失敗: \(error.localizedDescription)")
+                #endif
+            }
+        } else {
+            // macOS 12以下の場合は非対応
+            #if DEBUG
+            print("⚠️ ログイン時起動はmacOS 13以降でサポートされます")
+            #endif
+        }
     }
 }
 

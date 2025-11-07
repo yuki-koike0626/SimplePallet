@@ -30,7 +30,7 @@ struct HowToUseModalView: View {
             HStack(alignment: .top, spacing: 20) {
                 // 左側: ショートカットキー
                 VStack(alignment: .leading, spacing: 16) {
-                    sectionHeader("ショートカットキー")
+                    sectionHeader("ショートカットキー(デフォルト)")
 
                     shortcutRow(
                         icon: "rectangle.fill",

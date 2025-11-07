@@ -1,13 +1,15 @@
 import Cocoa
+import SwiftUI
 
 /**
  メニューバーの管理
 
  NSStatusBar にアイコンを表示し、メニュー項目を管理。
- シンプルに終了機能のみを提供。
+ 設定画面、使い方、終了機能を提供。
  */
 class MenuBarController {
     private var statusItem: NSStatusItem?
+    private var settingsWindow: NSWindow?
 
     init() {
         setupMenuBar()
@@ -31,6 +33,11 @@ class MenuBarController {
     private func setupMenu() {
         let menu = NSMenu()
 
+        // 設定
+        let settingsItem = NSMenuItem(title: "設定...", action: #selector(showSettings), keyEquivalent: ",")
+        settingsItem.target = self
+        menu.addItem(settingsItem)
+
         // 使い方を見る
         let howToUseItem = NSMenuItem(title: "使い方を見る", action: #selector(showHowToUse), keyEquivalent: "")
         howToUseItem.target = self
@@ -44,6 +51,40 @@ class MenuBarController {
         menu.addItem(quitItem)
 
         statusItem?.menu = menu
+    }
+
+    /**
+     設定画面を表示
+     */
+    @objc private func showSettings() {
+        // 既存のウィンドウがあれば前面に表示
+        if let window = settingsWindow, window.isVisible {
+            window.makeKeyAndOrderFront(nil)
+            NSApp.activate(ignoringOtherApps: true)
+            return
+        }
+
+        // 設定画面を作成
+        let settingsView = SettingsView()
+        let hostingController = NSHostingController(rootView: settingsView)
+
+        let window = NSWindow(
+            contentRect: NSRect(x: 0, y: 0, width: 500, height: 500),
+            styleMask: [.titled, .closable, .miniaturizable],
+            backing: .buffered,
+            defer: false
+        )
+
+        window.contentViewController = hostingController
+        window.title = "設定"
+        window.center()
+        window.isReleasedWhenClosed = false
+
+        // ウィンドウを表示
+        window.makeKeyAndOrderFront(nil)
+        NSApp.activate(ignoringOtherApps: true)
+
+        settingsWindow = window
     }
 
     /**
