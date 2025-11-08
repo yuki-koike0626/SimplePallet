@@ -1,6 +1,6 @@
 # セットアップガイド
 
-このドキュメントでは、Simple palet プロジェクトのセットアップ方法を説明します。
+このドキュメントでは、SimplePallet プロジェクトのセットアップ方法を説明します。
 
 ## 前提条件
 
@@ -17,16 +17,21 @@ Xcode プロジェクトを作成する必要があります。
 
 **ディレクトリ構造の確認：**
 ```
-Simple-palet/                          ← ワークスペースルート
-└── SimplePallet/                       ← ① ここにXcodeプロジェクトを保存
-    ├── Package.swift                  ← この階層
+SimplePallet/                          ← ワークスペースルート
+└── SimplePallet/                       ← ① Xcodeプロジェクトがある階層
+    ├── Package.swift
     ├── README.md
     ├── SETUP.md
     └── SimplePallet/                   ← ② ソースコードがある階層
         ├── SimplePalletApp.swift
+        ├── SimplePallet.xcodeproj/    ← Xcodeプロジェクト
+        ├── SimplePallet.entitlements
+        ├── Info.plist
         ├── App/
         ├── Core/
-        └── Models/
+        ├── Models/
+        ├── Modal/
+        └── Resources/
 ```
 
 #### オプション A: Xcode から新規プロジェクトを作成（推奨）
@@ -37,16 +42,16 @@ Simple-palet/                          ← ワークスペースルート
 4. プロジェクト設定：
    - **Product Name**: `SimplePallet`
    - **Team**: 自分の開発チーム
-   - **Organization Identifier**: `com.yuki`（または自分のID）
-   - **Bundle Identifier**: `com.yuki.SimplePallet`
+   - **Organization Identifier**: `com.koike`
+   - **Bundle Identifier**: `com.koike.SimplePallet`
    - **Interface**: `SwiftUI`
    - **Language**: `Swift`
    - **Storage**: `None`
    - **Create Document Types**: オフ
    - **Create Widget Extension**: オフ
 5. 保存先を選択：
-   - **重要**: `/Users/koikeyuuki/Simple-palet/SimplePallet/` を選択
-   - つまり、`Package.swift` が入っているディレクトリ
+   - **重要**: プロジェクトルートディレクトリを選択
+   - `Package.swift` が入っているディレクトリ
    - ⚠️ その中の `SimplePallet/SimplePallet/`（ソースコードがある階層）ではない
 
 6. **既存のSwiftファイルをプロジェクトに追加：**
@@ -56,7 +61,10 @@ Simple-palet/                          ← ワークスペースルート
      - `App/` フォルダ
      - `Core/` フォルダ
      - `Models/` フォルダ
+     - `Modal/` フォルダ
+     - `Resources/` フォルダ
      - `SimplePalletApp.swift`
+     - `SimplePallet.entitlements`
      - `Info.plist`
    - **Options で "Create groups" を選択**
    - **Add** をクリック
@@ -81,8 +89,8 @@ Xcode でプロジェクトを開いた後、以下の設定を確認・変更�
 
 #### General タブ
 
-- **Display Name**: `Simple palet`
-- **Bundle Identifier**: `com.yuki.SimplePallet`
+- **Display Name**: `SimplePallet`
+- **Bundle Identifier**: `com.koike.SimplePallet`
 - **Version**: `1.0`
 - **Build**: `1`
 - **Minimum Deployments**: `macOS 13.0`
@@ -104,7 +112,7 @@ Xcode でプロジェクトを開いた後、以下の設定を確認・変更�
 
 1. **Custom macOS Application Target Properties** で以下を確認：
    - `Application is agent (UIElement)`: `YES`（Dockに表示しない）
-   - `Privacy - Accessibility Usage Description`: `Simple paletは他のアプリのウィンドウを操作するためにアクセシビリティ機能を使用します。`
+   - `Privacy - Accessibility Usage Description`: `SimplePalletは他のアプリのウィンドウを操作するためにアクセシビリティ機能を使用します。`
 
 2. `Info.plist` を直接編集する場合：
    - プロジェクトに含まれている `Info.plist` を使用
@@ -113,13 +121,13 @@ Xcode でプロジェクトを開いた後、以下の設定を確認・変更�
 #### Build Settings タブ
 
 - **Product Name**: `SimplePallet`
-- **Product Bundle Identifier**: `com.yuki.SimplePallet`
+- **Product Bundle Identifier**: `com.koike.SimplePallet`
 - **Info.plist File**: `SimplePallet/Info.plist`（パスを確認）
 - **Create Info.plist Section in Binary**: `YES`
 
 ### 3. 依存関係の追加
 
-Simple palet は **KeyboardShortcuts** ライブラリを使用してグローバルショートカットを実装しています。
+SimplePallet は **KeyboardShortcuts** ライブラリを使用してグローバルショートカットを実装しています。
 
 #### KeyboardShortcuts ライブラリの追加
 
@@ -173,13 +181,16 @@ Simple palet は **KeyboardShortcuts** ライブラリを使用してグロー�
 
 1. アプリが起動すると、メニューバーにアイコンが表示されます
 2. アクセシビリティ権限のダイアログが表示されるので、許可します
-3. **システム環境設定 → プライバシーとセキュリティ → アクセシビリティ** で SimplePallet にチェック
+3. **システム設定 → プライバシーとセキュリティ → アクセシビリティ** で SimplePallet にチェック
 4. アプリを再起動
-5. デフォルトのショートカットでウィンドウをスナップ：
+5. メニューバーアイコンから以下の機能を確認：
+   - **設定...**: 設定画面が開く
+   - **使い方を見る**: 使い方モーダルが開く
+6. デフォルトのショートカットでウィンドウをスナップ：
    - `⌘ + ↑`: 最大化
    - `⌘ + ←`: 左半分
    - `⌘ + →`: 右半分
-6. **重要**: 何回でも連続して動作することを確認してください（トグル機能なし、常に指定サイズに変更）
+7. **重要**: 何回でも連続して動作することを確認してください（トグル機能なし、常に指定サイズに変更）
 
 ## トラブルシューティング
 
@@ -208,7 +219,7 @@ dyld: Library not loaded: @rpath/SimplePallet.debug.dylib
    ```bash
    rm -rf ~/Library/Developer/Xcode/DerivedData/SimplePallet-*
    ```
-2. プロジェクトルート（`Simple-palet/SimplePallet/SimplePallet/`）で Xcode 用ビルドを実行します。
+2. プロジェクトルート（`SimplePallet/SimplePallet/SimplePallet/`）で Xcode 用ビルドを実行します。
    ```bash
    xcodebuild -scheme SimplePallet -configuration Debug build
    ```
