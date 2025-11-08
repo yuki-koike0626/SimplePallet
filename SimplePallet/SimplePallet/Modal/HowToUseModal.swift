@@ -17,7 +17,7 @@ struct HowToUseModalView: View {
                     .font(.title)
                     .fontWeight(.bold)
 
-                Text("SimplePalletとは、macOS向けのシンプルなウィンドウ管理アプリです。キーボードショートカットで最前面ウィンドウを「最大化 / 2分割 / 3分割」に瞬間的に切り替えることができます。")
+                Text("SimplePalletとは、macOS向けのシンプルなウィンドウ管理アプリです。キーボードショートカットで最前面ウィンドウを「最大化 / 2分割 / 3分割」に瞬間的に切り替えることができます。素早いパソコン操作を行うための習慣を作ります")
                     .font(.body)
                     .foregroundColor(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
@@ -78,44 +78,93 @@ struct HowToUseModalView: View {
 
                 // 右側: アプリ間移動と推奨設定
                 VStack(alignment: .leading, spacing: 12) {
-                    sectionHeader("アプリ間移動")
+                    sectionHeader("アプリ間移動を活用")
 
-                    HStack(spacing: 12) {
-                        Image(systemName: "rectangle.stack.fill")
-                            .font(.title)
-                            .foregroundColor(.blue)
-                            .frame(width: 40)
+                    VStack(spacing: 8) {
+                        HStack(spacing: 12) {
+                            Image(systemName: "rectangle.stack.fill")
+                                .font(.title2)
+                                .foregroundColor(.blue)
+                                .frame(width: 32)
 
-                        VStack(alignment: .leading, spacing: 4) {
-                            HStack {
+                            VStack(alignment: .leading, spacing: 4) {
                                 Text("⌘ + Tab")
-                                    .font(.system(.body, design: .monospaced))
+                                    .font(.system(.callout, design: .monospaced))
                                     .fontWeight(.semibold)
                                     .padding(.horizontal, 8)
                                     .padding(.vertical, 4)
                                     .background(Color.secondary.opacity(0.2))
                                     .cornerRadius(6)
 
-                                Text("で切り替え")
-                                    .foregroundColor(.primary)
+                                Text("アプリを素早く切り替え")
                                     .font(.caption)
+                                    .foregroundColor(.secondary)
                             }
 
-                            Text("アプリを素早く移動")
-                                .font(.caption)
-                                .foregroundColor(.secondary)
+                            Spacer()
                         }
+                        .padding(10)
+                        .background(Color.blue.opacity(0.1))
+                        .cornerRadius(10)
 
-                        Spacer()
+                        HStack(spacing: 12) {
+                            Image(systemName: "minus.circle.fill")
+                                .font(.title2)
+                                .foregroundColor(.orange)
+                                .frame(width: 32)
+
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text("⌘ + M")
+                                    .font(.system(.callout, design: .monospaced))
+                                    .fontWeight(.semibold)
+                                    .padding(.horizontal, 8)
+                                    .padding(.vertical, 4)
+                                    .background(Color.secondary.opacity(0.2))
+                                    .cornerRadius(6)
+
+                                Text("Dockに最小化（黄色ボタンと同じ）")
+                                    .font(.caption)
+                                    .foregroundColor(.secondary)
+                            }
+
+                            Spacer()
+                        }
+                        .padding(10)
+                        .background(Color.orange.opacity(0.1))
+                        .cornerRadius(10)
+
+                        HStack(spacing: 12) {
+                            Image(systemName: "arrow.up.circle.fill")
+                                .font(.title2)
+                                .foregroundColor(.green)
+                                .frame(width: 32)
+
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text("⌘ + Tab + ⌥")
+                                    .font(.system(.callout, design: .monospaced))
+                                    .fontWeight(.semibold)
+                                    .padding(.horizontal, 8)
+                                    .padding(.vertical, 4)
+                                    .background(Color.secondary.opacity(0.2))
+                                    .cornerRadius(6)
+
+                                Text("最小化中のアプリ上で⌥押し、キーを離すことで解除")
+                                    .font(.caption)
+                                    .foregroundColor(.secondary)
+                                    .fixedSize(horizontal: false, vertical: true)
+                            }
+
+                            Spacer()
+                        }
+                        .padding(10)
+                        .background(Color.green.opacity(0.1))
+                        .cornerRadius(10)
                     }
-                    .padding(12)
-                    .background(Color.blue.opacity(0.1))
-                    .cornerRadius(12)
 
                     Spacer()
                         .frame(height: 8)
 
-                    sectionHeader("推奨設定")
+                    sectionHeader("推奨方法")
 
                     recommendationRow(
                         icon: "desktopcomputer",
@@ -147,7 +196,7 @@ struct HowToUseModalView: View {
             }
         }
         .padding(24)
-        .frame(width: 900, height: 600)
+        .frame(width: 900, height: 680)
     }
 
     // MARK: - Helper Views
@@ -238,7 +287,7 @@ class HowToUseModalManager {
 
         // ウィンドウを作成
         let window = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 900, height: 600),
+            contentRect: NSRect(x: 0, y: 0, width: 900, height: 680),
             styleMask: [.titled, .closable, .fullSizeContentView],
             backing: .buffered,
             defer: false

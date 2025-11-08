@@ -37,7 +37,7 @@ struct SettingsView: View {
             footer
         }
         .padding()
-        .frame(width: 500, height: 450)
+        .frame(width: 500, height: 600)
         .onAppear {
             checkPermission()
         }
@@ -80,41 +80,84 @@ struct SettingsView: View {
 
     private var shortcutSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("ショートカット")
+            Text("ショートカットをカスタマイズ")
                 .font(.headline)
 
-            Text("KeyboardShortcutsライブラリが提供する標準UIでショートカットを設定できます。")
-                .font(.caption)
+            VStack(spacing: 10) {
+                // 最大化
+                HStack {
+                    Spacer()
+                    Text("最大化")
+                        .frame(width: 80, alignment: .trailing)
+                    KeyboardShortcuts.Recorder(for: .maximize)
+                        .frame(width: 200, alignment: .leading)
+                    Spacer()
+                }
+
+                // 左半分
+                HStack {
+                    Spacer()
+                    Text("左半分")
+                        .frame(width: 80, alignment: .trailing)
+                    KeyboardShortcuts.Recorder(for: .left)
+                        .frame(width: 200, alignment: .leading)
+                    Spacer()
+                }
+
+                // 右半分
+                HStack {
+                    Spacer()
+                    Text("右半分")
+                        .frame(width: 80, alignment: .trailing)
+                    KeyboardShortcuts.Recorder(for: .right)
+                        .frame(width: 200, alignment: .leading)
+                    Spacer()
+                }
+            }
+
+            Divider()
+                .padding(.vertical, 4)
+
+            Text("3分割")
+                .font(.subheadline)
                 .foregroundColor(.secondary)
 
-            // 最大化
-            HStack {
-                Text("最大化")
-                    .frame(width: 80, alignment: .leading)
-                KeyboardShortcuts.Recorder(for: .maximize)
-            }
+            VStack(spacing: 10) {
+                // 左1/3
+                HStack {
+                    Spacer()
+                    Text("左1/3")
+                        .frame(width: 80, alignment: .trailing)
+                    KeyboardShortcuts.Recorder(for: .leftThird)
+                        .frame(width: 200, alignment: .leading)
+                    Spacer()
+                }
 
-            // 左半分
-            HStack {
-                Text("左半分")
-                    .frame(width: 80, alignment: .leading)
-                KeyboardShortcuts.Recorder(for: .left)
-            }
+                // 中央1/3
+                HStack {
+                    Spacer()
+                    Text("中央1/3")
+                        .frame(width: 80, alignment: .trailing)
+                    KeyboardShortcuts.Recorder(for: .centerThird)
+                        .frame(width: 200, alignment: .leading)
+                    Spacer()
+                }
 
-            // 右半分
-            HStack {
-                Text("右半分")
-                    .frame(width: 80, alignment: .leading)
-                KeyboardShortcuts.Recorder(for: .right)
+                // 右1/3
+                HStack {
+                    Spacer()
+                    Text("右1/3")
+                        .frame(width: 80, alignment: .trailing)
+                    KeyboardShortcuts.Recorder(for: .rightThird)
+                        .frame(width: 200, alignment: .leading)
+                    Spacer()
+                }
             }
         }
     }
 
     private var generalSection: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("一般")
-                .font(.headline)
-
             Toggle("ログイン時に自動起動", isOn: $settings.launchAtLogin)
         }
     }
@@ -125,7 +168,7 @@ struct SettingsView: View {
                 .font(.caption)
                 .foregroundColor(.secondary)
 
-            Text("© 2025 Yuki. All rights reserved.")
+            Text("© 2025 SimplePallet. All rights reserved.")
                 .font(.caption2)
                 .foregroundColor(.secondary)
         }
