@@ -118,6 +118,8 @@ enum ScreenCalculator {
 
     /**
      AXUIElementからウィンドウの矩形を取得
+
+     AXUIElement座標系（左上原点、Y軸下向き）をNSScreen座標系（左下原点、Y軸上向き）に変換する
      */
     private static func getWindowFrame(_ window: AXUIElement) -> CGRect? {
         var positionValue: CFTypeRef?
@@ -138,7 +140,15 @@ enum ScreenCalculator {
             return nil
         }
 
-        return CGRect(x: position.x, y: position.y, width: size.width, height: size.height)
+        // AXUIElement座標系（左上原点、Y軸下向き）からNSScreen座標系（左下原点、Y軸上向き）に変換
+        let baseHeight = primaryScreenHeight()
+
+        // Y座標を反転（左上原点 → 左下原点）
+        // AXUIElement: Y=0が一番上、下に行くほど増える
+        // NSScreen: Y=0が一番下、上に行くほど増える
+        let convertedY = baseHeight - position.y - size.height
+
+        return CGRect(x: position.x, y: convertedY, width: size.width, height: size.height)
     }
 
     /**
@@ -159,5 +169,15 @@ enum ScreenCalculator {
         }
 
         return bestScreen
+    }
+
+    static func primaryScreenHeight() -> CGFloat {
+        if let primary = NSScreen.screens.first(where: { abs($0.frame.origin.x) < 0.1 && abs($0.frame.origin.y) < 0.1 }) {
+            return primary.frame.height
+        }
+        if let screen = NSScreen.screens.first(where: { $0.frame.contains(NSPoint(x: 1, y: 1)) }) {
+            return screen.frame.height
+        }
+        return NSScreen.main?.frame.height ?? NSScreen.screens.first?.frame.height ?? 0
     }
 }

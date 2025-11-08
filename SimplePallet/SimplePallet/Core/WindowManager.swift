@@ -151,6 +151,8 @@ enum WindowManager {
 
     /**
      ウィンドウを指定された矩形に移動・リサイズ
+
+     NSScreen座標系（左下原点）からAXUIElement座標系（左上原点）に変換してウィンドウを配置
      */
     private static func moveWindow(_ window: AXUIElement, to frame: CGRect) -> Result<Void, WindowOperationError> {
         // フルスクリーンチェック
@@ -164,8 +166,12 @@ enum WindowManager {
             return .failure(.notResizable)
         }
 
+        // NSScreen座標系（左下原点、Y軸上向き）からAXUIElement座標系（左上原点、Y軸下向き）に変換
+        let baseHeight = ScreenCalculator.primaryScreenHeight()
+        let convertedY = baseHeight - frame.origin.y - frame.size.height
+        var position = CGPoint(x: frame.origin.x, y: convertedY)
+
         // 位置を設定
-        var position = frame.origin
         if let positionValue = AXValueCreate(.cgPoint, &position) {
             let result = AXUIElementSetAttributeValue(window, kAXPositionAttribute as CFString, positionValue)
             if result != .success {
