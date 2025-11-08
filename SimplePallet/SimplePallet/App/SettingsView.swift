@@ -41,7 +41,7 @@ struct SettingsView: View {
             footer
         }
         .padding()
-        .frame(width: 500, height: 500)
+        .frame(width: 500, height: 600)
         .onAppear {
             checkPermission()
         }
@@ -91,6 +91,12 @@ struct SettingsView: View {
                 .font(.caption)
                 .foregroundColor(.secondary)
 
+            // 2分割
+            Text("2分割")
+                .font(.subheadline)
+                .foregroundColor(.secondary)
+                .padding(.top, 4)
+
             // 最大化
             HStack {
                 Text("最大化")
@@ -110,6 +116,33 @@ struct SettingsView: View {
                 Text("右半分")
                     .frame(width: 80, alignment: .leading)
                 KeyboardShortcuts.Recorder(for: .right)
+            }
+
+            // 3分割
+            Text("3分割")
+                .font(.subheadline)
+                .foregroundColor(.secondary)
+                .padding(.top, 8)
+
+            // 左1/3
+            HStack {
+                Text("左1/3")
+                    .frame(width: 80, alignment: .leading)
+                KeyboardShortcuts.Recorder(for: .leftThird)
+            }
+
+            // 中央1/3
+            HStack {
+                Text("中央1/3")
+                    .frame(width: 80, alignment: .leading)
+                KeyboardShortcuts.Recorder(for: .centerThird)
+            }
+
+            // 右1/3
+            HStack {
+                Text("右1/3")
+                    .frame(width: 80, alignment: .leading)
+                KeyboardShortcuts.Recorder(for: .rightThird)
             }
         }
     }

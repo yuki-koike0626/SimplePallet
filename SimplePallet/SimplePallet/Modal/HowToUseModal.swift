@@ -17,7 +17,7 @@ struct HowToUseModalView: View {
                     .font(.title)
                     .fontWeight(.bold)
 
-                Text("SimplePalletとは、macOS向けのシンプルなウィンドウ管理アプリです。キーボードショートカットで最前面ウィンドウを「最大化 / 左半分 / 右半分」に瞬間的に切り替えることができます。")
+                Text("SimplePalletとは、macOS向けのシンプルなウィンドウ管理アプリです。キーボードショートカットで最前面ウィンドウを「最大化 / 2分割 / 3分割」に瞬間的に切り替えることができます。")
                     .font(.body)
                     .foregroundColor(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
@@ -27,9 +27,9 @@ struct HowToUseModalView: View {
 
             Divider()
 
-            HStack(alignment: .top, spacing: 20) {
-                // 左側: ショートカットキー
-                VStack(alignment: .leading, spacing: 16) {
+            HStack(alignment: .top, spacing: 16) {
+                // 左側: 2分割ショートカットキー
+                VStack(alignment: .leading, spacing: 12) {
                     sectionHeader("ショートカットキー(デフォルト)")
 
                     shortcutRow(
@@ -52,9 +52,32 @@ struct HowToUseModalView: View {
                 }
                 .frame(maxWidth: .infinity)
 
+                // 中央: 3分割の場合
+                VStack(alignment: .leading, spacing: 12) {
+                    sectionHeader("3分割の場合(デフォルト)")
+
+                    shortcutRow(
+                        icon: "rectangle.leadingthird.inset.filled",
+                        shortcut: "⌥ + ⌘ + ←",
+                        description: "左1/3"
+                    )
+
+                    shortcutRow(
+                        icon: "rectangle.center.inset.filled",
+                        shortcut: "⌥ + ⌘ + ↑",
+                        description: "中央1/3"
+                    )
+
+                    shortcutRow(
+                        icon: "rectangle.trailingthird.inset.filled",
+                        shortcut: "⌥ + ⌘ + →",
+                        description: "右1/3"
+                    )
+                }
+                .frame(maxWidth: .infinity)
+
                 // 右側: アプリ間移動と推奨設定
-                VStack(alignment: .leading, spacing: 16) {
-                    // アプリ間移動
+                VStack(alignment: .leading, spacing: 12) {
                     sectionHeader("アプリ間移動")
 
                     HStack(spacing: 12) {
@@ -89,24 +112,22 @@ struct HowToUseModalView: View {
                     .background(Color.blue.opacity(0.1))
                     .cornerRadius(12)
 
-                    Divider()
+                    Spacer()
+                        .frame(height: 8)
 
-                    // 推奨設定
                     sectionHeader("推奨設定")
 
-                    VStack(alignment: .leading, spacing: 10) {
-                        recommendationRow(
-                            icon: "desktopcomputer",
-                            title: "デスクトップは一つだけ",
-                            description: "Mission Control で複数デスクトップを使わず、一つのデスクトップで作業"
-                        )
+                    recommendationRow(
+                        icon: "desktopcomputer",
+                        title: "デスクトップは一つだけ",
+                        description: "複数デスクトップを使わず、一つのデスクトップで作業"
+                    )
 
-                        recommendationRow(
-                            icon: "rectangle.3.group",
-                            title: "アプリ間移動を活用",
-                            description: "⌘+Tab でアプリを切り替えて効率的にウィンドウを管理"
-                        )
-                    }
+                    recommendationRow(
+                        icon: "rectangle.3.group",
+                        title: "アプリ間移動を活用",
+                        description: "⌘+Tab でアプリを切り替えて効率的にウィンドウを管理"
+                    )
                 }
                 .frame(maxWidth: .infinity)
             }
@@ -126,7 +147,7 @@ struct HowToUseModalView: View {
             }
         }
         .padding(24)
-        .frame(width: 680, height: 620)
+        .frame(width: 900, height: 600)
     }
 
     // MARK: - Helper Views
@@ -217,7 +238,7 @@ class HowToUseModalManager {
 
         // ウィンドウを作成
         let window = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 680, height: 620),
+            contentRect: NSRect(x: 0, y: 0, width: 900, height: 600),
             styleMask: [.titled, .closable, .fullSizeContentView],
             backing: .buffered,
             defer: false

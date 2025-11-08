@@ -9,6 +9,9 @@ enum SnappingAction: String, CaseIterable, Codable {
     case maximize = "maximize"
     case left = "left"
     case right = "right"
+    case leftThird = "leftThird"
+    case centerThird = "centerThird"
+    case rightThird = "rightThird"
 
     /// 表示名（日本語）
     var displayName: String {
@@ -16,6 +19,9 @@ enum SnappingAction: String, CaseIterable, Codable {
         case .maximize: return "最大化"
         case .left: return "左半分"
         case .right: return "右半分"
+        case .leftThird: return "左1/3"
+        case .centerThird: return "中央1/3"
+        case .rightThird: return "右1/3"
         }
     }
 

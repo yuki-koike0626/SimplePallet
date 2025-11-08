@@ -33,6 +33,21 @@ class KeyboardShortcutManager {
         KeyboardShortcuts.onKeyUp(for: .right) { [weak self] in
             self?.handleShortcut(.right)
         }
+
+        // 左1/3
+        KeyboardShortcuts.onKeyUp(for: .leftThird) { [weak self] in
+            self?.handleShortcut(.leftThird)
+        }
+
+        // 中央1/3
+        KeyboardShortcuts.onKeyUp(for: .centerThird) { [weak self] in
+            self?.handleShortcut(.centerThird)
+        }
+
+        // 右1/3
+        KeyboardShortcuts.onKeyUp(for: .rightThird) { [weak self] in
+            self?.handleShortcut(.rightThird)
+        }
     }
 
     /**
@@ -61,6 +76,12 @@ class KeyboardShortcutManager {
             _ = WindowManager.moveToLeft()
         case .right:
             _ = WindowManager.moveToRight()
+        case .leftThird:
+            _ = WindowManager.moveToLeftThird()
+        case .centerThird:
+            _ = WindowManager.moveToCenterThird()
+        case .rightThird:
+            _ = WindowManager.moveToRightThird()
         }
     }
 }
@@ -71,4 +92,7 @@ extension KeyboardShortcuts.Name {
     static let maximize = Self("com.yuki.SimplePallet.maximize", default: .init(.upArrow, modifiers: [.command]))
     static let left = Self("com.yuki.SimplePallet.left", default: .init(.leftArrow, modifiers: [.command]))
     static let right = Self("com.yuki.SimplePallet.right", default: .init(.rightArrow, modifiers: [.command]))
+    static let leftThird = Self("com.yuki.SimplePallet.leftThird", default: .init(.leftArrow, modifiers: [.option, .command]))
+    static let centerThird = Self("com.yuki.SimplePallet.centerThird", default: .init(.upArrow, modifiers: [.option, .command]))
+    static let rightThird = Self("com.yuki.SimplePallet.rightThird", default: .init(.rightArrow, modifiers: [.option, .command]))
 }
