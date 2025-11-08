@@ -10,6 +10,8 @@ import KeyboardShortcuts
 struct SettingsView: View {
     @ObservedObject private var settings = AppSettings.shared
     @State private var hasPermission = AccessibilityPermission.isGranted()
+    @State private var saveFeedback: SaveFeedback?
+    @State private var feedbackDismissWorkItem: DispatchWorkItem?
 
     var body: some View {
         VStack(spacing: 20) {
@@ -157,8 +159,25 @@ struct SettingsView: View {
     }
 
     private var generalSection: some View {
-        VStack(alignment: .leading, spacing: 10) {
+        VStack(alignment: .center, spacing: 12) {
             Toggle("ログイン時に自動起動", isOn: $settings.launchAtLogin)
+
+            Button("保存する") {
+                saveSettings()
+            }
+            .buttonStyle(.borderedProminent)
+            .controlSize(.regular)
+
+            if let feedback = saveFeedback {
+                HStack(spacing: 6) {
+                    Image(systemName: feedback.iconName)
+                        .foregroundColor(feedback.color)
+                    Text(feedback.message)
+                        .font(.caption)
+                        .foregroundColor(feedback.color)
+                }
+                .transition(.opacity)
+            }
         }
     }
 
@@ -177,8 +196,67 @@ struct SettingsView: View {
 
     // MARK: - アクション
 
+    private func saveSettings() {
+        // 既存のタイマーをキャンセル
+        feedbackDismissWorkItem?.cancel()
+
+        do {
+            try settings.saveSettings()
+            withAnimation(.easeInOut(duration: 0.2)) {
+                saveFeedback = .success
+            }
+        } catch {
+            withAnimation(.easeInOut(duration: 0.2)) {
+                saveFeedback = .failure(error.localizedDescription)
+            }
+        }
+
+        // 2.5秒後にフィードバックを消す
+        let workItem = DispatchWorkItem {
+            withAnimation(.easeInOut(duration: 0.2)) {
+                saveFeedback = nil
+            }
+        }
+        feedbackDismissWorkItem = workItem
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: workItem)
+    }
+
     private func checkPermission() {
         hasPermission = AccessibilityPermission.isGranted()
+    }
+
+    // MARK: - フィードバック
+
+    private enum SaveFeedback {
+        case success
+        case failure(String)
+
+        var message: String {
+            switch self {
+            case .success:
+                return "設定を保存しました"
+            case .failure(let error):
+                return "保存に失敗しました: \(error)"
+            }
+        }
+
+        var color: Color {
+            switch self {
+            case .success:
+                return .green
+            case .failure:
+                return .red
+            }
+        }
+
+        var iconName: String {
+            switch self {
+            case .success:
+                return "checkmark.circle.fill"
+            case .failure:
+                return "exclamationmark.triangle.fill"
+            }
+        }
     }
 }
 

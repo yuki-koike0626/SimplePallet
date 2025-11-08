@@ -22,7 +22,13 @@ class AppSettings: ObservableObject {
     @Published var launchAtLogin: Bool {
         didSet {
             UserDefaults.standard.set(launchAtLogin, forKey: Keys.launchAtLogin)
-            updateLoginItem()
+            do {
+                try updateLoginItem()
+            } catch {
+                #if DEBUG
+                print("⚠️ ログイン時起動の自動更新に失敗: \(error.localizedDescription)")
+                #endif
+            }
         }
     }
 
@@ -37,29 +43,34 @@ class AppSettings: ObservableObject {
     }
 
     /**
+     設定を明示的に保存する
+
+     UIから明示的に呼び出される際に使用。成功/失敗をthrowで返す。
+     */
+    func saveSettings() throws {
+        UserDefaults.standard.set(isEnabled, forKey: Keys.isEnabled)
+        UserDefaults.standard.set(launchAtLogin, forKey: Keys.launchAtLogin)
+        try updateLoginItem()
+    }
+
+    /**
      ログイン時の自動起動設定を更新
 
      macOS 13以降ではSMAppServiceを使用する。
      */
-    private func updateLoginItem() {
+    private func updateLoginItem() throws {
         if #available(macOS 13, *) {
-            do {
-                if launchAtLogin {
-                    // ログイン項目に登録
-                    try SMAppService.mainApp.register()
-                    #if DEBUG
-                    print("✅ ログイン時起動を有効化しました")
-                    #endif
-                } else {
-                    // ログイン項目から削除
-                    try SMAppService.mainApp.unregister()
-                    #if DEBUG
-                    print("❌ ログイン時起動を無効化しました")
-                    #endif
-                }
-            } catch {
+            if launchAtLogin {
+                // ログイン項目に登録
+                try SMAppService.mainApp.register()
                 #if DEBUG
-                print("⚠️ ログイン時起動の設定に失敗: \(error.localizedDescription)")
+                print("✅ ログイン時起動を有効化しました")
+                #endif
+            } else {
+                // ログイン項目から削除
+                try SMAppService.mainApp.unregister()
+                #if DEBUG
+                print("❌ ログイン時起動を無効化しました")
                 #endif
             }
         } else {
