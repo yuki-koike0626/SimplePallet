@@ -81,6 +81,48 @@ enum WindowManager {
         return moveWindow(window, to: targetFrame)
     }
 
+    /**
+     最前面ウィンドウを左1/3に配置
+     */
+    static func moveToLeftThird() -> Result<Void, WindowOperationError> {
+        guard let window = getFrontmostWindow() else {
+            return .failure(.noFrontmostWindow)
+        }
+
+        let screen = ScreenCalculator.targetScreen(for: window)
+        let targetFrame = ScreenCalculator.frameForLeftThird(on: screen)
+
+        return moveWindow(window, to: targetFrame)
+    }
+
+    /**
+     最前面ウィンドウを中央1/3に配置
+     */
+    static func moveToCenterThird() -> Result<Void, WindowOperationError> {
+        guard let window = getFrontmostWindow() else {
+            return .failure(.noFrontmostWindow)
+        }
+
+        let screen = ScreenCalculator.targetScreen(for: window)
+        let targetFrame = ScreenCalculator.frameForCenterThird(on: screen)
+
+        return moveWindow(window, to: targetFrame)
+    }
+
+    /**
+     最前面ウィンドウを右1/3に配置
+     */
+    static func moveToRightThird() -> Result<Void, WindowOperationError> {
+        guard let window = getFrontmostWindow() else {
+            return .failure(.noFrontmostWindow)
+        }
+
+        let screen = ScreenCalculator.targetScreen(for: window)
+        let targetFrame = ScreenCalculator.frameForRightThird(on: screen)
+
+        return moveWindow(window, to: targetFrame)
+    }
+
     // MARK: - Private Helpers
 
     /**

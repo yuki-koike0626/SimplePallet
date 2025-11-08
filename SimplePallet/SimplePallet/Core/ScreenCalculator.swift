@@ -66,6 +66,54 @@ enum ScreenCalculator {
         )
     }
 
+    /**
+     左1/3用の矩形を計算
+
+     - Parameter screen: 対象の画面
+     - Returns: 画面の左1/3を占める矩形
+     */
+    static func frameForLeftThird(on screen: NSScreen) -> CGRect {
+        let visible = screen.visibleFrame
+        return CGRect(
+            x: visible.origin.x,
+            y: visible.origin.y,
+            width: visible.width / 3,
+            height: visible.height
+        )
+    }
+
+    /**
+     中央1/3用の矩形を計算
+
+     - Parameter screen: 対象の画面
+     - Returns: 画面の中央1/3を占める矩形
+     */
+    static func frameForCenterThird(on screen: NSScreen) -> CGRect {
+        let visible = screen.visibleFrame
+        return CGRect(
+            x: visible.origin.x + visible.width / 3,
+            y: visible.origin.y,
+            width: visible.width / 3,
+            height: visible.height
+        )
+    }
+
+    /**
+     右1/3用の矩形を計算
+
+     - Parameter screen: 対象の画面
+     - Returns: 画面の右1/3を占める矩形
+     */
+    static func frameForRightThird(on screen: NSScreen) -> CGRect {
+        let visible = screen.visibleFrame
+        return CGRect(
+            x: visible.origin.x + visible.width * 2 / 3,
+            y: visible.origin.y,
+            width: visible.width / 3,
+            height: visible.height
+        )
+    }
+
     // MARK: - Private Helpers
 
     /**
