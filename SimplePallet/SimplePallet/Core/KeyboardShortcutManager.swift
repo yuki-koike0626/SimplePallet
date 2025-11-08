@@ -61,7 +61,9 @@ class KeyboardShortcutManager {
      ショートカットが押された時の処理
      */
     private func handleShortcut(_ action: SnappingAction) {
-        guard isEnabled else { return }
+        guard isEnabled else {
+            return
+        }
 
         // アクセシビリティ権限チェック
         guard AccessibilityPermission.isGranted() else {

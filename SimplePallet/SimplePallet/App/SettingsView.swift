@@ -10,7 +10,6 @@ import KeyboardShortcuts
 struct SettingsView: View {
     @ObservedObject private var settings = AppSettings.shared
     @State private var hasPermission = AccessibilityPermission.isGranted()
-    @State private var showSavedMessage = false
 
     var body: some View {
         VStack(spacing: 20) {
@@ -34,14 +33,11 @@ struct SettingsView: View {
 
             Spacer()
 
-            // 保存ボタン
-            saveButton
-
             // フッター
             footer
         }
         .padding()
-        .frame(width: 500, height: 600)
+        .frame(width: 500, height: 450)
         .onAppear {
             checkPermission()
         }
@@ -91,12 +87,6 @@ struct SettingsView: View {
                 .font(.caption)
                 .foregroundColor(.secondary)
 
-            // 2分割
-            Text("2分割")
-                .font(.subheadline)
-                .foregroundColor(.secondary)
-                .padding(.top, 4)
-
             // 最大化
             HStack {
                 Text("最大化")
@@ -117,33 +107,6 @@ struct SettingsView: View {
                     .frame(width: 80, alignment: .leading)
                 KeyboardShortcuts.Recorder(for: .right)
             }
-
-            // 3分割
-            Text("3分割")
-                .font(.subheadline)
-                .foregroundColor(.secondary)
-                .padding(.top, 8)
-
-            // 左1/3
-            HStack {
-                Text("左1/3")
-                    .frame(width: 80, alignment: .leading)
-                KeyboardShortcuts.Recorder(for: .leftThird)
-            }
-
-            // 中央1/3
-            HStack {
-                Text("中央1/3")
-                    .frame(width: 80, alignment: .leading)
-                KeyboardShortcuts.Recorder(for: .centerThird)
-            }
-
-            // 右1/3
-            HStack {
-                Text("右1/3")
-                    .frame(width: 80, alignment: .leading)
-                KeyboardShortcuts.Recorder(for: .rightThird)
-            }
         }
     }
 
@@ -153,35 +116,6 @@ struct SettingsView: View {
                 .font(.headline)
 
             Toggle("ログイン時に自動起動", isOn: $settings.launchAtLogin)
-        }
-    }
-
-    private var saveButton: some View {
-        VStack(spacing: 8) {
-            Button(action: {
-                saveSettings()
-            }) {
-                HStack {
-                    Image(systemName: "checkmark.circle.fill")
-                    Text("この設定で保存する")
-                }
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 10)
-            }
-            .buttonStyle(.borderedProminent)
-            .controlSize(.large)
-
-            if showSavedMessage {
-                HStack(spacing: 6) {
-                    Image(systemName: "checkmark.circle.fill")
-                        .foregroundColor(.green)
-                        .font(.caption)
-                    Text("設定を保存しました")
-                        .font(.caption)
-                        .foregroundColor(.secondary)
-                }
-                .transition(.opacity)
-            }
         }
     }
 
@@ -202,21 +136,6 @@ struct SettingsView: View {
 
     private func checkPermission() {
         hasPermission = AccessibilityPermission.isGranted()
-    }
-
-    private func saveSettings() {
-        // 設定は既にリアルタイムで保存されているため、
-        // ここではユーザーに保存完了を通知するだけ
-        withAnimation {
-            showSavedMessage = true
-        }
-
-        // 2秒後にメッセージを非表示
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            withAnimation {
-                showSavedMessage = false
-            }
-        }
     }
 }
 

@@ -2,7 +2,7 @@ import SwiftUI
 import AppKit
 
 /**
- Simple palet のメインエントリーポイント
+ SimplePallet のメインエントリーポイント
 
  メニューバー常駐アプリとして動作し、Dockには表示しない。
  グローバルキーボードショートカットで最前面ウィンドウをスナップする機能を提供。

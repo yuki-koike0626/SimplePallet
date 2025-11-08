@@ -29,7 +29,7 @@
     <key>NSSupportsSuddenTermination</key>
     <false/>
     <key>NSAccessibilityUsageDescription</key>
-    <string>Simple paletは他のアプリのウィンドウを操作するためにアクセシビリティ機能を使用します。</string>
+    <string>SimplePalletは他のアプリのウィンドウを操作するためにアクセシビリティ機能を使用します。</string>
 </dict>
 </plist>
 
