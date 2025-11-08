@@ -10,6 +10,8 @@ import KeyboardShortcuts
 struct SettingsView: View {
     @ObservedObject private var settings = AppSettings.shared
     @State private var hasPermission = AccessibilityPermission.isGranted()
+    @State private var saveFeedback: SaveFeedback?
+    @State private var feedbackDismissWorkItem: DispatchWorkItem?
 
     var body: some View {
         VStack(spacing: 20) {
@@ -37,7 +39,7 @@ struct SettingsView: View {
             footer
         }
         .padding()
-        .frame(width: 500, height: 450)
+        .frame(width: 500, height: 600)
         .onAppear {
             checkPermission()
         }
@@ -80,42 +82,102 @@ struct SettingsView: View {
 
     private var shortcutSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("ショートカット")
+            Text("ショートカットをカスタマイズ")
                 .font(.headline)
 
-            Text("KeyboardShortcutsライブラリが提供する標準UIでショートカットを設定できます。")
-                .font(.caption)
+            VStack(spacing: 10) {
+                // 最大化
+                HStack {
+                    Spacer()
+                    Text("最大化")
+                        .frame(width: 80, alignment: .trailing)
+                    KeyboardShortcuts.Recorder(for: .maximize)
+                        .frame(width: 200, alignment: .leading)
+                    Spacer()
+                }
+
+                // 左半分
+                HStack {
+                    Spacer()
+                    Text("左半分")
+                        .frame(width: 80, alignment: .trailing)
+                    KeyboardShortcuts.Recorder(for: .left)
+                        .frame(width: 200, alignment: .leading)
+                    Spacer()
+                }
+
+                // 右半分
+                HStack {
+                    Spacer()
+                    Text("右半分")
+                        .frame(width: 80, alignment: .trailing)
+                    KeyboardShortcuts.Recorder(for: .right)
+                        .frame(width: 200, alignment: .leading)
+                    Spacer()
+                }
+            }
+
+            Divider()
+                .padding(.vertical, 4)
+
+            Text("3分割")
+                .font(.subheadline)
                 .foregroundColor(.secondary)
 
-            // 最大化
-            HStack {
-                Text("最大化")
-                    .frame(width: 80, alignment: .leading)
-                KeyboardShortcuts.Recorder(for: .maximize)
-            }
+            VStack(spacing: 10) {
+                // 左1/3
+                HStack {
+                    Spacer()
+                    Text("左1/3")
+                        .frame(width: 80, alignment: .trailing)
+                    KeyboardShortcuts.Recorder(for: .leftThird)
+                        .frame(width: 200, alignment: .leading)
+                    Spacer()
+                }
 
-            // 左半分
-            HStack {
-                Text("左半分")
-                    .frame(width: 80, alignment: .leading)
-                KeyboardShortcuts.Recorder(for: .left)
-            }
+                // 中央1/3
+                HStack {
+                    Spacer()
+                    Text("中央1/3")
+                        .frame(width: 80, alignment: .trailing)
+                    KeyboardShortcuts.Recorder(for: .centerThird)
+                        .frame(width: 200, alignment: .leading)
+                    Spacer()
+                }
 
-            // 右半分
-            HStack {
-                Text("右半分")
-                    .frame(width: 80, alignment: .leading)
-                KeyboardShortcuts.Recorder(for: .right)
+                // 右1/3
+                HStack {
+                    Spacer()
+                    Text("右1/3")
+                        .frame(width: 80, alignment: .trailing)
+                    KeyboardShortcuts.Recorder(for: .rightThird)
+                        .frame(width: 200, alignment: .leading)
+                    Spacer()
+                }
             }
         }
     }
 
     private var generalSection: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Text("一般")
-                .font(.headline)
-
+        VStack(alignment: .center, spacing: 12) {
             Toggle("ログイン時に自動起動", isOn: $settings.launchAtLogin)
+
+            Button("保存する") {
+                saveSettings()
+            }
+            .buttonStyle(.borderedProminent)
+            .controlSize(.regular)
+
+            if let feedback = saveFeedback {
+                HStack(spacing: 6) {
+                    Image(systemName: feedback.iconName)
+                        .foregroundColor(feedback.color)
+                    Text(feedback.message)
+                        .font(.caption)
+                        .foregroundColor(feedback.color)
+                }
+                .transition(.opacity)
+            }
         }
     }
 
@@ -125,7 +187,7 @@ struct SettingsView: View {
                 .font(.caption)
                 .foregroundColor(.secondary)
 
-            Text("© 2025 Yuki. All rights reserved.")
+            Text("© 2025 SimplePallet. All rights reserved.")
                 .font(.caption2)
                 .foregroundColor(.secondary)
         }
@@ -134,8 +196,67 @@ struct SettingsView: View {
 
     // MARK: - アクション
 
+    private func saveSettings() {
+        // 既存のタイマーをキャンセル
+        feedbackDismissWorkItem?.cancel()
+
+        do {
+            try settings.saveSettings()
+            withAnimation(.easeInOut(duration: 0.2)) {
+                saveFeedback = .success
+            }
+        } catch {
+            withAnimation(.easeInOut(duration: 0.2)) {
+                saveFeedback = .failure(error.localizedDescription)
+            }
+        }
+
+        // 2.5秒後にフィードバックを消す
+        let workItem = DispatchWorkItem {
+            withAnimation(.easeInOut(duration: 0.2)) {
+                saveFeedback = nil
+            }
+        }
+        feedbackDismissWorkItem = workItem
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: workItem)
+    }
+
     private func checkPermission() {
         hasPermission = AccessibilityPermission.isGranted()
+    }
+
+    // MARK: - フィードバック
+
+    private enum SaveFeedback {
+        case success
+        case failure(String)
+
+        var message: String {
+            switch self {
+            case .success:
+                return "設定を保存しました"
+            case .failure(let error):
+                return "保存に失敗しました: \(error)"
+            }
+        }
+
+        var color: Color {
+            switch self {
+            case .success:
+                return .green
+            case .failure:
+                return .red
+            }
+        }
+
+        var iconName: String {
+            switch self {
+            case .success:
+                return "checkmark.circle.fill"
+            case .failure:
+                return "exclamationmark.triangle.fill"
+            }
+        }
     }
 }
 
