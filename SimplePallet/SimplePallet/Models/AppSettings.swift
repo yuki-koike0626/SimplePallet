@@ -5,11 +5,15 @@ import ServiceManagement
 /**
  アプリ全体の設定を管理
 
- ショートカットの有効/無効状態と自動起動設定を管理。
+ ショートカットの有効/無効状態、自動起動設定、言語設定を管理。
  ショートカット自体の設定はKeyboardShortcutsライブラリが管理する。
+ 単一責任の原則: アプリ設定の保存と管理のみを担当。
  */
 class AppSettings: ObservableObject {
     static let shared = AppSettings()
+
+    /// 言語マネージャーへの参照
+    let languageManager = LanguageManager.shared
 
     /// ショートカットの有効/無効状態
     @Published var isEnabled: Bool {

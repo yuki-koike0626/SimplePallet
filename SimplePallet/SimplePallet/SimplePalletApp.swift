@@ -10,11 +10,13 @@ import AppKit
 @main
 struct SimplePalletApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    @StateObject private var languageManager = LanguageManager.shared
 
     var body: some Scene {
         Settings {
             EmptyView()
         }
+        .environment(\.locale, Locale(identifier: languageManager.getEffectiveLanguageCode()))
     }
 }
 

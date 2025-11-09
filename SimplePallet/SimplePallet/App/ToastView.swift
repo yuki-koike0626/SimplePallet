@@ -152,9 +152,9 @@ struct ToastContentView: View {
 struct ToastContentView_Previews: PreviewProvider {
     static var previews: some View {
         VStack(spacing: 20) {
-            ToastContentView(message: String(localized: "action.maximize", bundle: .main, comment: "Maximize action"), type: .success)
-            ToastContentView(message: String(localized: "toast.error", bundle: .main, comment: "Error toast"), type: .error)
-            ToastContentView(message: String(localized: "toast.info", bundle: .main, comment: "Info toast"), type: .info)
+            ToastContentView(message: L("action.maximize"), type: .success)
+            ToastContentView(message: L("toast.error"), type: .error)
+            ToastContentView(message: L("toast.info"), type: .info)
         }
         .frame(width: 400, height: 300)
     }

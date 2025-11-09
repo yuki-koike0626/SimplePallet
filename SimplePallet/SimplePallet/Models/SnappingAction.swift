@@ -16,12 +16,12 @@ enum SnappingAction: String, CaseIterable, Codable {
     /// 表示名（ローカライズ対応）
     var displayName: String {
         switch self {
-        case .maximize: return String(localized: "action.maximize", bundle: .main, comment: "Maximize action")
-        case .left: return String(localized: "action.left", bundle: .main, comment: "Left half action")
-        case .right: return String(localized: "action.right", bundle: .main, comment: "Right half action")
-        case .leftThird: return String(localized: "action.leftThird", bundle: .main, comment: "Left third action")
-        case .centerThird: return String(localized: "action.centerThird", bundle: .main, comment: "Center third action")
-        case .rightThird: return String(localized: "action.rightThird", bundle: .main, comment: "Right third action")
+        case .maximize: return L("action.maximize")
+        case .left: return L("action.left")
+        case .right: return L("action.right")
+        case .leftThird: return L("action.leftThird")
+        case .centerThird: return L("action.centerThird")
+        case .rightThird: return L("action.rightThird")
         }
     }
 
