@@ -43,6 +43,9 @@
 		30CDC2772EB72AD200F63661 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		30CDC27A2EB72AD200F63663 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		30CDC27B2EB72AD200F63664 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		30CDC27C2EB72AD200F63665 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		30CDC27D2EB72AD200F63666 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		30CDC27E2EB72AD200F63667 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -183,8 +186,11 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 				ja,
+				ko,
+				"zh-Hans",
+				"zh-Hant",
+				Base,
 			);
 			mainGroup = 30CDC2452EB7287500F63660;
 			minimizedProjectReferenceProxies = 1;
@@ -241,6 +247,9 @@
 			children = (
 				30CDC27A2EB72AD200F63663 /* ja */,
 				30CDC27B2EB72AD200F63664 /* en */,
+				30CDC27C2EB72AD200F63665 /* ko */,
+				30CDC27D2EB72AD200F63666 /* zh-Hans */,
+				30CDC27E2EB72AD200F63667 /* zh-Hant */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
