@@ -46,6 +46,11 @@ class MenuBarController {
         howToUseItem.target = self
         menu.addItem(howToUseItem)
 
+        // 開発者
+        let developerItem = NSMenuItem(title: L("menu.developerInfo"), action: #selector(showDeveloperInfo), keyEquivalent: "")
+        developerItem.target = self
+        menu.addItem(developerItem)
+
         menu.addItem(NSMenuItem.separator())
 
         // 終了
@@ -95,6 +100,13 @@ class MenuBarController {
      */
     @objc private func showHowToUse() {
         HowToUseModalManager.shared.show()
+    }
+
+    /**
+     開発者情報モーダルを表示
+     */
+    @objc private func showDeveloperInfo() {
+        DeveloperInfoModalManager.shared.show()
     }
 
     /**

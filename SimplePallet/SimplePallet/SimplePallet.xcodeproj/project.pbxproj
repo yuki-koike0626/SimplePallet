@@ -17,6 +17,7 @@
 		308944982EB8BDDF0028FFC8 /* AppLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308944962EB8BDDF0028FFC8 /* AppLanguage.swift */; };
 		308944992EB8BDDF0028FFC9 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3089449A2EB8BDDF0028FFC9 /* LanguageManager.swift */; };
 		3089449B2EB8BDDF0028FFCA /* LocalizationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3089449C2EB8BDDF0028FFCA /* LocalizationHelper.swift */; };
+		3089449D2EB8BDDF0028FFCB /* DeveloperInfoModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3089449E2EB8BDDF0028FFCB /* DeveloperInfoModal.swift */; };
 		30CDC26C2EB72AD200F63660 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CDC25D2EB72AD200F63660 /* SettingsView.swift */; };
 		30CDC26D2EB72AD200F63660 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CDC2662EB72AD200F63660 /* AppSettings.swift */; };
 		30CDC26E2EB72AD200F63660 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CDC25E2EB72AD200F63660 /* ToastView.swift */; };
@@ -37,6 +38,7 @@
 		308944962EB8BDDF0028FFC8 /* AppLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLanguage.swift; sourceTree = "<group>"; };
 		3089449A2EB8BDDF0028FFC9 /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
 		3089449C2EB8BDDF0028FFCA /* LocalizationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationHelper.swift; sourceTree = "<group>"; };
+		3089449E2EB8BDDF0028FFCB /* DeveloperInfoModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperInfoModal.swift; sourceTree = "<group>"; };
 		30CDC24E2EB7287500F63660 /* SimplePallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimplePallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30CDC25C2EB72AD200F63660 /* MenuBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarController.swift; sourceTree = "<group>"; };
 		30CDC25D2EB72AD200F63660 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		308944962EB8BDDF0028FFC7 /* Modal */ = {
 			isa = PBXGroup;
 			children = (
+				3089449E2EB8BDDF0028FFCB /* DeveloperInfoModal.swift */,
 				308944952EB8BDDF0028FFC7 /* HowToUseModal.swift */,
 			);
 			path = Modal;
@@ -242,6 +245,7 @@
 				30CDC26F2EB72AD200F63660 /* MenuBarController.swift in Sources */,
 				30CDC2712EB72AD200F63660 /* SimplePalletApp.swift in Sources */,
 				308944912EB88A670028FFC7 /* ScreenCalculator.swift in Sources */,
+				3089449D2EB8BDDF0028FFCB /* DeveloperInfoModal.swift in Sources */,
 				308944972EB8BDDF0028FFC7 /* HowToUseModal.swift in Sources */,
 				308944992EB8BDDF0028FFC9 /* LanguageManager.swift in Sources */,
 				3089449B2EB8BDDF0028FFCA /* LocalizationHelper.swift in Sources */,
