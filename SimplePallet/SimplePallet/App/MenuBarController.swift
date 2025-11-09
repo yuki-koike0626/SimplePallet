@@ -34,19 +34,19 @@ class MenuBarController {
         let menu = NSMenu()
 
         // 設定
-        let settingsItem = NSMenuItem(title: "設定...", action: #selector(showSettings), keyEquivalent: ",")
+        let settingsItem = NSMenuItem(title: String(localized: "menu.settings", bundle: .main, comment: "Settings menu item"), action: #selector(showSettings), keyEquivalent: ",")
         settingsItem.target = self
         menu.addItem(settingsItem)
 
         // 使い方を見る
-        let howToUseItem = NSMenuItem(title: "使い方を見る", action: #selector(showHowToUse), keyEquivalent: "")
+        let howToUseItem = NSMenuItem(title: String(localized: "menu.howToUse", bundle: .main, comment: "How to use menu item"), action: #selector(showHowToUse), keyEquivalent: "")
         howToUseItem.target = self
         menu.addItem(howToUseItem)
 
         menu.addItem(NSMenuItem.separator())
 
         // 終了
-        let quitItem = NSMenuItem(title: "SimplePalletを終了", action: #selector(quit), keyEquivalent: "q")
+        let quitItem = NSMenuItem(title: String(localized: "menu.quit", bundle: .main, comment: "Quit menu item"), action: #selector(quit), keyEquivalent: "q")
         quitItem.target = self
         menu.addItem(quitItem)
 
@@ -76,7 +76,7 @@ class MenuBarController {
         )
 
         window.contentViewController = hostingController
-        window.title = "設定"
+        window.title = String(localized: "window.settings", bundle: .main, comment: "Settings window title")
         window.center()
         window.isReleasedWhenClosed = false
 

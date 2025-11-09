@@ -16,7 +16,7 @@ struct SettingsView: View {
     var body: some View {
         VStack(spacing: 20) {
             // ヘッダー
-            Text("SimplePallet 設定")
+            Text("settings.title", bundle: .main, comment: "Settings title")
                 .font(.title)
                 .padding(.top)
 
@@ -49,31 +49,31 @@ struct SettingsView: View {
 
     private var permissionSection: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("アクセシビリティ権限")
+            Text("settings.accessibility", bundle: .main, comment: "Accessibility permission section")
                 .font(.headline)
 
             HStack {
                 Image(systemName: hasPermission ? "checkmark.circle.fill" : "xmark.circle.fill")
                     .foregroundColor(hasPermission ? .green : .red)
 
-                Text(hasPermission ? "許可されています" : "権限が必要です")
+                Text(hasPermission ? String(localized: "settings.permissionGranted", bundle: .main, comment: "Permission granted") : String(localized: "settings.permissionRequired", bundle: .main, comment: "Permission required"))
                     .foregroundColor(.secondary)
 
                 Spacer()
 
                 if !hasPermission {
-                    Button("設定を開く") {
+                    Button(String(localized: "button.openSettings", bundle: .main, comment: "Open settings button")) {
                         AccessibilityPermission.openSystemPreferences()
                     }
 
-                    Button("再確認") {
+                    Button(String(localized: "button.checkAgain", bundle: .main, comment: "Check again button")) {
                         checkPermission()
                     }
                 }
             }
 
             if !hasPermission {
-                Text("ウィンドウを操作するには、システム環境設定でアクセシビリティ権限を許可してください。")
+                Text("settings.accessibilityDescription", bundle: .main, comment: "Accessibility description")
                     .font(.caption)
                     .foregroundColor(.secondary)
             }
@@ -82,14 +82,14 @@ struct SettingsView: View {
 
     private var shortcutSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("ショートカットをカスタマイズ")
+            Text("settings.customizeShortcuts", bundle: .main, comment: "Customize shortcuts section")
                 .font(.headline)
 
             VStack(spacing: 10) {
                 // 最大化
                 HStack {
                     Spacer()
-                    Text("最大化")
+                    Text("action.maximize", bundle: .main, comment: "Maximize action")
                         .frame(width: 80, alignment: .trailing)
                     KeyboardShortcuts.Recorder(for: .maximize)
                         .frame(width: 200, alignment: .leading)
@@ -99,7 +99,7 @@ struct SettingsView: View {
                 // 左半分
                 HStack {
                     Spacer()
-                    Text("左半分")
+                    Text("action.left", bundle: .main, comment: "Left half action")
                         .frame(width: 80, alignment: .trailing)
                     KeyboardShortcuts.Recorder(for: .left)
                         .frame(width: 200, alignment: .leading)
@@ -109,7 +109,7 @@ struct SettingsView: View {
                 // 右半分
                 HStack {
                     Spacer()
-                    Text("右半分")
+                    Text("action.right", bundle: .main, comment: "Right half action")
                         .frame(width: 80, alignment: .trailing)
                     KeyboardShortcuts.Recorder(for: .right)
                         .frame(width: 200, alignment: .leading)
@@ -120,7 +120,7 @@ struct SettingsView: View {
             Divider()
                 .padding(.vertical, 4)
 
-            Text("3分割")
+            Text("settings.thirdSplit", bundle: .main, comment: "Third split section")
                 .font(.subheadline)
                 .foregroundColor(.secondary)
 
@@ -128,7 +128,7 @@ struct SettingsView: View {
                 // 左1/3
                 HStack {
                     Spacer()
-                    Text("左1/3")
+                    Text("action.leftThird", bundle: .main, comment: "Left third action")
                         .frame(width: 80, alignment: .trailing)
                     KeyboardShortcuts.Recorder(for: .leftThird)
                         .frame(width: 200, alignment: .leading)
@@ -138,7 +138,7 @@ struct SettingsView: View {
                 // 中央1/3
                 HStack {
                     Spacer()
-                    Text("中央1/3")
+                    Text("action.centerThird", bundle: .main, comment: "Center third action")
                         .frame(width: 80, alignment: .trailing)
                     KeyboardShortcuts.Recorder(for: .centerThird)
                         .frame(width: 200, alignment: .leading)
@@ -148,7 +148,7 @@ struct SettingsView: View {
                 // 右1/3
                 HStack {
                     Spacer()
-                    Text("右1/3")
+                    Text("action.rightThird", bundle: .main, comment: "Right third action")
                         .frame(width: 80, alignment: .trailing)
                     KeyboardShortcuts.Recorder(for: .rightThird)
                         .frame(width: 200, alignment: .leading)
@@ -160,9 +160,9 @@ struct SettingsView: View {
 
     private var generalSection: some View {
         VStack(alignment: .center, spacing: 12) {
-            Toggle("ログイン時に自動起動", isOn: $settings.launchAtLogin)
+            Toggle(String(localized: "settings.launchAtLogin", bundle: .main, comment: "Launch at login toggle"), isOn: $settings.launchAtLogin)
 
-            Button("保存する") {
+            Button(String(localized: "button.save", bundle: .main, comment: "Save button")) {
                 saveSettings()
             }
             .buttonStyle(.borderedProminent)
@@ -183,11 +183,11 @@ struct SettingsView: View {
 
     private var footer: some View {
         VStack(spacing: 5) {
-            Text("SimplePallet v1.0")
+            Text("app.version", bundle: .main, comment: "App version")
                 .font(.caption)
                 .foregroundColor(.secondary)
 
-            Text("© 2025 SimplePallet. All rights reserved.")
+            Text("app.copyright", bundle: .main, comment: "Copyright")
                 .font(.caption2)
                 .foregroundColor(.secondary)
         }
@@ -234,9 +234,9 @@ struct SettingsView: View {
         var message: String {
             switch self {
             case .success:
-                return "設定を保存しました"
+                return String(localized: "settings.saveSuccess", bundle: .main, comment: "Save success message")
             case .failure(let error):
-                return "保存に失敗しました: \(error)"
+                return String(localized: "settings.saveFailed", bundle: .main, comment: "Save failed message").replacingOccurrences(of: "%@", with: error)
             }
         }
 

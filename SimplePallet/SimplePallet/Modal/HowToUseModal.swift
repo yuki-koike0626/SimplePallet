@@ -13,11 +13,11 @@ struct HowToUseModalView: View {
         VStack(spacing: 24) {
             // ヘッダー
             VStack(alignment: .leading, spacing: 12) {
-                Text("Simple Pallet の使い方")
+                Text("howToUse.title", bundle: .main, comment: "How to use title")
                     .font(.title)
                     .fontWeight(.bold)
 
-                Text("SimplePalletとは、macOS向けのシンプルなウィンドウ管理アプリです。キーボードショートカットで最前面ウィンドウを「最大化 / 2分割 / 3分割」に瞬間的に切り替えることができます。素早いパソコン操作を行うための習慣を作ります")
+                Text("howToUse.description", bundle: .main, comment: "App description")
                     .font(.body)
                     .foregroundColor(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
@@ -30,55 +30,55 @@ struct HowToUseModalView: View {
             HStack(alignment: .top, spacing: 16) {
                 // 左側: 2分割ショートカットキー
                 VStack(alignment: .leading, spacing: 12) {
-                    sectionHeader("ショートカットキー(デフォルト)")
+                    sectionHeader(String(localized: "howToUse.shortcutKeys", bundle: .main, comment: "Shortcut keys section"))
 
                     shortcutRow(
                         icon: "rectangle.fill",
                         shortcut: "⌘ + ↑",
-                        description: "最大化"
+                        description: String(localized: "action.maximize", bundle: .main, comment: "Maximize action")
                     )
 
                     shortcutRow(
                         icon: "rectangle.lefthalf.filled",
                         shortcut: "⌘ + ←",
-                        description: "左半分"
+                        description: String(localized: "action.left", bundle: .main, comment: "Left half action")
                     )
 
                     shortcutRow(
                         icon: "rectangle.righthalf.filled",
                         shortcut: "⌘ + →",
-                        description: "右半分"
+                        description: String(localized: "action.right", bundle: .main, comment: "Right half action")
                     )
                 }
                 .frame(maxWidth: .infinity)
 
                 // 中央: 3分割の場合
                 VStack(alignment: .leading, spacing: 12) {
-                    sectionHeader("3分割の場合(デフォルト)")
+                    sectionHeader(String(localized: "howToUse.thirdSplit", bundle: .main, comment: "Third split section"))
 
                     shortcutRow(
                         icon: "rectangle.leadingthird.inset.filled",
                         shortcut: "⌥ + ⌘ + ←",
-                        description: "左1/3"
+                        description: String(localized: "action.leftThird", bundle: .main, comment: "Left third action")
                     )
 
                     shortcutRow(
                         icon: "rectangle.center.inset.filled",
                         shortcut: "⌥ + ⌘ + ↑",
-                        description: "中央1/3"
+                        description: String(localized: "action.centerThird", bundle: .main, comment: "Center third action")
                     )
 
                     shortcutRow(
                         icon: "rectangle.trailingthird.inset.filled",
                         shortcut: "⌥ + ⌘ + →",
-                        description: "右1/3"
+                        description: String(localized: "action.rightThird", bundle: .main, comment: "Right third action")
                     )
                 }
                 .frame(maxWidth: .infinity)
 
                 // 右側: アプリ間移動と推奨設定
                 VStack(alignment: .leading, spacing: 12) {
-                    sectionHeader("アプリ間移動を活用")
+                    sectionHeader(String(localized: "howToUse.appSwitching", bundle: .main, comment: "App switching section"))
 
                     VStack(spacing: 8) {
                         HStack(spacing: 12) {
@@ -88,7 +88,7 @@ struct HowToUseModalView: View {
                                 .frame(width: 32)
 
                             VStack(alignment: .leading, spacing: 4) {
-                                Text("⌘ + Tab")
+                                Text("howToUse.cmdTab", bundle: .main, comment: "Cmd+Tab shortcut")
                                     .font(.system(.callout, design: .monospaced))
                                     .fontWeight(.semibold)
                                     .padding(.horizontal, 8)
@@ -96,7 +96,7 @@ struct HowToUseModalView: View {
                                     .background(Color.secondary.opacity(0.2))
                                     .cornerRadius(6)
 
-                                Text("アプリを素早く切り替え")
+                                Text("howToUse.cmdTabDesc", bundle: .main, comment: "Cmd+Tab description")
                                     .font(.caption)
                                     .foregroundColor(.secondary)
                             }
@@ -114,7 +114,7 @@ struct HowToUseModalView: View {
                                 .frame(width: 32)
 
                             VStack(alignment: .leading, spacing: 4) {
-                                Text("⌘ + M")
+                                Text("howToUse.minimizeDock", bundle: .main, comment: "Minimize dock shortcut")
                                     .font(.system(.callout, design: .monospaced))
                                     .fontWeight(.semibold)
                                     .padding(.horizontal, 8)
@@ -122,9 +122,10 @@ struct HowToUseModalView: View {
                                     .background(Color.secondary.opacity(0.2))
                                     .cornerRadius(6)
 
-                                Text("Dockに最小化（黄色ボタンと同じ）")
+                                Text("howToUse.minimizeDockDesc", bundle: .main, comment: "Minimize dock description")
                                     .font(.caption)
                                     .foregroundColor(.secondary)
+                                    .fixedSize(horizontal: false, vertical: true)
                             }
 
                             Spacer()
@@ -140,7 +141,7 @@ struct HowToUseModalView: View {
                                 .frame(width: 32)
 
                             VStack(alignment: .leading, spacing: 4) {
-                                Text("⌘ + Tab + ⌥")
+                                Text("howToUse.cmdTabOption", bundle: .main, comment: "Cmd+Tab+Option shortcut")
                                     .font(.system(.callout, design: .monospaced))
                                     .fontWeight(.semibold)
                                     .padding(.horizontal, 8)
@@ -148,7 +149,7 @@ struct HowToUseModalView: View {
                                     .background(Color.secondary.opacity(0.2))
                                     .cornerRadius(6)
 
-                                Text("最小化中のアプリ上で⌥押し、キーを離すことで解除")
+                                Text("howToUse.cmdTabOptionDesc", bundle: .main, comment: "Cmd+Tab+Option description")
                                     .font(.caption)
                                     .foregroundColor(.secondary)
                                     .fixedSize(horizontal: false, vertical: true)
@@ -164,18 +165,18 @@ struct HowToUseModalView: View {
                     Spacer()
                         .frame(height: 8)
 
-                    sectionHeader("推奨方法")
+                    sectionHeader(String(localized: "howToUse.recommendationsTitle", bundle: .main, comment: "Recommendations section"))
 
                     recommendationRow(
                         icon: "desktopcomputer",
-                        title: "デスクトップは一つだけ",
-                        description: "複数デスクトップを使わず、一つのデスクトップで作業"
+                        title: String(localized: "howToUse.recommendationsSingleDesktop", bundle: .main, comment: "Single desktop recommendation"),
+                        description: String(localized: "howToUse.recommendationsSingleDesktopDesc", bundle: .main, comment: "Single desktop description")
                     )
 
                     recommendationRow(
                         icon: "rectangle.3.group",
-                        title: "アプリ間移動を活用",
-                        description: "⌘+Tab でアプリを切り替えて効率的にウィンドウを管理"
+                        title: String(localized: "howToUse.appSwitching", bundle: .main, comment: "App switching recommendation"),
+                        description: String(localized: "howToUse.appSwitchingDesc", bundle: .main, comment: "App switching description")
                     )
                 }
                 .frame(maxWidth: .infinity)
@@ -188,7 +189,7 @@ struct HowToUseModalView: View {
             HStack {
                 Spacer()
 
-                Button("閉じる") {
+                Button(String(localized: "button.close", bundle: .main, comment: "Close button")) {
                     dismiss()
                 }
                 .keyboardShortcut(.defaultAction)
@@ -294,7 +295,7 @@ class HowToUseModalManager {
         )
 
         window.contentViewController = hostingController
-        window.title = "使い方"
+        window.title = String(localized: "window.howToUse", bundle: .main, comment: "How to use window title")
         window.center()
         window.level = .floating
         window.isReleasedWhenClosed = false
