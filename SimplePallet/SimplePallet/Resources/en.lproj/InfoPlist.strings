@@ -1,0 +1,8 @@
+/*
+  InfoPlist.strings
+  SimplePallet - English
+*/
+
+/* Accessibility permission usage description */
+"NSAccessibilityUsageDescription" = "SimplePallet uses accessibility features to control windows of other applications.";
+

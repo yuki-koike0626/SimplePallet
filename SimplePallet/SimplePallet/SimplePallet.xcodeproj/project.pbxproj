@@ -20,6 +20,8 @@
 		30CDC26F2EB72AD200F63660 /* MenuBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CDC25C2EB72AD200F63660 /* MenuBarController.swift */; };
 		30CDC2712EB72AD200F63660 /* SimplePalletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CDC26B2EB72AD200F63660 /* SimplePalletApp.swift */; };
 		30CDC2752EB72AD200F63660 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30CDC2682EB72AD200F63660 /* Assets.xcassets */; };
+		30CDC2762EB72AD200F63661 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 30CDC2772EB72AD200F63661 /* Localizable.xcstrings */; };
+		30CDC2782EB72AD200F63662 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30CDC2792EB72AD200F63662 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,9 @@
 		30CDC2682EB72AD200F63660 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30CDC26A2EB72AD200F63660 /* SimplePallet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimplePallet.entitlements; sourceTree = "<group>"; };
 		30CDC26B2EB72AD200F63660 /* SimplePalletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePalletApp.swift; sourceTree = "<group>"; };
+		30CDC2772EB72AD200F63661 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		30CDC27A2EB72AD200F63663 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		30CDC27B2EB72AD200F63664 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -126,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				30CDC2682EB72AD200F63660 /* Assets.xcassets */,
+				30CDC2772EB72AD200F63661 /* Localizable.xcstrings */,
+				30CDC2792EB72AD200F63662 /* InfoPlist.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -177,6 +184,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 30CDC2452EB7287500F63660;
 			minimizedProjectReferenceProxies = 1;
@@ -199,6 +207,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				30CDC2752EB72AD200F63660 /* Assets.xcassets in Resources */,
+				30CDC2762EB72AD200F63661 /* Localizable.xcstrings in Resources */,
+				30CDC2782EB72AD200F63662 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +234,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		30CDC2792EB72AD200F63662 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30CDC27A2EB72AD200F63663 /* ja */,
+				30CDC27B2EB72AD200F63664 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		30CDC2572EB7287600F63660 /* Debug */ = {
