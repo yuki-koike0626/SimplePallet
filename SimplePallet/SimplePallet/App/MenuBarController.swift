@@ -1,5 +1,6 @@
 import Cocoa
 import SwiftUI
+import Combine
 
 /**
  メニューバーの管理
@@ -10,9 +11,11 @@ import SwiftUI
 class MenuBarController {
     private var statusItem: NSStatusItem?
     private var settingsWindow: NSWindow?
+    private var cancellables = Set<AnyCancellable>()
 
     init() {
         setupMenuBar()
+        observeLanguageChanges()
     }
 
     private func setupMenuBar() {
@@ -34,19 +37,19 @@ class MenuBarController {
         let menu = NSMenu()
 
         // 設定
-        let settingsItem = NSMenuItem(title: String(localized: "menu.settings", bundle: .main, comment: "Settings menu item"), action: #selector(showSettings), keyEquivalent: ",")
+        let settingsItem = NSMenuItem(title: L("menu.settings"), action: #selector(showSettings), keyEquivalent: ",")
         settingsItem.target = self
         menu.addItem(settingsItem)
 
         // 使い方を見る
-        let howToUseItem = NSMenuItem(title: String(localized: "menu.howToUse", bundle: .main, comment: "How to use menu item"), action: #selector(showHowToUse), keyEquivalent: "")
+        let howToUseItem = NSMenuItem(title: L("menu.howToUse"), action: #selector(showHowToUse), keyEquivalent: "")
         howToUseItem.target = self
         menu.addItem(howToUseItem)
 
         menu.addItem(NSMenuItem.separator())
 
         // 終了
-        let quitItem = NSMenuItem(title: String(localized: "menu.quit", bundle: .main, comment: "Quit menu item"), action: #selector(quit), keyEquivalent: "q")
+        let quitItem = NSMenuItem(title: L("menu.quit"), action: #selector(quit), keyEquivalent: "q")
         quitItem.target = self
         menu.addItem(quitItem)
 
@@ -69,14 +72,14 @@ class MenuBarController {
         let hostingController = NSHostingController(rootView: settingsView)
 
         let window = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 500, height: 600),
+            contentRect: NSRect(x: 0, y: 0, width: 500, height: 700),
             styleMask: [.titled, .closable, .miniaturizable],
             backing: .buffered,
             defer: false
         )
 
         window.contentViewController = hostingController
-        window.title = String(localized: "window.settings", bundle: .main, comment: "Settings window title")
+        window.title = L("window.settings")
         window.center()
         window.isReleasedWhenClosed = false
 
@@ -99,6 +102,32 @@ class MenuBarController {
      */
     @objc private func quit() {
         NSApplication.shared.terminate(nil)
+    }
+
+    /**
+     言語変更を監視してメニューを更新
+     */
+    private func observeLanguageChanges() {
+        LanguageManager.shared.languageDidChange
+            .sink { [weak self] _ in
+                self?.setupMenu()
+                self?.closeAndReopenSettingsIfNeeded()
+            }
+            .store(in: &cancellables)
+    }
+
+    /**
+     設定ウィンドウが開いている場合は閉じて再度開く
+     */
+    private func closeAndReopenSettingsIfNeeded() {
+        if let window = settingsWindow, window.isVisible {
+            window.close()
+            settingsWindow = nil
+            // 少し待ってから再度開く
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { [weak self] in
+                self?.showSettings()
+            }
+        }
     }
 }
 

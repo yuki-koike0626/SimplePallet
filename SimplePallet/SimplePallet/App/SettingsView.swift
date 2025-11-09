@@ -9,19 +9,26 @@ import KeyboardShortcuts
  */
 struct SettingsView: View {
     @ObservedObject private var settings = AppSettings.shared
+    @ObservedObject private var languageManager = LanguageManager.shared
     @State private var hasPermission = AccessibilityPermission.isGranted()
     @State private var saveFeedback: SaveFeedback?
     @State private var feedbackDismissWorkItem: DispatchWorkItem?
+    @State private var refreshID = UUID()
 
     var body: some View {
         VStack(spacing: 20) {
             // ヘッダー
-            Text("settings.title", bundle: .main, comment: "Settings title")
+            LText("settings.title")
                 .font(.title)
                 .padding(.top)
 
             // アクセシビリティ権限セクション
             permissionSection
+
+            Divider()
+
+            // 言語設定セクション
+            languageSection
 
             Divider()
 
@@ -39,9 +46,17 @@ struct SettingsView: View {
             footer
         }
         .padding()
-        .frame(width: 500, height: 600)
+        .frame(width: 500)
+        .fixedSize(horizontal: false, vertical: true)
+        .id(refreshID)
         .onAppear {
             checkPermission()
+        }
+        .onReceive(languageManager.languageDidChange) { _ in
+            // 言語変更時にビュー全体を再描画
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                refreshID = UUID()
+            }
         }
     }
 
@@ -49,31 +64,31 @@ struct SettingsView: View {
 
     private var permissionSection: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("settings.accessibility", bundle: .main, comment: "Accessibility permission section")
+            LText("settings.accessibility")
                 .font(.headline)
 
             HStack {
                 Image(systemName: hasPermission ? "checkmark.circle.fill" : "xmark.circle.fill")
                     .foregroundColor(hasPermission ? .green : .red)
 
-                Text(hasPermission ? String(localized: "settings.permissionGranted", bundle: .main, comment: "Permission granted") : String(localized: "settings.permissionRequired", bundle: .main, comment: "Permission required"))
+                Text(hasPermission ? L("settings.permissionGranted") : L("settings.permissionRequired"))
                     .foregroundColor(.secondary)
 
                 Spacer()
 
                 if !hasPermission {
-                    Button(String(localized: "button.openSettings", bundle: .main, comment: "Open settings button")) {
+                    Button(L("button.openSettings")) {
                         AccessibilityPermission.openSystemPreferences()
                     }
 
-                    Button(String(localized: "button.checkAgain", bundle: .main, comment: "Check again button")) {
+                    Button(L("button.checkAgain")) {
                         checkPermission()
                     }
                 }
             }
 
             if !hasPermission {
-                Text("settings.accessibilityDescription", bundle: .main, comment: "Accessibility description")
+                LText("settings.accessibilityDescription")
                     .font(.caption)
                     .foregroundColor(.secondary)
             }
@@ -82,14 +97,14 @@ struct SettingsView: View {
 
     private var shortcutSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("settings.customizeShortcuts", bundle: .main, comment: "Customize shortcuts section")
+            LText("settings.customizeShortcuts")
                 .font(.headline)
 
             VStack(spacing: 10) {
                 // 最大化
                 HStack {
                     Spacer()
-                    Text("action.maximize", bundle: .main, comment: "Maximize action")
+                    LText("action.maximize")
                         .frame(width: 80, alignment: .trailing)
                     KeyboardShortcuts.Recorder(for: .maximize)
                         .frame(width: 200, alignment: .leading)
@@ -99,7 +114,7 @@ struct SettingsView: View {
                 // 左半分
                 HStack {
                     Spacer()
-                    Text("action.left", bundle: .main, comment: "Left half action")
+                    LText("action.left")
                         .frame(width: 80, alignment: .trailing)
                     KeyboardShortcuts.Recorder(for: .left)
                         .frame(width: 200, alignment: .leading)
@@ -109,7 +124,7 @@ struct SettingsView: View {
                 // 右半分
                 HStack {
                     Spacer()
-                    Text("action.right", bundle: .main, comment: "Right half action")
+                    LText("action.right")
                         .frame(width: 80, alignment: .trailing)
                     KeyboardShortcuts.Recorder(for: .right)
                         .frame(width: 200, alignment: .leading)
@@ -120,7 +135,7 @@ struct SettingsView: View {
             Divider()
                 .padding(.vertical, 4)
 
-            Text("settings.thirdSplit", bundle: .main, comment: "Third split section")
+            LText("settings.thirdSplit")
                 .font(.subheadline)
                 .foregroundColor(.secondary)
 
@@ -128,7 +143,7 @@ struct SettingsView: View {
                 // 左1/3
                 HStack {
                     Spacer()
-                    Text("action.leftThird", bundle: .main, comment: "Left third action")
+                    LText("action.leftThird")
                         .frame(width: 80, alignment: .trailing)
                     KeyboardShortcuts.Recorder(for: .leftThird)
                         .frame(width: 200, alignment: .leading)
@@ -138,7 +153,7 @@ struct SettingsView: View {
                 // 中央1/3
                 HStack {
                     Spacer()
-                    Text("action.centerThird", bundle: .main, comment: "Center third action")
+                    LText("action.centerThird")
                         .frame(width: 80, alignment: .trailing)
                     KeyboardShortcuts.Recorder(for: .centerThird)
                         .frame(width: 200, alignment: .leading)
@@ -148,7 +163,7 @@ struct SettingsView: View {
                 // 右1/3
                 HStack {
                     Spacer()
-                    Text("action.rightThird", bundle: .main, comment: "Right third action")
+                    LText("action.rightThird")
                         .frame(width: 80, alignment: .trailing)
                     KeyboardShortcuts.Recorder(for: .rightThird)
                         .frame(width: 200, alignment: .leading)
@@ -158,11 +173,42 @@ struct SettingsView: View {
         }
     }
 
+    private var languageSection: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            LText("settings.language")
+                .font(.headline)
+
+            HStack {
+                Spacer()
+
+                Picker("", selection: Binding(
+                    get: { languageManager.currentLanguage },
+                    set: { languageManager.changeLanguage($0) }
+                )) {
+                    ForEach(AppLanguage.allCases, id: \.self) { language in
+                        Text(language.displayName)
+                            .tag(language)
+                    }
+                }
+                .pickerStyle(.menu)
+                .frame(width: 200)
+
+                Spacer()
+            }
+
+            LText("settings.languageDescription")
+                .font(.caption)
+                .foregroundColor(.secondary)
+                .multilineTextAlignment(.center)
+                .frame(maxWidth: .infinity)
+        }
+    }
+
     private var generalSection: some View {
         VStack(alignment: .center, spacing: 12) {
-            Toggle(String(localized: "settings.launchAtLogin", bundle: .main, comment: "Launch at login toggle"), isOn: $settings.launchAtLogin)
+            Toggle(L("settings.launchAtLogin"), isOn: $settings.launchAtLogin)
 
-            Button(String(localized: "button.save", bundle: .main, comment: "Save button")) {
+            Button(L("button.save")) {
                 saveSettings()
             }
             .buttonStyle(.borderedProminent)
@@ -183,11 +229,11 @@ struct SettingsView: View {
 
     private var footer: some View {
         VStack(spacing: 5) {
-            Text("app.version", bundle: .main, comment: "App version")
+            LText("app.version")
                 .font(.caption)
                 .foregroundColor(.secondary)
 
-            Text("app.copyright", bundle: .main, comment: "Copyright")
+            LText("app.copyright")
                 .font(.caption2)
                 .foregroundColor(.secondary)
         }
@@ -234,9 +280,9 @@ struct SettingsView: View {
         var message: String {
             switch self {
             case .success:
-                return String(localized: "settings.saveSuccess", bundle: .main, comment: "Save success message")
+                return L("settings.saveSuccess")
             case .failure(let error):
-                return String(localized: "settings.saveFailed", bundle: .main, comment: "Save failed message").replacingOccurrences(of: "%@", with: error)
+                return L("settings.saveFailed").replacingOccurrences(of: "%@", with: error)
             }
         }
 
