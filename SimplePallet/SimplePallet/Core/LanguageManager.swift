@@ -23,19 +23,21 @@ class LanguageManager: ObservableObject {
 
     private init() {
         // 保存されている言語設定を読み込む
+        let language: AppLanguage
         if let savedLanguageRawValue = UserDefaults.standard.string(forKey: userDefaultsKey),
            let savedLanguage = AppLanguage(rawValue: savedLanguageRawValue) {
-            self.currentLanguage = savedLanguage
+            language = savedLanguage
         } else {
             // 初回起動時はシステムに従う
-            self.currentLanguage = .system
+            language = .system
         }
 
-        // 初期Bundleを設定
-        self.currentBundle = Bundle.main
+        // プロパティを初期化
+        self.currentLanguage = language
+        self.currentBundle = Self.resolveBundle(for: language)
 
         // 起動時に言語を適用
-        applyLanguage(currentLanguage)
+        applyLanguage(language)
     }
 
     /**
@@ -71,24 +73,48 @@ class LanguageManager: ObservableObject {
         if let languageCode = language.languageCode {
             // 特定の言語コードを設定
             UserDefaults.standard.set([languageCode], forKey: "AppleLanguages")
-
-            // Bundleを動的に変更
-            if let path = Bundle.main.path(forResource: languageCode, ofType: "lproj"),
-               let bundle = Bundle(path: path) {
-                self.currentBundle = bundle
-            } else {
-                self.currentBundle = Bundle.main
-            }
         } else {
             // システム言語に従う（AppleLanguagesをリセット）
             UserDefaults.standard.removeObject(forKey: "AppleLanguages")
-            self.currentBundle = Bundle.main
         }
 
         UserDefaults.standard.synchronize()
 
+        // Bundleを動的に変更
+        self.currentBundle = Self.resolveBundle(for: language)
+
         // Bundleの変更を通知
         objectWillChange.send()
+    }
+
+    /**
+     指定された言語に対応するBundleを解決する
+
+     システム言語の場合は、システムの優先言語から適切なBundleを選択する。
+     単一責任: Bundleの解決ロジックのみを担当。
+
+     - Parameter language: 対象の言語
+     - Returns: 解決されたBundle
+     */
+    private static func resolveBundle(for language: AppLanguage) -> Bundle {
+        // システム言語の場合は、システムの優先言語から判定
+        let effectiveLanguageCode: String?
+        if language == .system {
+            // システムの優先言語からアプリがサポートしている言語を取得
+            effectiveLanguageCode = AppLanguage.fromSystemLanguage().languageCode
+        } else {
+            effectiveLanguageCode = language.languageCode
+        }
+
+        // 言語コードに対応するBundleを取得
+        if let languageCode = effectiveLanguageCode,
+           let path = Bundle.main.path(forResource: languageCode, ofType: "lproj"),
+           let bundle = Bundle(path: path) {
+            return bundle
+        }
+
+        // フォールバック: メインBundle
+        return Bundle.main
     }
 
     /**
@@ -97,10 +123,13 @@ class LanguageManager: ObservableObject {
      - Returns: 言語コード（システム言語の場合はシステムの言語）
      */
     func getEffectiveLanguageCode() -> String {
-        if let languageCode = currentLanguage.languageCode {
+        if currentLanguage == .system {
+            // システム言語の場合は、実際のシステム言語コードを返す
+            return AppLanguage.fromSystemLanguage().languageCode ?? "ja"
+        } else if let languageCode = currentLanguage.languageCode {
             return languageCode
         } else {
-            return Locale.preferredLanguages.first ?? "ja"
+            return "ja"
         }
     }
 
