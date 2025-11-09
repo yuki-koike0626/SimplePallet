@@ -15,6 +15,24 @@
             "state" : "translated",
             "value" : "中央1/3"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "중앙 1/3"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "居中 1/3"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "置中 1/3"
+          }
         }
       }
     },
@@ -31,6 +49,24 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "左半分"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "왼쪽 절반"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "左半边"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "左半邊"
           }
         }
       }
@@ -49,6 +85,24 @@
             "state" : "translated",
             "value" : "左1/3"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "왼쪽 1/3"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "左侧 1/3"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "左側 1/3"
+          }
         }
       }
     },
@@ -62,6 +116,24 @@
           }
         },
         "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最大化"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "최대화"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最大化"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "最大化"
@@ -83,6 +155,24 @@
             "state" : "translated",
             "value" : "右半分"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오른쪽 절반"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "右半边"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "右半邊"
+          }
         }
       }
     },
@@ -99,6 +189,24 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "右1/3"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오른쪽 1/3"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "右侧 1/3"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "右側 1/3"
           }
         }
       }
@@ -117,6 +225,24 @@
             "state" : "translated",
             "value" : "© 2025 SimplePallet. All rights reserved."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "© 2025 SimplePallet. All rights reserved."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "© 2025 SimplePallet. 保留所有权利。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "© 2025 SimplePallet. 保留所有權利。"
+          }
         }
       }
     },
@@ -130,6 +256,24 @@
           }
         },
         "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SimplePallet v1.0"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SimplePallet v1.0"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SimplePallet v1.0"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "SimplePallet v1.0"
@@ -151,6 +295,24 @@
             "state" : "translated",
             "value" : "再確認"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다시 확인"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重新检查"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重新檢查"
+          }
         }
       }
     },
@@ -167,6 +329,24 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "閉じる"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "닫기"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关闭"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "關閉"
           }
         }
       }
@@ -185,6 +365,24 @@
             "state" : "translated",
             "value" : "設定を開く"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "설정 열기"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开设置"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開啟設定"
+          }
         }
       }
     },
@@ -201,6 +399,24 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "保存する"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "저장"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保存"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "儲存"
           }
         }
       }
@@ -219,6 +435,24 @@
             "state" : "translated",
             "value" : "アプリ間移動を活用"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "앱 전환 활용"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "善用应用切换"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "善用應用程式切換"
+          }
         }
       }
     },
@@ -236,6 +470,24 @@
             "state" : "translated",
             "value" : "⌘+Tab でアプリを切り替えて効率的にウィンドウを管理"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⌘+Tab으로 앱을 전환하여 효율적으로 윈도우 관리"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用 ⌘+Tab 切换应用以高效管理窗口"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用 ⌘+Tab 切換應用程式以高效管理視窗"
+          }
         }
       }
     },
@@ -249,6 +501,24 @@
           }
         },
         "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⌘ + Tab"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⌘ + Tab"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⌘ + Tab"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "⌘ + Tab"
@@ -270,6 +540,24 @@
             "state" : "translated",
             "value" : "アプリを素早く切り替え"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "빠르게 앱 전환"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "快速切换应用"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "快速切換應用程式"
+          }
         }
       }
     },
@@ -283,6 +571,24 @@
           }
         },
         "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⌘ + Tab + ⌥"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⌘ + Tab + ⌥"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⌘ + Tab + ⌥"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "⌘ + Tab + ⌥"
@@ -304,6 +610,24 @@
             "state" : "translated",
             "value" : "最小化中のアプリ上で⌥押し、キーを離すことで解除"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "최소화된 앱에서 ⌥ 누른 상태로 키를 떼면 복원"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在最小化的应用上按住 ⌥，松开按键即可恢复"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在最小化的應用程式上按住 ⌥，放開按鍵即可還原"
+          }
         }
       }
     },
@@ -321,6 +645,24 @@
             "state" : "translated",
             "value" : "SimplePalletとは、macOS向けのシンプルなウィンドウ管理アプリです。キーボードショートカットで最前面ウィンドウを「最大化 / 2分割 / 3分割」に瞬間的に切り替えることができます。素早いパソコン操作を行うための習慣を作ります"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SimplePallet은 macOS를 위한 간단한 윈도우 관리 앱입니다. 키보드 단축키로 최전면 윈도우를 '최대화 / 2분할 / 3분할'로 즉시 전환할 수 있습니다. 빠른 컴퓨터 작업을 위한 습관을 만들어보세요"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SimplePallet 是一款适用于 macOS 的简洁窗口管理应用。您可以通过键盘快捷键瞬间将最前面的窗口切换为「最大化 / 二分屏 / 三分屏」。培养高效电脑操作的习惯"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SimplePallet 是一款適用於 macOS 的簡潔視窗管理應用程式。您可以透過鍵盤快速鍵瞬間將最前面的視窗切換為「最大化 / 二分割 / 三分割」。養成高效電腦操作的習慣"
+          }
         }
       }
     },
@@ -334,6 +676,24 @@
           }
         },
         "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⌘ + M"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⌘ + M"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⌘ + M"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "⌘ + M"
@@ -355,6 +715,24 @@
             "state" : "translated",
             "value" : "Dockに最小化（黄色ボタンと同じ）"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dock에 최소화 (노란색 버튼과 동일)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最小化到程序坞（与黄色按钮相同）"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最小化到 Dock（與黃色按鈕相同）"
+          }
         }
       }
     },
@@ -371,6 +749,24 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "デスクトップは一つだけ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "단일 데스크톱 사용"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用单个桌面"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用單一桌面"
           }
         }
       }
@@ -389,6 +785,24 @@
             "state" : "translated",
             "value" : "複数デスクトップを使わず、一つのデスクトップで作業"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "여러 데스크톱 대신 하나의 데스크톱에서 작업"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不使用多个桌面，在单个桌面上工作"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不使用多個桌面，在單一桌面上作業"
+          }
         }
       }
     },
@@ -405,6 +819,24 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "推奨方法"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "권장 사항"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "推荐方法"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "建議方法"
           }
         }
       }
@@ -423,6 +855,24 @@
             "state" : "translated",
             "value" : "ショートカットキー(デフォルト)"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "키보드 단축키 (기본값)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "键盘快捷键（默认）"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "鍵盤快速鍵（預設）"
+          }
         }
       }
     },
@@ -439,6 +889,24 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "3分割は⌥を加えただけ(デフォルト)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3분할: ⌥만 추가 (기본값)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "三分屏：只需添加 ⌥（默认）"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "三分割：只需添加 ⌥（預設）"
           }
         }
       }
@@ -457,6 +925,24 @@
             "state" : "translated",
             "value" : "Simple Pallet の使い方"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SimplePallet 사용 방법"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SimplePallet 使用方法"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SimplePallet 使用方法"
+          }
         }
       }
     },
@@ -473,6 +959,24 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "使い方を見る"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사용 방법 보기"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "查看使用方法"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "查看使用方法"
           }
         }
       }
@@ -491,6 +995,24 @@
             "state" : "translated",
             "value" : "SimplePalletを終了"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SimplePallet 종료"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "退出 SimplePallet"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "結束 SimplePallet"
+          }
         }
       }
     },
@@ -504,6 +1026,24 @@
           }
         },
         "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定..."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "설정..."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设置..."
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "設定..."
@@ -525,6 +1065,24 @@
             "state" : "translated",
             "value" : "アクセシビリティ権限"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "접근성 권한"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "辅助功能权限"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "輔助使用權限"
+          }
         }
       }
     },
@@ -541,6 +1099,24 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ウィンドウを操作するには、システム環境設定でアクセシビリティ権限を許可してください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "윈도우를 제어하려면 시스템 설정에서 접근성 권한을 허용해 주세요."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "要控制窗口，请在系统设置中授予辅助功能权限。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "要控制視窗，請在系統設定中授予輔助使用權限。"
           }
         }
       }
@@ -559,6 +1135,24 @@
             "state" : "translated",
             "value" : "ショートカットをカスタマイズ"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "단축키 사용자 지정"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自定义快捷键"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自訂快速鍵"
+          }
         }
       }
     },
@@ -575,6 +1169,24 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ログイン時に自動起動"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "로그인 시 자동 실행"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "登录时自动启动"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "登入時自動啟動"
           }
         }
       }
@@ -593,6 +1205,24 @@
             "state" : "translated",
             "value" : "許可されています"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "허용됨"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已授权"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已授權"
+          }
         }
       }
     },
@@ -609,6 +1239,24 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "権限が必要です"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "권한 필요"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "需要权限"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "需要權限"
           }
         }
       }
@@ -627,6 +1275,24 @@
             "state" : "translated",
             "value" : "保存に失敗しました: %@"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "저장 실패: %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保存失败：%@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "儲存失敗：%@"
+          }
         }
       }
     },
@@ -643,6 +1309,24 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "設定を保存しました"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "설정이 저장되었습니다"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设置已保存"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定已儲存"
           }
         }
       }
@@ -661,6 +1345,24 @@
             "state" : "translated",
             "value" : "3分割"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3분할"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "三分屏"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "三分割"
+          }
         }
       }
     },
@@ -674,6 +1376,24 @@
           }
         },
         "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SimplePallet 設定"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SimplePallet 설정"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SimplePallet 设置"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "SimplePallet 設定"
@@ -695,6 +1415,24 @@
             "state" : "translated",
             "value" : "エラーが発生しました"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오류가 발생했습니다"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "发生错误"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "發生錯誤"
+          }
         }
       }
     },
@@ -711,6 +1449,24 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "情報メッセージ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "정보 메시지"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "信息消息"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "資訊訊息"
           }
         }
       }
@@ -729,6 +1485,24 @@
             "state" : "translated",
             "value" : "使い方"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사용 방법"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用方法"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用方法"
+          }
         }
       }
     },
@@ -746,10 +1520,27 @@
             "state" : "translated",
             "value" : "設定"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "설정"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设置"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定"
+          }
         }
       }
     }
   },
   "version" : "1.0"
 }
-
