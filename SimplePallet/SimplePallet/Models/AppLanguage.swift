@@ -36,7 +36,7 @@ enum AppLanguage: String, CaseIterable, Codable {
     var displayName: String {
         switch self {
         case .system:
-            return "システムに従う"
+            return L("language.system")
         case .japanese:
             return "日本語"
         case .english:
