@@ -25,6 +25,24 @@ enum SnappingAction: String, CaseIterable, Codable {
         }
     }
 
+    /// メニューバー表示用のSF Symbolsアイコン名
+    var iconName: String {
+        switch self {
+        case .maximize:
+            return "rectangle.fill"
+        case .left:
+            return "rectangle.lefthalf.filled"
+        case .right:
+            return "rectangle.righthalf.filled"
+        case .leftThird:
+            return "rectangle.leftthird.inset.filled"
+        case .centerThird:
+            return "rectangle.center.inset.filled"
+        case .rightThird:
+            return "rectangle.rightthird.inset.filled"
+        }
+    }
+
     /// KeyboardShortcutsライブラリで使用するユニークな識別子
     var shortcutName: String {
         return "com.yuki.SimplePallet.\(rawValue)"
