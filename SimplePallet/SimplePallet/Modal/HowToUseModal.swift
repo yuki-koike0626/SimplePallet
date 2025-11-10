@@ -30,53 +30,74 @@ struct HowToUseModalView: View {
             Divider()
 
             HStack(alignment: .top, spacing: 16) {
-                // 左側: 2分割ショートカットキー
+                // 左側と中央: ショートカットキーセクション
                 VStack(alignment: .leading, spacing: 12) {
-                    sectionHeader(L("howToUse.shortcutKeys"))
+                    HStack(alignment: .top, spacing: 16) {
+                        // 左側: 2分割ショートカットキー
+                        VStack(alignment: .leading, spacing: 12) {
+                            sectionHeader(L("howToUse.shortcutKeys"))
 
-                    shortcutRow(
-                        icon: "rectangle.fill",
-                        shortcut: "⌘ + ↑",
-                        description: L("action.maximize")
-                    )
+                            shortcutRow(
+                                icon: "rectangle.fill",
+                                shortcut: "⌘ + ↑",
+                                description: L("action.maximize")
+                            )
 
-                    shortcutRow(
-                        icon: "rectangle.lefthalf.filled",
-                        shortcut: "⌘ + ←",
-                        description: L("action.left")
-                    )
+                            shortcutRow(
+                                icon: "rectangle.lefthalf.filled",
+                                shortcut: "⌘ + ←",
+                                description: L("action.left")
+                            )
 
-                    shortcutRow(
-                        icon: "rectangle.righthalf.filled",
-                        shortcut: "⌘ + →",
-                        description: L("action.right")
-                    )
+                            shortcutRow(
+                                icon: "rectangle.righthalf.filled",
+                                shortcut: "⌘ + →",
+                                description: L("action.right")
+                            )
+                        }
+                        .frame(maxWidth: .infinity)
+
+                        // 中央: 3分割の場合
+                        VStack(alignment: .leading, spacing: 12) {
+                            sectionHeader(L("howToUse.thirdSplit"))
+
+                            shortcutRow(
+                                icon: "rectangle.leadingthird.inset.filled",
+                                shortcut: "⌥ + ⌘ + ←",
+                                description: L("action.leftThird")
+                            )
+
+                            shortcutRow(
+                                icon: "rectangle.center.inset.filled",
+                                shortcut: "⌥ + ⌘ + ↑",
+                                description: L("action.centerThird")
+                            )
+
+                            shortcutRow(
+                                icon: "rectangle.trailingthird.inset.filled",
+                                shortcut: "⌥ + ⌘ + →",
+                                description: L("action.rightThird")
+                            )
+                        }
+                        .frame(maxWidth: .infinity)
+                    }
+
+                    Spacer()
+                        .frame(height: 8)
+
+                    // よくあるミスセクション
+                    HStack(alignment: .top, spacing: 16) {
+                        VStack(alignment: .leading, spacing: 12) {
+                            sectionHeader(L("howToUse.commonMistakes"))
+                            warningBox(text: L("howToUse.fullscreenWarning"))
+                        }
+                        .frame(maxWidth: .infinity)
+
+                        Spacer()
+                            .frame(maxWidth: .infinity)
+                    }
                 }
-                .frame(maxWidth: .infinity)
-
-                // 中央: 3分割の場合
-                VStack(alignment: .leading, spacing: 12) {
-                    sectionHeader(L("howToUse.thirdSplit"))
-
-                    shortcutRow(
-                        icon: "rectangle.leadingthird.inset.filled",
-                        shortcut: "⌥ + ⌘ + ←",
-                        description: L("action.leftThird")
-                    )
-
-                    shortcutRow(
-                        icon: "rectangle.center.inset.filled",
-                        shortcut: "⌥ + ⌘ + ↑",
-                        description: L("action.centerThird")
-                    )
-
-                    shortcutRow(
-                        icon: "rectangle.trailingthird.inset.filled",
-                        shortcut: "⌥ + ⌘ + →",
-                        description: L("action.rightThird")
-                    )
-                }
-                .frame(maxWidth: .infinity)
+                .frame(minWidth: 600, maxWidth: .infinity)
 
                 // 右側: アプリ間移動と推奨設定
                 VStack(alignment: .leading, spacing: 12) {
@@ -181,7 +202,7 @@ struct HowToUseModalView: View {
                         description: L("howToUse.appSwitchingDesc")
                     )
                 }
-                .frame(maxWidth: .infinity)
+                .frame(maxWidth: 250)
             }
             .padding(.horizontal, 4)
 
@@ -199,7 +220,7 @@ struct HowToUseModalView: View {
             }
         }
         .padding(24)
-        .frame(width: 900, height: 680)
+        .frame(width: 900)
         .id(refreshID)
         .onReceive(LanguageManager.shared.languageDidChange) { _ in
             // 言語変更時にビュー全体を再描画
@@ -215,6 +236,24 @@ struct HowToUseModalView: View {
         Text(title)
             .font(.headline)
             .foregroundColor(.primary)
+    }
+
+    private func warningBox(text: String) -> some View {
+        HStack(alignment: .top, spacing: 12) {
+            Image(systemName: "exclamationmark.triangle.fill")
+                .font(.title3)
+                .foregroundColor(.orange)
+                .frame(width: 24, alignment: .top)
+                .padding(.top, 2)
+
+            Text(text)
+                .font(.body)
+                .foregroundColor(.primary)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .padding(16)
+        .background(Color.orange.opacity(0.1))
+        .cornerRadius(8)
     }
 
     private func shortcutRow(icon: String, shortcut: String, description: String) -> some View {
@@ -300,7 +339,7 @@ class HowToUseModalManager {
 
         // ウィンドウを作成
         let window = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 900, height: 680),
+            contentRect: NSRect(x: 0, y: 0, width: 900, height: 700),
             styleMask: [.titled, .closable, .fullSizeContentView],
             backing: .buffered,
             defer: false
@@ -312,6 +351,9 @@ class HowToUseModalManager {
         window.level = .floating
         window.isReleasedWhenClosed = false
         window.titlebarAppearsTransparent = true
+
+        // コンテンツに合わせてウィンドウサイズを調整
+        window.setContentSize(hostingController.view.fittingSize)
 
         // ウィンドウを表示
         window.makeKeyAndOrderFront(nil)

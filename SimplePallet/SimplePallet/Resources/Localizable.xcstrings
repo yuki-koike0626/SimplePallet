@@ -952,6 +952,41 @@
         }
       }
     },
+    "howToUse.commonMistakes" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Common Mistakes"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "よくあるミス"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "자주 하는 실수"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "常见错误"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "常見錯誤"
+          }
+        }
+      }
+    },
     "howToUse.description" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1053,6 +1088,41 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "最小化到 Dock（與黃色按鈕相同）"
+          }
+        }
+      }
+    },
+    "howToUse.fullscreenWarning" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Window splitting is not available in full screen mode (when enlarged with green button 🟢). To use it, press the green button 🟢 to exit full screen mode. We recommend not using full screen, but using maximize (⌘+↑) to enlarge the window instead."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全画面表示(左上の緑ボタン🟢で大きくしてる場合)は画面分割が使えません。使いたい場合は緑ボタン🟢を押して全画面表示を解除してください。全画面表示は使わず、最大化(⌘+↑)で画面を大きくする方法を推奨しています。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "전체 화면 모드(녹색 버튼 🟢으로 확대한 경우)에서는 화면 분할을 사용할 수 없습니다. 사용하려면 녹색 버튼 🟢을 눌러 전체 화면 모드를 종료하세요. 전체 화면은 사용하지 않고 최대화(⌘+↑)로 화면을 크게 하는 것을 권장합니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全屏模式（用绿色按钮 🟢 放大时）无法使用窗口分割。如需使用，请按绿色按钮 🟢 退出全屏模式。我们建议不使用全屏模式，而是使用最大化 (⌘+↑) 来放大窗口。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全螢幕模式（用綠色按鈕 🟢 放大時）無法使用視窗分割。如需使用，請按綠色按鈕 🟢 退出全螢幕模式。我們建議不使用全螢幕模式，而是使用最大化 (⌘+↑) 來放大視窗。"
           }
         }
       }
