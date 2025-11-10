@@ -98,3 +98,85 @@ extension KeyboardShortcuts.Name {
     static let centerThird = Self("com.yuki.SimplePallet.centerThird", default: .init(.upArrow, modifiers: [.option, .command]))
     static let rightThird = Self("com.yuki.SimplePallet.rightThird", default: .init(.rightArrow, modifiers: [.option, .command]))
 }
+
+// MARK: - ShortcutFormatter
+
+/**
+ ショートカットキー表示のフォーマット処理
+
+ KeyboardShortcutsライブラリから取得したショートカット情報を、
+ メニューバーで表示可能な文字列に変換する。
+ 単一責任の原則: ショートカットキーの表示文字列生成のみを担当。
+ */
+enum ShortcutFormatter {
+
+    /**
+     ショートカットキーの表示文字列を取得
+
+     - Parameter name: KeyboardShortcuts.Name
+     - Returns: 表示用の文字列（例: "⌘↑"）。未設定の場合は空文字列
+     */
+    static func displayString(for name: KeyboardShortcuts.Name) -> String {
+        guard let shortcut = KeyboardShortcuts.getShortcut(for: name) else {
+            return ""
+        }
+
+        return formatShortcut(shortcut)
+    }
+
+    /**
+     ショートカット情報を表示文字列に変換
+
+     - Parameter shortcut: KeyboardShortcuts.Shortcut
+     - Returns: フォーマット済み文字列（例: "⌥⌘←"）
+     */
+    private static func formatShortcut(_ shortcut: KeyboardShortcuts.Shortcut) -> String {
+        var result = ""
+
+        // モディファイアキーの順序: Control → Option → Shift → Command
+        if shortcut.modifiers.contains(.control) {
+            result += "⌃"
+        }
+        if shortcut.modifiers.contains(.option) {
+            result += "⌥"
+        }
+        if shortcut.modifiers.contains(.shift) {
+            result += "⇧"
+        }
+        if shortcut.modifiers.contains(.command) {
+            result += "⌘"
+        }
+
+        // キーの記号化
+        result += keySymbol(for: shortcut.key)
+
+        return result
+    }
+
+    /**
+     キーコードを表示用の記号に変換
+
+     - Parameter key: KeyboardShortcuts.Key
+     - Returns: 表示用の記号（例: "↑"）
+     */
+    private static func keySymbol(for key: KeyboardShortcuts.Key?) -> String {
+        guard let key = key else {
+            return ""
+        }
+
+        // よく使われる矢印キー
+        switch key {
+        case .upArrow:
+            return "↑"
+        case .downArrow:
+            return "↓"
+        case .leftArrow:
+            return "←"
+        case .rightArrow:
+            return "→"
+        default:
+            // その他のキーは空文字を返す（複雑なキーは表示しない）
+            return ""
+        }
+    }
+}

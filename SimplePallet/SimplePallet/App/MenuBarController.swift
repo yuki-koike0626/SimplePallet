@@ -36,6 +36,11 @@ class MenuBarController {
     private func setupMenu() {
         let menu = NSMenu()
 
+        // ウィンドウ操作セクション
+        addWindowActionsSection(to: menu)
+
+        menu.addItem(NSMenuItem.separator())
+
         // 設定
         let settingsItem = NSMenuItem(title: L("menu.settings"), action: #selector(showSettings), keyEquivalent: ",")
         settingsItem.target = self
@@ -114,6 +119,160 @@ class MenuBarController {
      */
     @objc private func quit() {
         NSApplication.shared.terminate(nil)
+    }
+
+    // MARK: - Window Actions
+
+    /**
+     ウィンドウ操作メニューセクションを追加
+
+     最大化、左半分、右半分のメニュー項目を作成し、
+     現在設定されているショートカットキーを表示する。
+     */
+    private func addWindowActionsSection(to menu: NSMenu) {
+        // 最大化
+        let maximizeItem = createWindowActionMenuItem(
+            action: .maximize,
+            selector: #selector(executeMaximize)
+        )
+        menu.addItem(maximizeItem)
+
+        // 左半分
+        let leftItem = createWindowActionMenuItem(
+            action: .left,
+            selector: #selector(executeLeft)
+        )
+        menu.addItem(leftItem)
+
+        // 右半分
+        let rightItem = createWindowActionMenuItem(
+            action: .right,
+            selector: #selector(executeRight)
+        )
+        menu.addItem(rightItem)
+    }
+
+    /**
+     ウィンドウ操作用のメニュー項目を作成
+
+     - Parameters:
+       - action: SnappingAction
+       - selector: 実行するセレクタ
+     - Returns: 設定済みのNSMenuItem
+     */
+    private func createWindowActionMenuItem(
+        action: SnappingAction,
+        selector: Selector
+    ) -> NSMenuItem {
+        let item = NSMenuItem(
+            title: action.displayName,
+            action: selector,
+            keyEquivalent: ""
+        )
+        item.target = self
+
+        // アイコンを設定
+        if let icon = NSImage(systemSymbolName: action.iconName, accessibilityDescription: action.displayName) {
+            item.image = icon
+        }
+
+        return item
+    }
+
+    /**
+     最大化を実行
+     */
+    @objc private func executeMaximize() {
+        executeWindowAction(.maximize)
+    }
+
+    /**
+     左半分に移動を実行
+     */
+    @objc private func executeLeft() {
+        executeWindowAction(.left)
+    }
+
+    /**
+     右半分に移動を実行
+     */
+    @objc private func executeRight() {
+        executeWindowAction(.right)
+    }
+
+    /**
+     ウィンドウ操作を実行する共通メソッド
+
+     アクセシビリティ権限のチェックと、実際のウィンドウ操作を行う。
+     エラー時にはトーストでユーザーに通知する。
+     */
+    private func executeWindowAction(_ action: SnappingAction) {
+        // アクセシビリティ権限チェック
+        guard AccessibilityPermission.isGranted() else {
+            showAccessibilityPermissionError()
+            return
+        }
+
+        // ショートカットが有効かチェック
+        guard AppSettings.shared.isEnabled else {
+            return
+        }
+
+        // ウィンドウ操作を実行
+        let result: Result<Void, WindowOperationError>
+        switch action {
+        case .maximize:
+            result = WindowManager.maximizeWindow()
+        case .left:
+            result = WindowManager.moveToLeft()
+        case .right:
+            result = WindowManager.moveToRight()
+        case .leftThird:
+            result = WindowManager.moveToLeftThird()
+        case .centerThird:
+            result = WindowManager.moveToCenterThird()
+        case .rightThird:
+            result = WindowManager.moveToRightThird()
+        }
+
+        // エラーハンドリング
+        if case .failure(let error) = result {
+            handleWindowOperationError(error)
+        }
+    }
+
+    /**
+     アクセシビリティ権限エラーを表示
+     */
+    private func showAccessibilityPermissionError() {
+        ToastManager.shared.showToast(
+            message: L("error.accessibility.notGranted"),
+            type: .error
+        )
+    }
+
+    /**
+     ウィンドウ操作エラーをハンドリング
+     */
+    private func handleWindowOperationError(_ error: WindowOperationError) {
+        let message: String
+        switch error {
+        case .noFrontmostWindow:
+            message = L("error.window.noFrontmost")
+        case .fullScreenWindow:
+            message = L("error.window.fullScreen")
+        case .permissionDenied:
+            message = L("error.accessibility.notGranted")
+        case .notResizable:
+            message = L("error.window.notResizable")
+        case .unknown:
+            message = L("error.window.unknown")
+        }
+
+        ToastManager.shared.showToast(
+            message: message,
+            type: .error
+        )
     }
 
     /**
