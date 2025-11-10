@@ -86,16 +86,11 @@ struct HowToUseModalView: View {
                         .frame(height: 8)
 
                     // よくあるミスセクション
-                    HStack(alignment: .top, spacing: 16) {
-                        VStack(alignment: .leading, spacing: 12) {
-                            sectionHeader(L("howToUse.commonMistakes"))
-                            warningBox(text: L("howToUse.fullscreenWarning"))
-                        }
-                        .frame(maxWidth: .infinity)
-
-                        Spacer()
-                            .frame(maxWidth: .infinity)
+                    VStack(alignment: .leading, spacing: 12) {
+                        sectionHeader(L("howToUse.commonMistakes"))
+                        warningBox(text: L("howToUse.fullscreenWarning"))
                     }
+                    .frame(maxWidth: .infinity)
                 }
                 .frame(minWidth: 600, maxWidth: .infinity)
 
