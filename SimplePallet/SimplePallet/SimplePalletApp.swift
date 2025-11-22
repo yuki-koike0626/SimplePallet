@@ -54,8 +54,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             AccessibilityPermission.requestPermission()
         }
 
-        // メニューバーコントローラーの初期化
-        menuBarController = MenuBarController()
+        // メニューバーコントローラーの初期化（updaterControllerを渡す）
+        menuBarController = MenuBarController(updaterController: updaterController)
 
         // キーボードショートカットマネージャーの初期化
         shortcutManager = KeyboardShortcutManager.shared

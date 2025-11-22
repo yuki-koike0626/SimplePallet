@@ -38,8 +38,11 @@
     <true/>
     <key>SUScheduledCheckInterval</key>
     <integer>86400</integer>
-    <key>SUPublicEDKey</key>
-    <string>MCowBQYDK2VwAyEA4zNJUzwJ548IOslpjARjFIgcZjj0qSB5wWjd6yK6woY=</string>
+
+    <!-- 開発用：署名チェックを無効化 -->
+    <!-- リリース時にコメント解除してください -->
+    <!-- <key>SUPublicEDKey</key>
+    <string>MCowBQYDK2VwAyEA4zNJUzwJ548IOslpjARjFIgcZjj0qSB5wWjd6yK6woY=</string> -->
 </dict>
 </plist>
 

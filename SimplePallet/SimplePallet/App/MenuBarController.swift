@@ -14,7 +14,11 @@ class MenuBarController {
     private var settingsWindow: NSWindow?
     private var cancellables = Set<AnyCancellable>()
 
-    init() {
+    // Sparkle Updater（AppDelegateから渡される）
+    private weak var updaterController: SPUStandardUpdaterController?
+
+    init(updaterController: SPUStandardUpdaterController? = nil) {
+        self.updaterController = updaterController
         setupMenuBar()
         observeLanguageChanges()
     }
@@ -133,9 +137,14 @@ class MenuBarController {
      アップデートをチェック
      */
     @objc private func checkForUpdates() {
-        if let appDelegate = NSApplication.shared.delegate as? AppDelegate {
-            appDelegate.updaterController.updater.checkForUpdates()
+        // バックグラウンドアプリの場合、ダイアログを表示する前にアプリをアクティブにする
+        NSApp.activate(ignoringOtherApps: true)
+        
+        guard let updaterController = updaterController else {
+            return
         }
+        
+        updaterController.updater.checkForUpdates()
     }
 
     // MARK: - Window Actions
