@@ -26,6 +26,7 @@
 		30CDC2752EB72AD200F63660 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30CDC2682EB72AD200F63660 /* Assets.xcassets */; };
 		30CDC2762EB72AD200F63661 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 30CDC2772EB72AD200F63661 /* Localizable.xcstrings */; };
 		30CDC2782EB72AD200F63662 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30CDC2792EB72AD200F63662 /* InfoPlist.strings */; };
+		30D709BE2ED1AFB9000D4F19 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 30D709BD2ED1AFB9000D4F19 /* Sparkle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3089448A2EB889B20028FFC7 /* KeyboardShortcuts in Frameworks */,
+				30D709BE2ED1AFB9000D4F19 /* Sparkle in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +175,7 @@
 			name = SimplePallet;
 			packageProductDependencies = (
 				308944892EB889B20028FFC7 /* KeyboardShortcuts */,
+				30D709BD2ED1AFB9000D4F19 /* Sparkle */,
 			);
 			productName = SimplePallet;
 			productReference = 30CDC24E2EB7287500F63660 /* SimplePallet.app */;
@@ -208,6 +211,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				308944882EB889B20028FFC7 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
+				30D709BC2ED1AFB9000D4F19 /* XCRemoteSwiftPackageReference "Sparkle" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 30CDC24F2EB7287500F63660 /* Products */;
@@ -497,6 +501,14 @@
 				minimumVersion = 2.4.0;
 			};
 		};
+		30D709BC2ED1AFB9000D4F19 /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -504,6 +516,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 308944882EB889B20028FFC7 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;
 			productName = KeyboardShortcuts;
+		};
+		30D709BD2ED1AFB9000D4F19 /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30D709BC2ED1AFB9000D4F19 /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

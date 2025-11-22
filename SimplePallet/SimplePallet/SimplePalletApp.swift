@@ -1,5 +1,6 @@
 import SwiftUI
 import AppKit
+import Sparkle
 
 /**
  SimplePallet のメインエントリーポイント
@@ -26,6 +27,15 @@ struct SimplePalletApp: App {
 class AppDelegate: NSObject, NSApplicationDelegate {
     var menuBarController: MenuBarController?
     var shortcutManager: KeyboardShortcutManager?
+
+    // Sparkle自動アップデート（MenuBarControllerからアクセスするため internal）
+    let updaterController: SPUStandardUpdaterController
+
+    override init() {
+        // Sparkleの初期化
+        updaterController = SPUStandardUpdaterController(startingUpdater: true, updaterDelegate: nil, userDriverDelegate: nil)
+        super.init()
+    }
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         // Dockアイコンを非表示に設定

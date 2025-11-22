@@ -1,6 +1,7 @@
 import Cocoa
 import SwiftUI
 import Combine
+import Sparkle
 
 /**
  メニューバーの管理
@@ -55,6 +56,13 @@ class MenuBarController {
         let developerItem = NSMenuItem(title: L("menu.developerInfo"), action: #selector(showDeveloperInfo), keyEquivalent: "")
         developerItem.target = self
         menu.addItem(developerItem)
+
+        menu.addItem(NSMenuItem.separator())
+
+        // アップデートをチェック
+        let updateItem = NSMenuItem(title: L("menu.checkForUpdates"), action: #selector(checkForUpdates), keyEquivalent: "")
+        updateItem.target = self
+        menu.addItem(updateItem)
 
         menu.addItem(NSMenuItem.separator())
 
@@ -119,6 +127,15 @@ class MenuBarController {
      */
     @objc private func quit() {
         NSApplication.shared.terminate(nil)
+    }
+
+    /**
+     アップデートをチェック
+     */
+    @objc private func checkForUpdates() {
+        if let appDelegate = NSApplication.shared.delegate as? AppDelegate {
+            appDelegate.updaterController.updater.checkForUpdates()
+        }
     }
 
     // MARK: - Window Actions

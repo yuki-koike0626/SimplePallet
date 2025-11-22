@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>SimplePallet Updates</title>
+    <link>https://github.com/yuki-koike0626/SimplePallet</link>
+    <description>SimplePallet - macOS用のシンプルなウィンドウ管理ツール</description>
+    <language>ja</language>
+    
+    <!-- 最新バージョン -->
+    <item>
+      <title>Version 1.0</title>
+      <link>https://github.com/yuki-koike0626/SimplePallet/releases/tag/v1.0</link>
+      <sparkle:version>1.0</sparkle:version>
+      <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
+      <description><![CDATA[
+        <h2>SimplePallet 1.0 - 初回リリース</h2>
+        <ul>
+          <li>ウィンドウの最大化</li>
+          <li>ウィンドウを画面の左半分/右半分に配置</li>
+          <li>ウィンドウを画面の3分割（左/中央/右）に配置</li>
+          <li>カスタマイズ可能なキーボードショートカット</li>
+          <li>多言語対応（日本語、英語、韓国語、中国語）</li>
+        </ul>
+      ]]></description>
+      <pubDate>Sat, 22 Nov 2025 00:00:00 +0900</pubDate>
+      <enclosure
+        url="https://github.com/yuki-koike0626/SimplePallet/releases/download/v1.0/SimplePallet-1.0.dmg"
+        sparkle:version="1.0"
+        sparkle:shortVersionString="1.0"
+        length="10000000"
+        type="application/octet-stream"
+        sparkle:edSignature="YOUR_ED_SIGNATURE_HERE"
+      />
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+    </item>
+
+    <!-- 新しいバージョンを追加する場合は、ここに<item>を追加してください -->
+    <!-- 例：
+    <item>
+      <title>Version 1.1</title>
+      <link>https://github.com/yourusername/SimplePallet/releases/tag/v1.1</link>
+      <sparkle:version>1.1</sparkle:version>
+      <sparkle:shortVersionString>1.1</sparkle:shortVersionString>
+      <description><![CDATA[
+        <h2>Version 1.1</h2>
+        <ul>
+          <li>バグ修正</li>
+          <li>パフォーマンス向上</li>
+        </ul>
+      ]]></description>
+      <pubDate>Mon, 01 Dec 2025 00:00:00 +0900</pubDate>
+      <enclosure
+        url="https://github.com/yourusername/SimplePallet/releases/download/v1.1/SimplePallet-1.1.dmg"
+        sparkle:version="1.1"
+        sparkle:shortVersionString="1.1"
+        length="10500000"
+        type="application/octet-stream"
+        sparkle:edSignature="YOUR_ED_SIGNATURE_HERE"
+      />
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+    </item>
+    -->
+  </channel>
+</rss>
+
