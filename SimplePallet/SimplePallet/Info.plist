@@ -30,6 +30,16 @@
     <false/>
     <key>NSAccessibilityUsageDescription</key>
     <string>SimplePalletは他のアプリのウィンドウを操作するためにアクセシビリティ機能を使用します。</string>
+
+    <!-- Sparkle自動アップデート設定 -->
+    <key>SUFeedURL</key>
+    <string>https://yuki-koike0626.github.io/SimplePallet/appcast.xml</string>
+    <key>SUEnableAutomaticChecks</key>
+    <true/>
+    <key>SUScheduledCheckInterval</key>
+    <integer>86400</integer>
+    <key>SUPublicEDKey</key>
+    <string>MCowBQYDK2VwAyEA4zNJUzwJ548IOslpjARjFIgcZjj0qSB5wWjd6yK6woY=</string>
 </dict>
 </plist>
 
