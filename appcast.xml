@@ -29,7 +29,6 @@
         sparkle:shortVersionString="1.0"
         length="10000000"
         type="application/octet-stream"
-        sparkle:edSignature="YOUR_ED_SIGNATURE_HERE"
       />
       <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
     </item>
