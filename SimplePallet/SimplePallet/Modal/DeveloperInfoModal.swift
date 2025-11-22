@@ -16,38 +16,6 @@ struct DeveloperInfoModalView: View {
         VStack(spacing: 24) {
             // ヘッダー
             VStack(spacing: 16) {
-                // 開発者の写真（丸型）
-                if let image = NSImage(named: "DeveloperPhoto") {
-                    Image(nsImage: image)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 120, height: 120)
-                        .clipShape(Circle())
-                        .overlay(
-                            Circle()
-                                .stroke(
-                                    LinearGradient(
-                                        gradient: Gradient(colors: [.white.opacity(0.8), .white.opacity(0.4)]),
-                                        startPoint: .topLeading,
-                                        endPoint: .bottomTrailing
-                                    ),
-                                    lineWidth: 2
-                                )
-                        )
-                        .shadow(color: .white.opacity(0.5), radius: 8, x: 0, y: 0)
-                        .shadow(color: .black.opacity(0.15), radius: 10, x: 0, y: 5)
-                } else {
-                    // 画像がない場合のプレースホルダー
-                    Circle()
-                        .fill(Color.blue.opacity(0.2))
-                        .frame(width: 120, height: 120)
-                        .overlay(
-                            Image(systemName: "person.fill")
-                                .font(.system(size: 50))
-                                .foregroundColor(.blue)
-                        )
-                }
-
                 HStack(spacing: 8) {
                     LText("developer.title")
                         .font(.title)
