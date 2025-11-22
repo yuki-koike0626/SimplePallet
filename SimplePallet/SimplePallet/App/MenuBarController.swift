@@ -139,11 +139,11 @@ class MenuBarController {
     @objc private func checkForUpdates() {
         // バックグラウンドアプリの場合、ダイアログを表示する前にアプリをアクティブにする
         NSApp.activate(ignoringOtherApps: true)
-        
+
         guard let updaterController = updaterController else {
             return
         }
-        
+
         updaterController.updater.checkForUpdates()
     }
 
