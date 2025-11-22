@@ -57,10 +57,17 @@ hdiutil create -srcfolder temp_dmg -volname "$VOLUME_NAME" -fs HFS+ \
 
 # DMGをマウント
 echo -e "${BLUE}DMGをマウント中...${NC}"
-MOUNT_DIR=$(hdiutil attach -readwrite -noverify -noautoopen "$TEMP_DMG" | \
-    egrep '^/dev/' | sed 1q | awk '{print $3}')
+MOUNT_OUTPUT=$(hdiutil attach -readwrite -noverify -noautoopen "$TEMP_DMG")
+MOUNT_DIR=$(echo "$MOUNT_OUTPUT" | grep "/Volumes/" | awk '{$1=$2=""; print $0}' | xargs)
 
 echo "マウント先: $MOUNT_DIR"
+
+# マウント失敗チェック
+if [ -z "$MOUNT_DIR" ]; then
+    echo -e "${RED}エラー: DMGのマウントに失敗しました${NC}"
+    echo "$MOUNT_OUTPUT"
+    exit 1
+fi
 
 # アイコン位置とウィンドウ設定（AppleScript）
 echo -e "${BLUE}ウィンドウレイアウトを設定中...${NC}"
