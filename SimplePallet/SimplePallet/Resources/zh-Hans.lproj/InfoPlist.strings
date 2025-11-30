@@ -1,0 +1,8 @@
+/*
+  InfoPlist.strings
+  SimplePallet - Simplified Chinese (简体中文)
+*/
+
+/* Accessibility permission usage description */
+"NSAccessibilityUsageDescription" = "SimplePallet 使用辅助功能来控制其他应用的窗口。";
+

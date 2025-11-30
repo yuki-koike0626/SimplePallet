@@ -1,0 +1,8 @@
+/*
+  InfoPlist.strings
+  SimplePallet - Korean (한국어)
+*/
+
+/* Accessibility permission usage description */
+"NSAccessibilityUsageDescription" = "SimplePallet은 다른 앱의 윈도우를 제어하기 위해 접근성 기능을 사용합니다.";
+

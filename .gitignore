@@ -1,0 +1,11 @@
+# Sparkle秘密鍵（絶対にコミットしない！）
+sparkle_private_key.pem
+sparkle_public_key.pem
+generate_keys
+
+# ビルド成果物
+build/
+dist/
+*.backup/
+SimplePallet.app/
+sign_update
