@@ -108,28 +108,23 @@
             color: #333;
             font-size: 2em;
         }
-        
+
         /* 新しいデモセクションのスタイル */
         .demo-section {
             display: flex;
             align-items: center;
             gap: 40px;
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(15px);
-            padding: 40px;
-            border-radius: 24px;
+            /* 背景や枠線を削除してシンプルに */
             margin-bottom: 60px;
-            border: 1px solid rgba(255,255,255,0.4);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
 
         .demo-video {
             flex: 1;
+            /* シンプルな角丸とシャドウのみ */
             border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
             max-width: 100%;
             height: auto;
-            border: 1px solid rgba(0,0,0,0.1);
         }
 
         .demo-content {
@@ -176,7 +171,7 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
         }
-        
+
         /* レスポンシブ対応 */
         @media (max-width: 768px) {
             .demo-section {
@@ -215,14 +210,14 @@
 
     <div class="features">
         <h2>キーボードで直感的に操作</h2>
-        
+
         <!-- デモセクションを追加 -->
         <div class="demo-section">
             <img src="window-snap-demo.gif" alt="Window snapping demonstration" class="demo-video">
             <div class="demo-content">
                 <h3>魔法のようなスナップ体験</h3>
                 <p style="margin-bottom: 24px;">マウスを使わずに、キーボードだけでウィンドウを整理整頓。思考を止めることなく、理想のレイアウトを一瞬で作れます。</p>
-                
+
                 <ul class="shortcut-list">
                     <li class="shortcut-item">
                         <span class="key-combo">⌘ + ←</span>
