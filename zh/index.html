@@ -341,6 +341,124 @@
             .step-item { width: 100%; max-width: 320px; padding: 0; }
         }
 
+        /* ヒントセクション */
+        .tips-section {
+            margin: 100px 0;
+            text-align: left;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.4);
+        }
+        .tips-section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.8em;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 50px;
+            background: rgba(255,255,255,0.6);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .comparison-table th {
+            background: rgba(0,0,0,0.03);
+            font-weight: bold;
+        }
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        .check-mark { color: #2ecc71; font-weight: bold; }
+        .cross-mark { color: #e74c3c; font-weight: bold; }
+        
+        .faq-item {
+            margin-bottom: 24px;
+        }
+        .faq-question {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .faq-question::before {
+            content: "Q.";
+            color: #007AFF;
+            font-weight: 900;
+            margin-right: 10px;
+        }
+        .faq-answer {
+            color: #555;
+            padding-left: 28px;
+            font-size: 0.95em;
+        }
+
+        /* ヒントセクション */
+        .tips-section {
+            margin: 100px 0;
+            text-align: left;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.4);
+        }
+        .tips-section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.8em;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 50px;
+            background: rgba(255,255,255,0.6);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .comparison-table th {
+            background: rgba(0,0,0,0.03);
+            font-weight: bold;
+        }
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        .check-mark { color: #2ecc71; font-weight: bold; }
+        .cross-mark { color: #e74c3c; font-weight: bold; }
+        
+        .faq-item {
+            margin-bottom: 24px;
+        }
+        .faq-question {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .faq-question::before {
+            content: "Q.";
+            color: #007AFF;
+            font-weight: 900;
+            margin-right: 10px;
+        }
+        .faq-answer {
+            color: #555;
+            padding-left: 28px;
+            font-size: 0.95em;
+        }
+
         footer {
             margin-top: 80px;
             font-size: 0.9em;
@@ -437,7 +555,7 @@
                     <p>之后只需使用快捷键<br>即可自由整理。</p>
                 </div>
             </div>
-            
+
             <div style="margin-top: 70px;">
                 <a href="https://github.com/yuki-koike0626/SimplePallet/releases/latest/download/SimplePallet-1.0.dmg" class="download-btn" onclick="gtag('event', 'download_click', {'event_category': 'download', 'event_label': 'v1.0_dmg_bottom'});">
                     下载 SimplePallet
@@ -462,7 +580,98 @@
         </div>
     </div>
 
-    <footer>
+        <!-- 提示部分 (SEO) -->
+        <div class="tips-section">
+            <h2>Mac分屏小技巧</h2>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>功能</th>
+                        <th>Mac自带 (Split View)</th>
+                        <th>SimplePallet</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>操作步骤</td>
+                        <td>3步<br><span style="font-size:0.8em; color:#888;">(长按 + 选择)</span></td>
+                        <td><strong>1步</strong><br><span style="font-size:0.8em; color:#007AFF;">(快捷键)</span></td>
+                    </tr>
+                    <tr>
+                        <td>鼠标操作</td>
+                        <td>必须 <span class="cross-mark">✗</span></td>
+                        <td><strong>无需</strong> <span class="check-mark">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td>三分屏</td>
+                        <td>不支持 <span class="cross-mark">✗</span></td>
+                        <td><strong>支持</strong> <span class="check-mark">✓</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">Mac有分屏快捷键吗？</div>
+                    <div class="faq-answer">系统默认没有，但使用SimplePallet可以通过 <code>Cmd + 方向键</code> 瞬间实现分屏。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Mac分屏无法使用怎么办？</div>
+                    <div class="faq-answer">如果自带的Split View无法使用，通常需要检查系统设置。而SimplePallet只需安装即可在任何环境下立即使用分屏功能。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Mac有类似Windows的窗口吸附功能吗？</div>
+                    <div class="faq-answer">自带功能有限，但安装此应用后，您可以获得比Windows更流畅、更直观的吸附体验。</div>
+                </div>
+            </div>
+        </div>
+
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "SimplePallet",
+          "operatingSystem": "macOS",
+          "applicationCategory": "UtilitiesApplication",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "CNY"
+          },
+          "description": "免费的Mac分屏快捷键应用。轻松将窗口分为二分之一或三分之一。"
+        }
+        </script>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [{
+            "@type": "Question",
+            "name": "Mac有分屏快捷键吗？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "系统默认没有，但使用SimplePallet可以通过 Cmd + 方向键 瞬间实现分屏。"
+            }
+          }, {
+            "@type": "Question",
+            "name": "Mac分屏无法使用怎么办？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "如果自带的Split View无法使用，通常需要检查系统设置。而SimplePallet只需安装即可在任何环境下立即使用分屏功能。"
+            }
+          }, {
+            "@type": "Question",
+            "name": "Mac有类似Windows的窗口吸附功能吗？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "自带功能有限，但安装此应用后，您可以获得比Windows更流畅、更直观的吸附体验。"
+            }
+          }]
+        }
+        </script>
+
+        <footer>
         <p>&copy; 2025 Yuki Koike. All rights reserved.</p>
         <p><a href="../privacy.html">隐私政策</a> | <a href="https://github.com/yuki-koike0626/SimplePallet">GitHub 仓库</a></p>
     </footer>

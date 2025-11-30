@@ -1,0 +1,68 @@
+{
+  "": {
+    "swift-dependencies": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/master.swiftdeps"
+  },
+  "/Users/koikeyuuki/Simple-palet/SimplePalet/SimplePalet/App/MenuBarController.swift": {
+    "dependencies": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/MenuBarController.d",
+    "object": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/MenuBarController.swift.o",
+    "swiftmodule": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/MenuBarController~partial.swiftmodule",
+    "swift-dependencies": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/MenuBarController.swiftdeps",
+    "diagnostics": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/MenuBarController.dia"
+  },
+  "/Users/koikeyuuki/Simple-palet/SimplePalet/SimplePalet/App/SettingsView.swift": {
+    "dependencies": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/SettingsView.d",
+    "object": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/SettingsView.swift.o",
+    "swiftmodule": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/SettingsView~partial.swiftmodule",
+    "swift-dependencies": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/SettingsView.swiftdeps",
+    "diagnostics": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/SettingsView.dia"
+  },
+  "/Users/koikeyuuki/Simple-palet/SimplePalet/SimplePalet/App/ToastView.swift": {
+    "dependencies": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/ToastView.d",
+    "object": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/ToastView.swift.o",
+    "swiftmodule": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/ToastView~partial.swiftmodule",
+    "swift-dependencies": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/ToastView.swiftdeps",
+    "diagnostics": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/ToastView.dia"
+  },
+  "/Users/koikeyuuki/Simple-palet/SimplePalet/SimplePalet/Core/AXPermission.swift": {
+    "dependencies": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/AXPermission.d",
+    "object": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/AXPermission.swift.o",
+    "swiftmodule": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/AXPermission~partial.swiftmodule",
+    "swift-dependencies": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/AXPermission.swiftdeps",
+    "diagnostics": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/AXPermission.dia"
+  },
+  "/Users/koikeyuuki/Simple-palet/SimplePalet/SimplePalet/Core/HotKeyManager.swift": {
+    "dependencies": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/HotKeyManager.d",
+    "object": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/HotKeyManager.swift.o",
+    "swiftmodule": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/HotKeyManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/HotKeyManager.swiftdeps",
+    "diagnostics": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/HotKeyManager.dia"
+  },
+  "/Users/koikeyuuki/Simple-palet/SimplePalet/SimplePalet/Core/ScreenUtil.swift": {
+    "dependencies": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/ScreenUtil.d",
+    "object": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/ScreenUtil.swift.o",
+    "swiftmodule": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/ScreenUtil~partial.swiftmodule",
+    "swift-dependencies": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/ScreenUtil.swiftdeps",
+    "diagnostics": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/ScreenUtil.dia"
+  },
+  "/Users/koikeyuuki/Simple-palet/SimplePalet/SimplePalet/Core/WindowMover.swift": {
+    "dependencies": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/WindowMover.d",
+    "object": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/WindowMover.swift.o",
+    "swiftmodule": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/WindowMover~partial.swiftmodule",
+    "swift-dependencies": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/WindowMover.swiftdeps",
+    "diagnostics": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/WindowMover.dia"
+  },
+  "/Users/koikeyuuki/Simple-palet/SimplePalet/SimplePalet/Models/AppSettings.swift": {
+    "dependencies": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/AppSettings.d",
+    "object": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/AppSettings.swift.o",
+    "swiftmodule": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/AppSettings~partial.swiftmodule",
+    "swift-dependencies": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/AppSettings.swiftdeps",
+    "diagnostics": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/AppSettings.dia"
+  },
+  "/Users/koikeyuuki/Simple-palet/SimplePalet/SimplePalet/SimplePaletApp.swift": {
+    "dependencies": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/SimplePaletApp.d",
+    "object": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/SimplePaletApp.swift.o",
+    "swiftmodule": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/SimplePaletApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/SimplePaletApp.swiftdeps",
+    "diagnostics": "/Users/koikeyuuki/Simple-palet/SimplePalet/.build/arm64-apple-macosx/debug/SimplePalet.build/SimplePaletApp.dia"
+  }
+}

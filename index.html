@@ -345,6 +345,65 @@
             .step-item { width: 100%; max-width: 320px; padding: 0; }
         }
 
+        /* ヒントセクション */
+        .tips-section {
+            margin: 100px 0;
+            text-align: left;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.4);
+        }
+        .tips-section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.8em;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 50px;
+            background: rgba(255,255,255,0.6);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .comparison-table th {
+            background: rgba(0,0,0,0.03);
+            font-weight: bold;
+        }
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        .check-mark { color: #2ecc71; font-weight: bold; }
+        .cross-mark { color: #e74c3c; font-weight: bold; }
+        
+        .faq-item {
+            margin-bottom: 24px;
+        }
+        .faq-question {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .faq-question::before {
+            content: "Q.";
+            color: #007AFF;
+            font-weight: 900;
+            margin-right: 10px;
+        }
+        .faq-answer {
+            color: #555;
+            padding-left: 28px;
+            font-size: 0.95em;
+        }
+
         footer {
             margin-top: 80px;
             font-size: 0.9em;
@@ -466,7 +525,98 @@
         </div>
     </div>
 
-    <footer>
+        <!-- ヒントセクション (SEO対策) -->
+        <div class="tips-section">
+            <h2>Mac画面分割のヒント</h2>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>機能</th>
+                        <th>Mac標準 (Split View)</th>
+                        <th>SimplePallet</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>操作ステップ</td>
+                        <td>3ステップ<br><span style="font-size:0.8em; color:#888;">(長押し + 選択)</span></td>
+                        <td><strong>1ステップ</strong><br><span style="font-size:0.8em; color:#007AFF;">(ショートカット)</span></td>
+                    </tr>
+                    <tr>
+                        <td>マウス操作</td>
+                        <td>必須 <span class="cross-mark">✗</span></td>
+                        <td><strong>不要</strong> <span class="check-mark">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td>3分割表示</td>
+                        <td>不可 <span class="cross-mark">✗</span></td>
+                        <td><strong>可能</strong> <span class="check-mark">✓</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">Macの画面を半分にするショートカットキーはありますか？</div>
+                    <div class="faq-answer">標準機能には搭載されていませんが、SimplePalletをインストールすれば <code>⌘ + 矢印キー</code> で瞬時に画面を半分に分割できます。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Macの画面分割ができない・機能しない場合は？</div>
+                    <div class="faq-answer">Mac標準のSplit Viewが動かない場合、「システム設定 > デスクトップとDock」の設定確認が必要ですが、SimplePalletならインストールするだけで、どの環境でもすぐに画面分割が利用可能です。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Windowsのようなスナップ機能はMacにありますか？</div>
+                    <div class="faq-answer">macOS標準では限定的ですが、このアプリを使えばWindowsの「エアロスナップ」以上に直感的で素早いウィンドウ操作が可能になります。</div>
+                </div>
+            </div>
+        </div>
+
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "SimplePallet",
+          "operatingSystem": "macOS",
+          "applicationCategory": "UtilitiesApplication",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "JPY"
+          },
+          "description": "Macの画面分割をショートカットキーで瞬時に行う無料アプリ。画面を半分、3分割に簡単に整理できます。"
+        }
+        </script>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [{
+            "@type": "Question",
+            "name": "Macの画面を半分にするショートカットキーはありますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "標準機能には搭載されていませんが、SimplePalletをインストールすれば Command + 矢印キー で瞬時に画面を半分に分割できます。"
+            }
+          }, {
+            "@type": "Question",
+            "name": "Macの画面分割ができない・機能しない場合は？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Mac標準のSplit Viewが動かない場合、システム設定の確認が必要ですが、SimplePalletならインストールするだけで、どの環境でもすぐに画面分割が利用可能です。"
+            }
+          }, {
+            "@type": "Question",
+            "name": "Windowsのようなスナップ機能はMacにありますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "macOS標準では限定的ですが、SimplePalletを使えばWindowsのエアロスナップ以上に直感的で素早いウィンドウ操作が可能になります。"
+            }
+          }]
+        }
+        </script>
+
+        <footer>
         <p>&copy; 2025 Yuki Koike. All rights reserved.</p>
         <p><a href="privacy.html">プライバシーポリシー</a> | <a href="https://github.com/yuki-koike0626/SimplePallet">GitHub Repository</a></p>
     </footer>

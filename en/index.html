@@ -322,6 +322,124 @@
             .step-item { width: 100%; max-width: 320px; padding: 0; }
         }
 
+        /* ヒントセクション */
+        .tips-section {
+            margin: 100px 0;
+            text-align: left;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.4);
+        }
+        .tips-section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.8em;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 50px;
+            background: rgba(255,255,255,0.6);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .comparison-table th {
+            background: rgba(0,0,0,0.03);
+            font-weight: bold;
+        }
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        .check-mark { color: #2ecc71; font-weight: bold; }
+        .cross-mark { color: #e74c3c; font-weight: bold; }
+        
+        .faq-item {
+            margin-bottom: 24px;
+        }
+        .faq-question {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .faq-question::before {
+            content: "Q.";
+            color: #007AFF;
+            font-weight: 900;
+            margin-right: 10px;
+        }
+        .faq-answer {
+            color: #555;
+            padding-left: 28px;
+            font-size: 0.95em;
+        }
+
+        /* ヒントセクション */
+        .tips-section {
+            margin: 100px 0;
+            text-align: left;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.4);
+        }
+        .tips-section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.8em;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 50px;
+            background: rgba(255,255,255,0.6);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .comparison-table th {
+            background: rgba(0,0,0,0.03);
+            font-weight: bold;
+        }
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        .check-mark { color: #2ecc71; font-weight: bold; }
+        .cross-mark { color: #e74c3c; font-weight: bold; }
+        
+        .faq-item {
+            margin-bottom: 24px;
+        }
+        .faq-question {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .faq-question::before {
+            content: "Q.";
+            color: #007AFF;
+            font-weight: 900;
+            margin-right: 10px;
+        }
+        .faq-answer {
+            color: #555;
+            padding-left: 28px;
+            font-size: 0.95em;
+        }
+
         footer {
             margin-top: 80px;
             font-size: 0.9em;
@@ -441,7 +559,7 @@
                     <p>Just use shortcuts to<br>organize freely.</p>
                 </div>
             </div>
-            
+
             <div style="margin-top: 70px;">
                 <a href="https://github.com/yuki-koike0626/SimplePallet/releases/latest/download/SimplePallet-1.0.dmg" class="download-btn" onclick="gtag('event', 'download_click', {'event_category': 'download', 'event_label': 'v1.0_dmg_bottom'});">
                     Download SimplePallet
@@ -466,7 +584,98 @@
         </div>
     </div>
 
-    <footer>
+        <!-- Tips Section (SEO) -->
+        <div class="tips-section">
+            <h2>Mac Split Screen Tips</h2>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Mac Default (Split View)</th>
+                        <th>SimplePallet</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Steps</td>
+                        <td>3 Steps<br><span style="font-size:0.8em; color:#888;">(Hold + Select)</span></td>
+                        <td><strong>1 Step</strong><br><span style="font-size:0.8em; color:#007AFF;">(Shortcut)</span></td>
+                    </tr>
+                    <tr>
+                        <td>Mouse Required</td>
+                        <td>Yes <span class="cross-mark">✗</span></td>
+                        <td><strong>No</strong> <span class="check-mark">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td>1/3 Split</td>
+                        <td>No <span class="cross-mark">✗</span></td>
+                        <td><strong>Yes</strong> <span class="check-mark">✓</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">Is there a shortcut key to split screen on Mac?</div>
+                    <div class="faq-answer">Not by default, but with SimplePallet you can instantly split screen using <code>Cmd + Arrow keys</code>.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Why is Mac split screen not working?</div>
+                    <div class="faq-answer">If standard Split View isn't working, you might need to check "Displays have separate Spaces" in settings. SimplePallet works instantly without complex configuration.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Does Mac have Window Snapping like Windows?</div>
+                    <div class="faq-answer">Standard features are limited, but this app gives you Windows-like snapping and an even faster workflow.</div>
+                </div>
+            </div>
+        </div>
+
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "SimplePallet",
+          "operatingSystem": "macOS",
+          "applicationCategory": "UtilitiesApplication",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "description": "Free Mac app to split screen instantly with shortcuts. Snap windows to halves or thirds easily."
+        }
+        </script>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [{
+            "@type": "Question",
+            "name": "Is there a shortcut key to split screen on Mac?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not by default, but with SimplePallet you can instantly split screen using Cmd + Arrow keys."
+            }
+          }, {
+            "@type": "Question",
+            "name": "Why is Mac split screen not working?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "If standard Split View isn't working, you might need to check Displays have separate Spaces in settings. SimplePallet works instantly without complex configuration."
+            }
+          }, {
+            "@type": "Question",
+            "name": "Does Mac have Window Snapping like Windows?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Standard features are limited, but this app gives you Windows-like snapping and an even faster workflow."
+            }
+          }]
+        }
+        </script>
+
+        <footer>
         <p>&copy; 2025 Yuki Koike. All rights reserved.</p>
         <p><a href="../privacy.html">Privacy Policy</a> | <a href="https://github.com/yuki-koike0626/SimplePallet">GitHub Repository</a></p>
     </footer>

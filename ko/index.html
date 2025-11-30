@@ -341,6 +341,124 @@
             .step-item { width: 100%; max-width: 320px; padding: 0; }
         }
 
+        /* ヒントセクション */
+        .tips-section {
+            margin: 100px 0;
+            text-align: left;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.4);
+        }
+        .tips-section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.8em;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 50px;
+            background: rgba(255,255,255,0.6);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .comparison-table th {
+            background: rgba(0,0,0,0.03);
+            font-weight: bold;
+        }
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        .check-mark { color: #2ecc71; font-weight: bold; }
+        .cross-mark { color: #e74c3c; font-weight: bold; }
+        
+        .faq-item {
+            margin-bottom: 24px;
+        }
+        .faq-question {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .faq-question::before {
+            content: "Q.";
+            color: #007AFF;
+            font-weight: 900;
+            margin-right: 10px;
+        }
+        .faq-answer {
+            color: #555;
+            padding-left: 28px;
+            font-size: 0.95em;
+        }
+
+        /* ヒントセクション */
+        .tips-section {
+            margin: 100px 0;
+            text-align: left;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.4);
+        }
+        .tips-section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.8em;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 50px;
+            background: rgba(255,255,255,0.6);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .comparison-table th {
+            background: rgba(0,0,0,0.03);
+            font-weight: bold;
+        }
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        .check-mark { color: #2ecc71; font-weight: bold; }
+        .cross-mark { color: #e74c3c; font-weight: bold; }
+        
+        .faq-item {
+            margin-bottom: 24px;
+        }
+        .faq-question {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .faq-question::before {
+            content: "Q.";
+            color: #007AFF;
+            font-weight: 900;
+            margin-right: 10px;
+        }
+        .faq-answer {
+            color: #555;
+            padding-left: 28px;
+            font-size: 0.95em;
+        }
+
         footer {
             margin-top: 80px;
             font-size: 0.9em;
@@ -437,7 +555,7 @@
                     <p>이제 단축키로<br>자유롭게 정리하세요.</p>
                 </div>
             </div>
-            
+
             <div style="margin-top: 70px;">
                 <a href="https://github.com/yuki-koike0626/SimplePallet/releases/latest/download/SimplePallet-1.0.dmg" class="download-btn" onclick="gtag('event', 'download_click', {'event_category': 'download', 'event_label': 'v1.0_dmg_bottom'});">
                     SimplePallet 다운로드
@@ -462,7 +580,98 @@
         </div>
     </div>
 
-    <footer>
+        <!-- 팁 섹션 (SEO) -->
+        <div class="tips-section">
+            <h2>맥 화면 분할 팁</h2>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>기능</th>
+                        <th>Mac 기본 (Split View)</th>
+                        <th>SimplePallet</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>조작 단계</td>
+                        <td>3단계<br><span style="font-size:0.8em; color:#888;">(길게 누르기 + 선택)</span></td>
+                        <td><strong>1단계</strong><br><span style="font-size:0.8em; color:#007AFF;">(단축키)</span></td>
+                    </tr>
+                    <tr>
+                        <td>마우스 필요</td>
+                        <td>필수 <span class="cross-mark">✗</span></td>
+                        <td><strong>불필요</strong> <span class="check-mark">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td>3분할</td>
+                        <td>불가 <span class="cross-mark">✗</span></td>
+                        <td><strong>가능</strong> <span class="check-mark">✓</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">맥에서 화면을 반으로 나누는 단축키가 있나요?</div>
+                    <div class="faq-answer">기본 기능에는 없지만, SimplePallet을 사용하면 <code>Cmd + 화살표</code>로 즉시 화면을 반으로 나눌 수 있습니다.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">맥 화면 분할이 안 될 때는 어떻게 하나요?</div>
+                    <div class="faq-answer">기본 Split View가 작동하지 않으면 시스템 설정 확인이 필요하지만, SimplePallet은 설치만 하면 즉시 화면 분할을 사용할 수 있습니다.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">맥에도 윈도우 같은 스냅 기능이 있나요?</div>
+                    <div class="faq-answer">기본 기능은 제한적이지만, 이 앱을 설치하면 윈도우 이상의 편리하고 빠른 스냅 기능을 사용할 수 있습니다.</div>
+                </div>
+            </div>
+        </div>
+
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "SimplePallet",
+          "operatingSystem": "macOS",
+          "applicationCategory": "UtilitiesApplication",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "KRW"
+          },
+          "description": "단축키로 맥 화면을 즉시 분할하는 무료 앱. 화면을 1/2, 1/3로 쉽게 정리하세요."
+        }
+        </script>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [{
+            "@type": "Question",
+            "name": "맥에서 화면을 반으로 나누는 단축키가 있나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "기본 기능에는 없지만, SimplePallet을 사용하면 Cmd + 화살표로 즉시 화면을 반으로 나눌 수 있습니다."
+            }
+          }, {
+            "@type": "Question",
+            "name": "맥 화면 분할이 안 될 때는 어떻게 하나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "기본 Split View가 작동하지 않으면 시스템 설정 확인이 필요하지만, SimplePallet은 설치만 하면 즉시 화면 분할을 사용할 수 있습니다."
+            }
+          }, {
+            "@type": "Question",
+            "name": "맥에도 윈도우 같은 스냅 기능이 있나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "기본 기능은 제한적이지만, 이 앱을 설치하면 윈도우 이상의 편리하고 빠른 스냅 기능을 사용할 수 있습니다."
+            }
+          }]
+        }
+        </script>
+
+        <footer>
         <p>&copy; 2025 Yuki Koike. All rights reserved.</p>
         <p><a href="../privacy.html">개인정보 처리방침</a> | <a href="https://github.com/yuki-koike0626/SimplePallet">GitHub 저장소</a></p>
     </footer>
