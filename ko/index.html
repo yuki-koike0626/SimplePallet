@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XV579MGY0M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XV579MGY0M');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimplePallet - 맥 화면 분할 단축키 앱</title>
+    <meta name="google-site-verification" content="x2J3BHoArRrFIN664RGVivhAYAvIGf_uhQ5Q05_92WQ" />
+    <meta name="description" content="맥 화면 분할을 단축키로 간편하게. 마우스 없이 윈도우를 1/2, 1/3로 즉시 정렬하세요. SimplePallet 무료 다운로드.">
+    <meta property="og:title" content="SimplePallet - 맥 화면 분할 단축키 앱">
+    <meta property="og:description" content="마우스 없이 키보드만으로 완벽한 화면 분할. 당신의 맥 라이프를 더 효율적으로 만드세요.">
+    <meta property="og:image" content="https://yuki-koike0626.github.io/SimplePallet/split-screen-usecase.png">
+    <meta property="og:url" content="https://yuki-koike0626.github.io/SimplePallet/ko/">
+    <meta property="og:type" content="website">
+
+    <!-- hreflang tags for SEO -->
+    <link rel="alternate" hreflang="ja" href="https://yuki-koike0626.github.io/SimplePallet/" />
+    <link rel="alternate" hreflang="en" href="https://yuki-koike0626.github.io/SimplePallet/en/" />
+    <link rel="alternate" hreflang="ko" href="https://yuki-koike0626.github.io/SimplePallet/ko/" />
+    <link rel="alternate" hreflang="zh" href="https://yuki-koike0626.github.io/SimplePallet/zh/" />
+    <link rel="alternate" hreflang="x-default" href="https://yuki-koike0626.github.io/SimplePallet/en/" />
+
+    <style>
+        /* 言語切り替えボタン */
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 0.9em;
+        }
+        .lang-switch a {
+            text-decoration: none;
+            color: #666;
+            padding: 5px 10px;
+            border-radius: 15px;
+            transition: background 0.2s;
+        }
+        .lang-switch a:hover {
+            background: rgba(0,0,0,0.05);
+            color: #333;
+        }
+        .lang-switch a.active {
+            font-weight: bold;
+            color: #007AFF;
+        }
+
+        /* アニメーション定義 */
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes ripple-pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 122, 255, 0.7), 0 4px 6px rgba(0,122,255,0.2);
+            }
+            70% {
+                box-shadow: 0 0 0 20px rgba(0, 122, 255, 0), 0 4px 6px rgba(0,122,255,0.2);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 122, 255, 0), 0 4px 6px rgba(0,122,255,0.2);
+            }
+        }
+
+        html {
+            min-height: 100%;
+            /* 淡いオーロラのようなグラデーション */
+            background: linear-gradient(-45deg, #e0f2ff, #f0f4ff, #e6e6ff, #f0ffff);
+            background-size: 400% 400%;
+            animation: gradient-animation 15s ease infinite;
+        }
+
+        /* グレイン（粒子）エフェクト */
+        html::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            /* SVGノイズフィルター */
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.5'/%3E%3C/svg%3E");
+            opacity: 0.4;
+            mix-blend-mode: overlay;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .hero {
+            padding: 60px 20px 0px 20px;
+        }
+        .app-icon {
+            width: 128px;
+            height: 128px;
+            border-radius: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #222;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 40px;
+        }
+        .download-btn {
+            display: inline-block;
+            background-color: #007AFF;
+            color: white;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: all 0.2s;
+            box-shadow: 0 4px 6px rgba(0,122,255,0.2);
+            /* 波紋アニメーション適用 */
+            animation: ripple-pulse 2s infinite;
+        }
+        .download-btn:hover {
+            background-color: #0062CC;
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 8px 12px rgba(0,122,255,0.3);
+            /* ホバー時はアニメーションを一時停止して押しやすくする */
+            animation: none;
+        }
+        .features {
+            margin-top: 80px;
+            text-align: left;
+        }
+        .features h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+            font-size: 2em;
+        }
+
+        /* 新しいデモセクションのスタイル */
+        .demo-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .demo-video {
+            /* flex: 1; は不要 */
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            max-width: 800px;
+            width: 100%;
+            height: auto;
+        }
+
+        .demo-content {
+            /* flex: 1; は不要 */
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left; /* 左詰めに変更 */
+            width: 100%;
+        }
+
+        .demo-content h3 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .shortcut-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: block; /* ブロック要素に戻して左寄せ */
+            text-align: left;
+        }
+
+        .shortcut-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            color: #444;
+        }
+
+        /* ユースケースセクションのスタイル */
+        .use-case {
+            margin-top: 60px;
+            /* 背景ボックスを削除し、レイアウト調整 */
+            text-align: left;
+        }
+
+        .use-case-img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            /* シンプルなボックスシャドウ */
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .use-case-title {
+            font-size: 1.5em;
+            color: #222;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .use-case-text {
+            font-size: 1.1em;
+            color: #444;
+            line-height: 1.6;
+            margin: 0;
+            font-weight: normal;
+        }
+
+        .key-combo {
+            background: #fff;
+            padding: 4px 10px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 0 #ddd;
+            font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+            font-weight: bold;
+            color: #333;
+            margin-right: 12px;
+            font-size: 0.9em;
+            min-width: 80px;
+            text-align: center;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            text-align: left; /* グリッド内のテキストは左揃えに戻す */
+        }
+
+        .feature-item {
+            background: rgba(255, 255, 255, 0.7); /* 半透明にして背景を少し透けさせる */
+            backdrop-filter: blur(10px); /* すりガラス効果 */
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.4);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+        footer {
+            margin-top: 80px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        a {
+            color: #007AFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="lang-switch">
+        <a href="../">日本語</a> | <a href="../en/">English</a> | <a href="#" class="active">한국어</a> | <a href="../zh/">中文</a>
+    </div>
+
+    <div class="hero">
+        <img src="../app-icon.png" alt="SimplePallet Icon" class="app-icon">
+        <h1>맥 화면 분할,<br>가장 직관적인 방법.</h1>
+        <p class="subtitle">단축키 하나로 1/2, 1/3 화면 분할.<br>마우스 없이 당신의 맥을 완벽하게 정리하세요.</p>
+
+        <a href="https://github.com/yuki-koike0626/SimplePallet/releases/latest/download/SimplePallet-1.0.dmg" class="download-btn" onclick="gtag('event', 'download_click', {'event_category': 'download', 'event_label': 'v1.0_dmg'});">
+            다운로드 (macOS 13.0+)
+        </a>
+        <p style="font-size: 0.8em; margin-top: 10px; color: #888;">버전 1.0 | Apple Silicon & Intel 지원</p>
+    </div>
+
+    <div class="features">
+        <h2>손끝 하나로,<br>원하는 레이아웃을.</h2>
+
+        <!-- 데모 섹션 -->
+        <div class="demo-section">
+            <img src="../window-snap-demo.gif" alt="맥 화면 분할 데모" class="demo-video">
+            <div class="demo-content">
+                <h3>마법 같은 스냅 경험.</h3>
+                <p style="margin-bottom: 24px;">더 이상 마우스로 드래그하지 마세요.<br>단축키를 누르는 순간 창이 자석처럼 붙습니다.<br>맥 화면 분할의 새로운 표준입니다.</p>
+
+                <ul class="shortcut-list">
+                    <li class="shortcut-item">
+                        <span class="key-combo">⌘ ←</span>
+                        <span>왼쪽 절반</span>
+                    </li>
+                    <li class="shortcut-item">
+                        <span class="key-combo">⌘ →</span>
+                        <span>오른쪽 절반</span>
+                    </li>
+                    <li class="shortcut-item">
+                        <span class="key-combo">⌘ ↑</span>
+                        <span>전체 화면</span>
+                    </li>
+                    <li class="shortcut-item">
+                        <span class="key-combo">⌥ ⌘ ←</span>
+                        <span>왼쪽 1/3</span>
+                    </li>
+                    <li class="shortcut-item">
+                        <span class="key-combo">⌥ ⌘ ↑</span>
+                        <span>중앙 1/3</span>
+                    </li>
+                    <li class="shortcut-item">
+                        <span class="key-combo">⌥ ⌘ →</span>
+                        <span>오른쪽 1/3</span>
+                    </li>
+                </ul>
+
+                <div class="use-case">
+                    <img src="../split-screen-usecase.png" alt="강의와 필기 화면 분할" class="use-case-img">
+                    <h4 class="use-case-title">강의와 필기,<br>완벽한 효율성.</h4>
+                    <p class="use-case-text">왼쪽 화면에서 강의를 보며 오른쪽 화면에서 필기를 하세요.<br>이 앱 하나면 누구나 즉시 가능합니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-item">
+                <h3>🪟 자유로운 배치</h3>
+                <p>화면 2분할, 3분할, 전체화면까지.<br>가장 심플하고 강력한 맥 윈도우 매니저.</p>
+            </div>
+            <div class="feature-item">
+                <h3>⌨️ 키보드 중심</h3>
+                <p>키보드에서 손을 떼지 마세요.<br>프로페셔널한 단축키 조작감을 경험하세요.</p>
+            </div>
+            <div class="feature-item">
+                <h3>🌍 다국어 지원</h3>
+                <p>한국어, 영어, 일본어, 중국어 지원.<br>전 세계 맥 유저를 위한 최적화.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Yuki Koike. All rights reserved.</p>
+        <p><a href="../privacy.html">개인정보 처리방침</a> | <a href="https://github.com/yuki-koike0626/SimplePallet">GitHub 저장소</a></p>
+    </footer>
+</body>
+</html>
