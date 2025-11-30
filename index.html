@@ -58,12 +58,11 @@
             text-align: center;
         }
         .hero {
-            padding: 60px 20px;
+            padding: 60px 20px 0px 20px;
         }
         .app-icon {
             width: 128px;
             height: 128px;
-            margin-bottom: 20px;
             border-radius: 24px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
@@ -158,6 +157,31 @@
             color: #444;
         }
 
+        /* ユースケースセクションのスタイル */
+        .use-case {
+            margin-top: 40px;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+
+        .use-case-img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .use-case-text {
+            font-size: 1.1em;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            font-weight: 500;
+        }
+
         .key-combo {
             background: #fff;
             padding: 4px 10px;
@@ -242,6 +266,11 @@
                         <span>上記にプラス⌥で3分割</span>
                     </li>
                 </ul>
+
+                <div class="use-case">
+                    <img src="split-screen-usecase.png" alt="Split screen use case" class="use-case-img">
+                    <p class="use-case-text">左画面で講義動画を見ながら、右画面でノートを取る。そんなこともこれをダウンロードするだけでできる。</p>
+                </div>
             </div>
         </div>
 
