@@ -7,6 +7,15 @@
     ":" : {
 
     },
+    "「このアプリをダウンロードすれば自分みたいにショートカットキーで快適に分割できるのに...」" : {
+
+    },
+    "「そもそも画面分割のやり方が分かっていない。」" : {
+
+    },
+    "「画面分割を一生懸命カーソルで行っている。」" : {
+
+    },
     "action.centerThird" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -742,6 +751,181 @@
         }
       }
     },
+    "error.accessibility.notGranted" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accessibility permission required"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アクセシビリティ権限が必要です"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "접근성 권한이 필요합니다"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "需要辅助功能权限"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "需要輔助使用權限"
+          }
+        }
+      }
+    },
+    "error.window.fullScreen" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cannot operate full screen window"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "フルスクリーンのウィンドウは操作できません"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "전체 화면 창을 조작할 수 없습니다"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法操作全屏窗口"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無法操作全螢幕視窗"
+          }
+        }
+      }
+    },
+    "error.window.noFrontmost" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No active window found"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アクティブなウィンドウが見つかりません"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "활성 창을 찾을 수 없습니다"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未找到活动窗口"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "找不到使用中的視窗"
+          }
+        }
+      }
+    },
+    "error.window.notResizable" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This window cannot be resized"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このウィンドウはリサイズできません"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 창은 크기를 조정할 수 없습니다"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此窗口无法调整大小"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此視窗無法調整大小"
+          }
+        }
+      }
+    },
+    "error.window.unknown" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An unexpected error occurred"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "予期しないエラーが発生しました"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "예기치 않은 오류가 발생했습니다"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "发生意外错误"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "發生意外錯誤"
+          }
+        }
+      }
+    },
     "howToUse.appSwitching" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1022,6 +1206,41 @@
         }
       }
     },
+    "howToUse.fullscreenWarning" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Window splitting is not available in full screen mode (when enlarged with green button 🟢). To use it, press the green button 🟢 to exit full screen mode. We recommend not using full screen, but using maximize (⌘+↑) to enlarge the window instead."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全画面表示(左上の緑ボタン🟢で大きくしてる場合)は画面分割が使えません。使いたい場合は緑ボタン🟢を押して全画面表示を解除してください。全画面表示は使わず、最大化(⌘+↑)で画面を大きくする方法を推奨しています。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "전체 화면 모드(녹색 버튼 🟢으로 확대한 경우)에서는 화면 분할을 사용할 수 없습니다. 사용하려면 녹색 버튼 🟢을 눌러 전체 화면 모드를 종료하세요. 전체 화면은 사용하지 않고 최대화(⌘+↑)로 화면을 크게 하는 것을 권장합니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全屏模式（用绿色按钮 🟢 放大时）无法使用窗口分割。如需使用，请按绿色按钮 🟢 退出全屏模式。我们建议不使用全屏模式，而是使用最大化 (⌘+↑) 来放大窗口。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全螢幕模式（用綠色按鈕 🟢 放大時）無法使用視窗分割。如需使用，請按綠色按鈕 🟢 退出全螢幕模式。我們建議不使用全螢幕模式，而是使用最大化 (⌘+↑) 來放大視窗。"
+          }
+        }
+      }
+    },
     "howToUse.minimizeDock" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1088,41 +1307,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "最小化到 Dock（與黃色按鈕相同）"
-          }
-        }
-      }
-    },
-    "howToUse.fullscreenWarning" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Window splitting is not available in full screen mode (when enlarged with green button 🟢). To use it, press the green button 🟢 to exit full screen mode. We recommend not using full screen, but using maximize (⌘+↑) to enlarge the window instead."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "全画面表示(左上の緑ボタン🟢で大きくしてる場合)は画面分割が使えません。使いたい場合は緑ボタン🟢を押して全画面表示を解除してください。全画面表示は使わず、最大化(⌘+↑)で画面を大きくする方法を推奨しています。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "전체 화면 모드(녹색 버튼 🟢으로 확대한 경우)에서는 화면 분할을 사용할 수 없습니다. 사용하려면 녹색 버튼 🟢을 눌러 전체 화면 모드를 종료하세요. 전체 화면은 사용하지 않고 최대화(⌘+↑)로 화면을 크게 하는 것을 권장합니다."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "全屏模式（用绿色按钮 🟢 放大时）无法使用窗口分割。如需使用，请按绿色按钮 🟢 退出全屏模式。我们建议不使用全屏模式，而是使用最大化 (⌘+↑) 来放大窗口。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "全螢幕模式（用綠色按鈕 🟢 放大時）無法使用視窗分割。如需使用，請按綠色按鈕 🟢 退出全螢幕模式。我們建議不使用全螢幕模式，而是使用最大化 (⌘+↑) 來放大視窗。"
           }
         }
       }
@@ -1337,6 +1521,76 @@
         }
       }
     },
+    "language.system" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Follow System Language"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このPCの言語に従う"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시스템 언어 따르기"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "跟随系统语言"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "跟隨系統語言"
+          }
+        }
+      }
+    },
+    "menu.checkForUpdates" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Check for Updates..."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アップデートを確認..."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "업데이트 확인..."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "检查更新..."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "檢查更新..."
+          }
+        }
+      }
+    },
     "menu.developerInfo" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1403,41 +1657,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "查看使用方法"
-          }
-        }
-      }
-    },
-    "menu.checkForUpdates" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Check for Updates..."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "アップデートを確認..."
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "업데이트 확인..."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "检查更新..."
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "檢查更新..."
           }
         }
       }
@@ -1932,6 +2151,9 @@
         }
       }
     },
+    "SimplePalletを広めよう" : {
+
+    },
     "toast.error" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -2107,215 +2329,20 @@
         }
       }
     },
-    "error.accessibility.notGranted" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Accessibility permission required"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "アクセシビリティ権限が必要です"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "접근성 권한이 필요합니다"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "需要辅助功能权限"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "需要輔助使用權限"
-          }
-        }
-      }
+    "など思ったらぜひSimplePalletを紹介してください！" : {
+
     },
-    "error.window.noFrontmost" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No active window found"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "アクティブなウィンドウが見つかりません"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "활성 창을 찾을 수 없습니다"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "未找到活动窗口"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "找不到使用中的視窗"
-          }
-        }
-      }
+    "リンクをコピー" : {
+
     },
-    "error.window.fullScreen" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cannot operate full screen window"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "フルスクリーンのウィンドウは操作できません"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "전체 화면 창을 조작할 수 없습니다"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "无法操作全屏窗口"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "無法操作全螢幕視窗"
-          }
-        }
-      }
+    "リンクをコピーしました！" : {
+
     },
-    "error.window.notResizable" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "This window cannot be resized"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "このウィンドウはリサイズできません"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "이 창은 크기를 조정할 수 없습니다"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "此窗口无法调整大小"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "此視窗無法調整大小"
-          }
-        }
-      }
+    "友達に勧める" : {
+
     },
-    "error.window.unknown" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "An unexpected error occurred"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "予期しないエラーが発生しました"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "예기치 않은 오류가 발생했습니다"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "发生意外错误"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "發生意外錯誤"
-          }
-        }
-      }
-    },
-    "language.system" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Follow System Language"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "このPCの言語に従う"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "시스템 언어 따르기"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "跟随系统语言"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "跟隨系統語言"
-          }
-        }
-      }
+    "閉じる" : {
+
     }
   },
   "version" : "1.0"

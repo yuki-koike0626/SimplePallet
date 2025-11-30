@@ -56,6 +56,11 @@ class MenuBarController {
         howToUseItem.target = self
         menu.addItem(howToUseItem)
 
+        // 友達に勧める
+        let recommendItem = NSMenuItem(title: "友達に勧める", action: #selector(showRecommend), keyEquivalent: "")
+        recommendItem.target = self
+        menu.addItem(recommendItem)
+
         // 開発者
         let developerItem = NSMenuItem(title: L("menu.developerInfo"), action: #selector(showDeveloperInfo), keyEquivalent: "")
         developerItem.target = self
@@ -117,6 +122,13 @@ class MenuBarController {
      */
     @objc private func showHowToUse() {
         HowToUseModalManager.shared.show()
+    }
+
+    /**
+     友達に勧めるモーダルを表示
+     */
+    @objc private func showRecommend() {
+        RecommendModalManager.shared.show()
     }
 
     /**

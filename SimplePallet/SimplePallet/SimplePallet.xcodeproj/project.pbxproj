@@ -27,6 +27,7 @@
 		30CDC2762EB72AD200F63661 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 30CDC2772EB72AD200F63661 /* Localizable.xcstrings */; };
 		30CDC2782EB72AD200F63662 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30CDC2792EB72AD200F63662 /* InfoPlist.strings */; };
 		30D709BE2ED1AFB9000D4F19 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 30D709BD2ED1AFB9000D4F19 /* Sparkle */; };
+		30F609CC2EDC564300E5C565 /* RecommendModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F609CB2EDC564300E5C565 /* RecommendModal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		30CDC27C2EB72AD200F63665 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		30CDC27D2EB72AD200F63666 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		30CDC27E2EB72AD200F63667 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		30F609CB2EDC564300E5C565 /* RecommendModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -81,6 +83,7 @@
 		308944962EB8BDDF0028FFC7 /* Modal */ = {
 			isa = PBXGroup;
 			children = (
+				30F609CB2EDC564300E5C565 /* RecommendModal.swift */,
 				3089449E2EB8BDDF0028FFCB /* DeveloperInfoModal.swift */,
 				308944952EB8BDDF0028FFC7 /* HowToUseModal.swift */,
 			);
@@ -247,6 +250,7 @@
 				30CDC26E2EB72AD200F63660 /* ToastView.swift in Sources */,
 				3089448C2EB88A4E0028FFC7 /* SnappingAction.swift in Sources */,
 				30CDC26F2EB72AD200F63660 /* MenuBarController.swift in Sources */,
+				30F609CC2EDC564300E5C565 /* RecommendModal.swift in Sources */,
 				30CDC2712EB72AD200F63660 /* SimplePalletApp.swift in Sources */,
 				308944912EB88A670028FFC7 /* ScreenCalculator.swift in Sources */,
 				3089449D2EB8BDDF0028FFCB /* DeveloperInfoModal.swift in Sources */,
