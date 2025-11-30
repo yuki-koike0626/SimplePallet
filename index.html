@@ -159,27 +159,33 @@
 
         /* ユースケースセクションのスタイル */
         .use-case {
-            margin-top: 40px;
-            background: rgba(255, 255, 255, 0.5);
-            padding: 20px;
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.6);
+            margin-top: 60px;
+            /* 背景ボックスを削除し、レイアウト調整 */
+            text-align: left;
         }
 
         .use-case-img {
             width: 100%;
             height: auto;
             border-radius: 12px;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 24px;
+            /* シンプルなボックスシャドウ */
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .use-case-title {
+            font-size: 1.5em;
+            color: #222;
+            margin-bottom: 10px;
+            font-weight: bold;
         }
 
         .use-case-text {
             font-size: 1.1em;
-            color: #333;
+            color: #444;
             line-height: 1.6;
             margin: 0;
-            font-weight: 500;
+            font-weight: normal;
         }
 
         .key-combo {
@@ -269,6 +275,7 @@
 
                 <div class="use-case">
                     <img src="split-screen-usecase.png" alt="Split screen use case" class="use-case-img">
+                    <h4 class="use-case-title">講義とノートを並べて効率アップ</h4>
                     <p class="use-case-text">左画面で講義動画を見ながら、右画面でノートを取る。そんなこともこれをダウンロードするだけでできる。</p>
                 </div>
             </div>
