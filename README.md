@@ -2,6 +2,8 @@
 
 macOS 向けのシンプルなウィンドウ管理アプリ。キーボードショートカットで最前面ウィンドウを「最大化 / 2分割 / 3分割」に即座にスナップできます。
 
+**🌐 公式サイト / ダウンロード:** [https://yuki-koike0626.github.io/SimplePallet/](https://yuki-koike0626.github.io/SimplePallet/)
+
 ## 📥 ダウンロード
 
 ### 最新版をダウンロード
@@ -101,11 +103,15 @@ macOS 向けのシンプルなウィンドウ管理アプリ。キーボード�
 
 ## プライバシー
 
+**[詳細なプライバシーポリシーはこちら](https://yuki-koike0626.github.io/SimplePallet/privacy.html)**
+
 SimplePallet は以下のポリシーに基づいています：
 
 - **データ収集なし**: 個人情報や使用統計は一切収集しません
 - **ローカル処理のみ**: 全ての処理はデバイス内で完結します
 - **必要最小限の権限**: アクセシビリティ権限のみを要求します
+
+詳細については、[プライバシーポリシー全文](https://yuki-koike0626.github.io/SimplePallet/privacy.html) をご確認ください。
 
 ## 🔧 開発者向け情報
 
