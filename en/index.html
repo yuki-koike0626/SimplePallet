@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XV579MGY0M"></script>
@@ -12,13 +12,13 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mac画面分割アプリ SimplePallet - ショートカットで画面を半分・3分割に</title>
+    <title>SimplePallet - Mac Split Screen Shortcut App</title>
     <meta name="google-site-verification" content="x2J3BHoArRrFIN664RGVivhAYAvIGf_uhQ5Q05_92WQ" />
-    <meta name="description" content="Macの画面を半分にしたり3分割するショートカットアプリ「SimplePallet」。マウス不要、コマンド一発でウィンドウを整理。Mac画面分割のやり方を探している方に最適。無料ダウンロード。">
-    <meta property="og:title" content="Mac画面分割をショートカットで - SimplePallet">
-    <meta property="og:description" content="Macの画面を半分にするのも、3分割にするのも一瞬。マウスを使わず、ショートカットキーだけでウィンドウを自在に操る体験を。">
+    <meta name="description" content="SimplePallet is the best Mac split screen shortcut app. Snap windows to halves or thirds instantly without a mouse. Master Mac window management. Free download.">
+    <meta property="og:title" content="SimplePallet - Mac Split Screen Shortcut App">
+    <meta property="og:description" content="Snap windows instantly. Master your Mac's split screen with simple keyboard shortcuts. No mouse required.">
     <meta property="og:image" content="https://yuki-koike0626.github.io/SimplePallet/split-screen-usecase.png">
-    <meta property="og:url" content="https://yuki-koike0626.github.io/SimplePallet/">
+    <meta property="og:url" content="https://yuki-koike0626.github.io/SimplePallet/en/">
     <meta property="og:type" content="website">
     
     <!-- hreflang tags for SEO -->
@@ -27,29 +27,6 @@
     <link rel="alternate" hreflang="x-default" href="https://yuki-koike0626.github.io/SimplePallet/en/" />
 
     <style>
-        /* 言語切り替えボタン */
-        .lang-switch {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 0.9em;
-        }
-        .lang-switch a {
-            text-decoration: none;
-            color: #666;
-            padding: 5px 10px;
-            border-radius: 15px;
-            transition: background 0.2s;
-        }
-        .lang-switch a:hover {
-            background: rgba(0,0,0,0.05);
-            color: #333;
-        }
-        .lang-switch a.active {
-            font-weight: bold;
-            color: #007AFF;
-        }
-
         /* アニメーション定義 */
         @keyframes gradient-animation {
             0% { background-position: 0% 50%; }
@@ -254,7 +231,7 @@
             gap: 20px;
             text-align: left; /* グリッド内のテキストは左揃えに戻す */
         }
-
+        
         /* レスポンシブ対応はflex-directionが最初からcolumnなので不要になったが、念のため残すなら調整 */
         @media (max-width: 768px) {
             /* 特になし */
@@ -275,80 +252,103 @@
         a {
             color: #007AFF;
         }
+        
+        /* Language switcher */
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 0.9em;
+        }
+        .lang-switch a {
+            text-decoration: none;
+            color: #666;
+            padding: 5px 10px;
+            border-radius: 15px;
+            transition: background 0.2s;
+        }
+        .lang-switch a:hover {
+            background: rgba(0,0,0,0.05);
+            color: #333;
+        }
+        .lang-switch a.active {
+            font-weight: bold;
+            color: #007AFF;
+        }
     </style>
 </head>
 <body>
     <div class="lang-switch">
-        <a href="#" class="active">日本語</a> | <a href="en/">English</a>
+        <a href="../">日本語</a> | <a href="#" class="active">English</a>
     </div>
 
     <div class="hero">
-        <img src="app-icon.png" alt="SimplePallet Icon" class="app-icon">
-        <h1>Macの画面分割を、<br>かつてないほど直感的に。</h1>
-        <p class="subtitle">画面を半分にするのも、3分割にするのも一瞬。<br>ショートカットキーだけで、あなたのMacを整理整頓します。</p>
+        <img src="../app-icon.png" alt="SimplePallet Icon" class="app-icon">
+        <h1>Mac Split Screen,<br>More Intuitive Than Ever.</h1>
+        <p class="subtitle">Snap windows to halves or thirds instantly.<br>Organize your Mac with just keyboard shortcuts.</p>
 
         <a href="https://github.com/yuki-koike0626/SimplePallet/releases/latest/download/SimplePallet-1.0.dmg" class="download-btn" onclick="gtag('event', 'download_click', {'event_category': 'download', 'event_label': 'v1.0_dmg'});">
-            ダウンロード (macOS 13.0+)
+            Download (macOS 13.0+)
         </a>
-        <p style="font-size: 0.8em; margin-top: 10px; color: #888;">バージョン 1.0 | Appleシリコン & Intel 対応</p>
+        <p style="font-size: 0.8em; margin-top: 10px; color: #888;">Version 1.0 | Apple Silicon & Intel</p>
     </div>
 
     <div class="features">
-        <h2>指先ひとつで、<br>ウィンドウは思いのまま。</h2>
-
-        <!-- デモセクションを追加 -->
+        <h2>Your Windows,<br>At Your Fingertips.</h2>
+        
+        <!-- Demo Section -->
         <div class="demo-section">
-            <img src="window-snap-demo.gif" alt="Mac画面分割のデモンストレーション" class="demo-video">
+            <img src="../window-snap-demo.gif" alt="Mac Split Screen Demonstration" class="demo-video">
             <div class="demo-content">
-                <h3>魔法のようなスナップ体験。</h3>
-                <p style="margin-bottom: 24px;">マウスドラッグの手間はもう必要ありません。<br>キーボードショートカットを押すだけで、ウィンドウが吸い付くように配置されます。<br>「Mac 画面分割」の新しいスタンダードです。</p>
+                <h3>Magical Snapping Experience.</h3>
+                <p style="margin-bottom: 24px;">Forget dragging windows. Just press a shortcut, and your windows snap into place perfectly.<br>This is the new standard for Mac window management.</p>
 
                 <ul class="shortcut-list">
                     <li class="shortcut-item">
                         <span class="key-combo">⌘ + ←</span>
-                        <span>ウィンドウを左半分に</span>
+                        <span>Left Half</span>
                     </li>
                     <li class="shortcut-item">
                         <span class="key-combo">⌘ + →</span>
-                        <span>ウィンドウを右半分に</span>
+                        <span>Right Half</span>
                     </li>
                     <li class="shortcut-item">
                         <span class="key-combo">⌘ + ↑</span>
-                        <span>ウィンドウを最大化</span>
+                        <span>Maximize</span>
                     </li>
                     <li class="shortcut-item">
                         <span class="key-combo">+ ⌥</span>
-                        <span>上記にプラス⌥で3分割</span>
+                        <span>Add Option(⌥) for Thirds</span>
                     </li>
                 </ul>
 
                 <div class="use-case">
-                    <img src="split-screen-usecase.png" alt="Mac画面分割で講義とノートを並べる" class="use-case-img">
-                    <h4 class="use-case-title">講義とノート。<br>美しく並べて、効率を最大化。</h4>
-                    <p class="use-case-text">左の画面で講義動画を見ながら、右の画面でノートを取る。<br>「Mac 画面 半分」の操作も、このアプリなら一瞬で完了します。</p>
+                    <img src="../split-screen-usecase.png" alt="Lecture and Notes Split Screen" class="use-case-img">
+                    <h4 class="use-case-title">Lectures & Notes.<br>Side by Side, Efficiently.</h4>
+                    <p class="use-case-text">Watch a lecture on the left, take notes on the right.<br>Achieve the perfect "Mac Split Screen" setup in seconds.</p>
                 </div>
             </div>
         </div>
 
         <div class="feature-grid">
             <div class="feature-item">
-                <h3>🪟 自在なレイアウト</h3>
-                <p>画面を半分に、あるいは3分割に。<br>Macの画面分割方法として、最もシンプルで強力な答えです。</p>
+                <h3>🪟 Flexible Layouts</h3>
+                <p>Half screen, thirds, or full screen.<br>The simplest and most powerful answer to Mac window management.</p>
             </div>
             <div class="feature-item">
-                <h3>⌨️ ショートカット操作</h3>
-                <p>キーボードから手を離すことなく。<br>Mac画面分割コマンドを使いこなし、プロフェッショナルな操作感を。</p>
+                <h3>⌨️ Shortcut Control</h3>
+                <p>Never leave your keyboard.<br>Master Mac split screen commands for a professional workflow.</p>
             </div>
             <div class="feature-item">
-                <h3>🌍 世界中で使える</h3>
-                <p>日本語、英語、韓国語、中国語に対応。<br>あらゆる言語環境のMacで、快適な画面分割体験を。</p>
+                <h3>🌍 Global Support</h3>
+                <p>Supports English, Japanese, Korean, and Chinese.<br>A comfortable experience for Mac users worldwide.</p>
             </div>
         </div>
     </div>
 
     <footer>
         <p>&copy; 2025 Yuki Koike. All rights reserved.</p>
-        <p><a href="privacy.html">プライバシーポリシー</a> | <a href="https://github.com/yuki-koike0626/SimplePallet">GitHub Repository</a></p>
+        <p><a href="../privacy.html">Privacy Policy</a> | <a href="https://github.com/yuki-koike0626/SimplePallet">GitHub Repository</a></p>
     </footer>
 </body>
 </html>
