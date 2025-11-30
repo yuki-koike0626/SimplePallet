@@ -99,18 +99,89 @@
             animation: none;
         }
         .features {
-            margin-top: 60px;
+            margin-top: 80px;
             text-align: left;
         }
         .features h2 {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             color: #333;
+            font-size: 2em;
         }
+        
+        /* 新しいデモセクションのスタイル */
+        .demo-section {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(15px);
+            padding: 40px;
+            border-radius: 24px;
+            margin-bottom: 60px;
+            border: 1px solid rgba(255,255,255,0.4);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .demo-video {
+            flex: 1;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            max-width: 100%;
+            height: auto;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .demo-content {
+            flex: 1;
+        }
+
+        .demo-content h3 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .shortcut-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .shortcut-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            color: #444;
+        }
+
+        .key-combo {
+            background: #fff;
+            padding: 4px 10px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 0 #ddd;
+            font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+            font-weight: bold;
+            color: #333;
+            margin-right: 12px;
+            font-size: 0.9em;
+            min-width: 80px;
+            text-align: center;
+        }
+
         .feature-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
+        }
+        
+        /* レスポンシブ対応 */
+        @media (max-width: 768px) {
+            .demo-section {
+                flex-direction: column;
+            }
         }
         .feature-item {
             background: rgba(255, 255, 255, 0.7); /* 半透明にして背景を少し透けさせる */
@@ -143,7 +214,36 @@
     </div>
 
     <div class="features">
-        <h2>主な機能</h2>
+        <h2>キーボードで直感的に操作</h2>
+        
+        <!-- デモセクションを追加 -->
+        <div class="demo-section">
+            <img src="window-snap-demo.gif" alt="Window snapping demonstration" class="demo-video">
+            <div class="demo-content">
+                <h3>魔法のようなスナップ体験</h3>
+                <p style="margin-bottom: 24px;">マウスを使わずに、キーボードだけでウィンドウを整理整頓。思考を止めることなく、理想のレイアウトを一瞬で作れます。</p>
+                
+                <ul class="shortcut-list">
+                    <li class="shortcut-item">
+                        <span class="key-combo">⌘ + ←</span>
+                        <span>ウィンドウを左半分に</span>
+                    </li>
+                    <li class="shortcut-item">
+                        <span class="key-combo">⌘ + →</span>
+                        <span>ウィンドウを右半分に</span>
+                    </li>
+                    <li class="shortcut-item">
+                        <span class="key-combo">⌘ + ↑</span>
+                        <span>ウィンドウを最大化</span>
+                    </li>
+                    <li class="shortcut-item">
+                        <span class="key-combo">⌥ + 1/2/3</span>
+                        <span>3分割配置もワンタッチ</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
         <div class="feature-grid">
             <div class="feature-item">
                 <h3>🪟 自在なウィンドウ配置</h3>
