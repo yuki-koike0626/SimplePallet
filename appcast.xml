@@ -27,8 +27,9 @@
         url="https://github.com/yuki-koike0626/SimplePallet/releases/download/v1.0/SimplePallet-1.0.dmg"
         sparkle:version="1.0"
         sparkle:shortVersionString="1.0"
-        length="10000000"
+        length="4183406"
         type="application/octet-stream"
+        sparkle:edSignature="Mo0TxLWPcBVz8u4SmdI59ls/ZTTLR8MzYA3RAzjA93RcZxRqD5O58A63bKi48C06I/E6Na3yn5Fw6QsU6PynAA=="
       />
       <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
     </item>
