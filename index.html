@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XV579MGY0M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XV579MGY0M');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SimplePallet - macOS用ウィンドウ管理ツール</title>
@@ -238,7 +247,7 @@
         <h1>SimplePallet</h1>
         <p class="subtitle">macOSのための、シンプルで強力なウィンドウ管理ツール</p>
 
-        <a href="https://github.com/yuki-koike0626/SimplePallet/releases/latest/download/SimplePallet-1.0.dmg" class="download-btn">
+        <a href="https://github.com/yuki-koike0626/SimplePallet/releases/latest/download/SimplePallet-1.0.dmg" class="download-btn" onclick="gtag('event', 'download_click', {'event_category': 'download', 'event_label': 'v1.0_dmg'});">
             ダウンロード (macOS 13.0+)
         </a>
         <p style="font-size: 0.8em; margin-top: 10px; color: #888;">バージョン 1.0 | Appleシリコン & Intel 対応</p>
