@@ -1,11 +1,77 @@
-# Sparkle秘密鍵（絶対にコミットしない！）
-sparkle_private_key.pem
-sparkle_public_key.pem
-generate_keys
 
-# ビルド成果物
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## User settings
+xcuserdata/
+
+## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
+*.xcscmblueprint
+*.xccheckout
+
+## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
 build/
-dist/
-*.backup/
+DerivedData/
+*.moved-aside
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Swift Package Manager
+#
+.build/
+
+# CocoaPods
+#
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
+#
+# Pods/
+#
+# Add this line if you want to avoid checking in source code from the Pods directory
+# Pods/
+
+# Carthage
+#
+# Add this line if you want to avoid checking in source code from Carthage dependencies
+# Carthage/Checkouts
+
+Carthage/Build/
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo.
+# fastlane/screenshots
+# fastlane/test_output
+
+# Code Injection
+#
+iOSInjectionProject/
+
+# App Packaging
+*.app
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Specific to this project - remove large build artifacts
 SimplePallet.app/
-sign_update
+SimplePallet/SimplePallet/SimplePallet.app/
+SimplePallet/SimplePallet/SimplePallet 2025-11-27 16-01-13/
+website_dist/
+
+# OS X
+.DS_Store
