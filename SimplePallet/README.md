@@ -6,7 +6,8 @@ macOS 向けのシンプルなウィンドウ管理アプリ。キーボード�
 
 ### 最新版をダウンロード
 
-[![最新リリース](https://img.shields.io/github/v/release/yuki-koike0626/SimplePallet?label=ダウンロード)](https://github.com/yuki-koike0626/SimplePallet/releases/latest)
+[![最新リリース](https://img.shields.io/github/v/release/yuki-koike0626/SimplePallet?label=最新版&logo=apple&color=blue)](https://github.com/yuki-koike0626/SimplePallet/releases/latest)
+[![ダウンロード数](https://img.shields.io/github/downloads/yuki-koike0626/SimplePallet/total?label=ダウンロード数&logo=github&color=green)](https://github.com/yuki-koike0626/SimplePallet/releases/latest)
 
 **[SimplePallet-1.0.dmg をダウンロード](https://github.com/yuki-koike0626/SimplePallet/releases/latest)**
 
