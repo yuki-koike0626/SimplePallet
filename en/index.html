@@ -246,6 +246,82 @@
             border: 1px solid rgba(255,255,255,0.4);
             box-shadow: 0 4px 6px rgba(0,0,0,0.02);
         }
+
+        /* 使い方セクション */
+        .how-to-use {
+            margin: 100px 0;
+            text-align: center;
+        }
+        .how-to-use h2 {
+            font-size: 2.2em;
+            margin-bottom: 60px;
+            color: #1d1d1f;
+        }
+        .steps-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+        .step-item {
+            flex: 1;
+            min-width: 240px;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .step-icon {
+            font-size: 3.5em;
+            margin-bottom: 24px;
+            background: #fff;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 28px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease;
+        }
+        .step-item:hover .step-icon {
+            transform: translateY(-5px);
+        }
+        .step-number {
+            font-size: 0.8em;
+            color: #007AFF;
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        .step-item h3 {
+            font-size: 1.4em;
+            margin: 0 0 12px 0;
+            color: #1d1d1f;
+            font-weight: 600;
+        }
+        .step-item p {
+            color: #86868b;
+            font-size: 1.05em;
+            line-height: 1.5;
+            margin: 0;
+        }
+        .step-arrow {
+            font-size: 2em;
+            color: #d2d2d7;
+            margin-top: 35px;
+            font-weight: 200;
+        }
+        @media (max-width: 768px) {
+            .step-arrow { display: none; }
+            .steps-container { flex-direction: column; align-items: center; gap: 50px; }
+            .step-item { width: 100%; max-width: 320px; padding: 0; }
+        }
+
         footer {
             margin-top: 80px;
             font-size: 0.9em;
@@ -337,6 +413,40 @@
                     <h4 class="use-case-title">Lectures & Notes.<br>Side by Side, Efficiently.</h4>
                     <p class="use-case-text">Watch a lecture on the left, take notes on the right.<br>Achieve the perfect "Mac Split Screen" setup in seconds.</p>
                 </div>
+            </div>
+        </div>
+
+        <!-- How to use section -->
+        <div class="how-to-use">
+            <h2>Getting Started is Simple.</h2>
+            <div class="steps-container">
+                <div class="step-item">
+                    <span class="step-number">Step 1</span>
+                    <div class="step-icon">📥</div>
+                    <h3>Download</h3>
+                    <p>Click the button to<br>save the app.</p>
+                </div>
+                <div class="step-arrow">›</div>
+                <div class="step-item">
+                    <span class="step-number">Step 2</span>
+                    <div class="step-icon">🔒</div>
+                    <h3>Permission</h3>
+                    <p>Open the app and enable<br>Accessibility in Settings.</p>
+                </div>
+                <div class="step-arrow">›</div>
+                <div class="step-item">
+                    <span class="step-number">Step 3</span>
+                    <div class="step-icon">✨</div>
+                    <h3>Done</h3>
+                    <p>Just use shortcuts to<br>organize freely.</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 70px;">
+                <a href="https://github.com/yuki-koike0626/SimplePallet/releases/latest/download/SimplePallet-1.0.dmg" class="download-btn" onclick="gtag('event', 'download_click', {'event_category': 'download', 'event_label': 'v1.0_dmg_bottom'});">
+                    Download SimplePallet
+                </a>
+                <p style="font-size: 0.8em; margin-top: 15px; color: #86868b;">Version 1.0 | macOS 13.0+ | Apple Silicon & Intel</p>
             </div>
         </div>
 
