@@ -105,6 +105,9 @@ echo -e "${BLUE}一時ファイルを削除中...${NC}"
 rm -f "$TEMP_DMG"
 rm -rf temp_dmg
 
+echo -e "${BLUE}DMGに署名中...${NC}"
+codesign --sign "Developer ID Application: Yuki Koike (9552ZD2XMV)" --timestamp "$DMG_PATH"
+
 echo ""
 echo -e "${GREEN}✅ DMG作成完了！${NC}"
 echo -e "${GREEN}ファイル: ${DMG_PATH}${NC}"

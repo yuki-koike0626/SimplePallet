@@ -7,3 +7,5 @@ generate_keys
 build/
 dist/
 *.backup/
+SimplePallet.app/
+sign_update
