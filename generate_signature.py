@@ -1,13 +1,34 @@
 import sys
 import base64
 import subprocess
+import os
+import argparse
 
-# ファイルパス
-dmg_path = "dist/SimplePallet-1.0.dmg"
-priv_key_path = "sparkle_private_key.pem"
+# 引数解析
+parser = argparse.ArgumentParser(description='Generate Sparkle signature.')
+parser.add_argument('--dmg', default="dist/SimplePallet-1.0.dmg", help='Path to DMG file')
+parser.add_argument('--key', default="../SimplePallet-Source/sparkle_private_key.pem", help='Path to private key')
+args = parser.parse_args()
+
+dmg_path = args.dmg
+priv_key_path = args.key
+
+# 鍵ファイルの存在確認
+if not os.path.exists(priv_key_path):
+    # カレントディレクトリも探してみる
+    if os.path.exists("sparkle_private_key.pem"):
+        priv_key_path = "sparkle_private_key.pem"
+    else:
+        print(f"Error: Private key not found at {priv_key_path}")
+        print("Please provide the correct path using --key argument or move the key to ../SimplePallet-Source/")
+        sys.exit(1)
+
+# DMGファイルの存在確認
+if not os.path.exists(dmg_path):
+    print(f"Error: DMG file not found at {dmg_path}")
+    sys.exit(1)
 
 # 1. ファイルサイズを取得
-import os
 file_size = os.path.getsize(dmg_path)
 print(f"File size: {file_size}")
 
@@ -35,4 +56,3 @@ try:
 except subprocess.CalledProcessError as e:
     print(f"Error signing: {e}")
     print(e.stderr)
-

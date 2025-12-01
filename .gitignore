@@ -67,7 +67,15 @@ iOSInjectionProject/
 *.dSYM.zip
 *.dSYM
 
+# Security
+*.pem
+
+# Binary Tools
+generate_keys
+sign_update
+
 # Specific to this project - remove large build artifacts
+dist/
 SimplePallet.app/
 SimplePallet/SimplePallet/SimplePallet.app/
 SimplePallet/SimplePallet/SimplePallet 2025-11-27 16-01-13/

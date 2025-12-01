@@ -105,8 +105,16 @@ echo -e "${BLUE}一時ファイルを削除中...${NC}"
 rm -f "$TEMP_DMG"
 rm -rf temp_dmg
 
+# 署名用ID（環境変数 SIGNING_IDENTITY が設定されていればそれを使用）
+# 設定されていない場合は、自動的に署名をスキップするかエラーにします
+SIGNING_IDENTITY="${SIGNING_IDENTITY:-Developer ID Application: Yuki Koike (9552ZD2XMV)}"
+
 echo -e "${BLUE}DMGに署名中...${NC}"
-codesign --sign "Developer ID Application: Yuki Koike (9552ZD2XMV)" --timestamp "$DMG_PATH"
+if [ -n "$SIGNING_IDENTITY" ]; then
+    codesign --sign "$SIGNING_IDENTITY" --timestamp "$DMG_PATH"
+else
+    echo -e "${RED}署名IDが設定されていないため、署名をスキップします${NC}"
+fi
 
 echo ""
 echo -e "${GREEN}✅ DMG作成完了！${NC}"
