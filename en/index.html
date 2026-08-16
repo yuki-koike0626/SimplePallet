@@ -12,19 +12,29 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SimplePallet - Mac Split Screen Shortcut App</title>
+    <title>SimplePallet - Free Mac Split Screen Window Manager</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../app-icon.png">
     <link rel="apple-touch-icon" href="../app-icon.png">
+    <link rel="stylesheet" href="../seo-aeo.css">
 
     <meta name="google-site-verification" content="x2J3BHoArRrFIN664RGVivhAYAvIGf_uhQ5Q05_92WQ" />
-    <meta name="description" content="SimplePallet is a free Mac app that revolutionizes split-screen multitasking. Snap windows to halves or thirds instantly with keyboard shortcuts (Cmd+Arrows). No mouse required. Experience Windows-like snapping on macOS.">
-    <meta property="og:title" content="SimplePallet - Instant Mac Split Screen with Shortcuts">
-    <meta property="og:description" content="Stop dragging windows. Snap them instantly with keyboard shortcuts. The best free window manager for macOS to split screens into halves or thirds.">
-    <meta property="og:image" content="https://yuki-koike0626.github.io/SimplePallet/app-icon.png">
+    <meta name="description" content="SimplePallet is a free, Apple-notarized Mac window manager. Use Cmd+Arrow to tile windows into halves, thirds, or two-thirds on macOS 13+. No tracking.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://yuki-koike0626.github.io/SimplePallet/en/">
+    <meta property="og:title" content="SimplePallet - Simple Mac Window Tiling with Cmd+Arrow">
+    <meta property="og:description" content="A free, Apple-notarized Mac window manager for half-screen, one-third, and two-thirds layouts. Window positioning is processed locally.">
+    <meta property="og:image" content="https://yuki-koike0626.github.io/SimplePallet/split-screen-usecase.png">
+    <meta property="og:image:width" content="1720">
+    <meta property="og:image:height" content="960">
     <meta property="og:url" content="https://yuki-koike0626.github.io/SimplePallet/en/">
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SimplePallet - Simple Mac Window Tiling with Cmd+Arrow">
+    <meta name="twitter:description" content="Free and Apple-notarized. Tile Mac windows into halves, thirds, or two-thirds with memorable shortcuts.">
+    <meta name="twitter:image" content="https://yuki-koike0626.github.io/SimplePallet/split-screen-usecase.png">
 
     <!-- hreflang tags for SEO -->
     <link rel="alternate" hreflang="ja" href="https://yuki-koike0626.github.io/SimplePallet/" />
@@ -479,20 +489,48 @@
     </style>
 </head>
 <body>
-    <div class="lang-switch">
-        <a href="../">日本語</a> | <a href="#" class="active">English</a> | <a href="../ko/">한국어</a> | <a href="../zh/">中文</a>
-    </div>
+    <nav class="lang-switch" aria-label="Display language">
+        <a href="../">日本語</a> | <a href="./" class="active" aria-current="page">English</a> | <a href="../ko/">한국어</a> | <a href="../zh/">中文</a>
+    </nav>
 
-    <div class="hero">
-        <img src="../app-icon.png" alt="SimplePallet Icon" class="app-icon">
-        <h1>Mac Split Screen,<br>More Intuitive Than Ever.</h1>
+    <main>
+    <section class="hero" aria-labelledby="page-title">
+        <img src="../app-icon.png" alt="SimplePallet app icon" class="app-icon" width="128" height="128">
+        <h1 id="page-title">Mac Split Screen,<br>More Intuitive Than Ever.</h1>
         <p class="subtitle">Snap windows to halves or thirds instantly.<br>Organize your Mac with just keyboard shortcuts.</p>
+        <p class="aeo-summary"><strong>SimplePallet is a free (JPY 0) Mac window manager that places windows in left or right halves, one-third, and two-thirds layouts using only the keyboard.</strong> Its primary <code>Cmd + Arrow</code> controls use fewer keys than macOS's built-in <code>Fn + Control + Arrow</code> shortcuts, and it supports Apple Silicon and Intel Macs running macOS 13 or later.</p>
 
         <a href="https://github.com/yuki-koike0626/SimplePallet/releases/latest/download/SimplePallet-1.2.dmg" class="download-btn" onclick="gtag('event', 'download_click', {'event_category': 'download', 'event_label': 'v1.2_dmg'});">
             Download (macOS 13.0+)
         </a>
-        <p style="font-size: 0.8em; margin-top: 10px; color: #888;">Version 1.2 | Apple Silicon & Intel</p>
-    </div>
+        <p style="font-size: 0.8em; margin-top: 10px; color: #888;">Version 1.2 | Apple Silicon &amp; Intel</p>
+
+        <div class="trust-grid" aria-label="Security and compatibility">
+            <div class="trust-item"><strong>Completely free</strong><span>JPY 0, no extra fees</span></div>
+            <div class="trust-item"><strong>Apple-notarized</strong><span>Developer ID signed</span></div>
+            <div class="trust-item"><strong>No data collection</strong><span>No personal data or usage analytics</span></div>
+            <div class="trust-item"><strong>Local processing</strong><span>Window positioning stays on your Mac</span></div>
+            <div class="trust-item"><strong>Source available</strong><span><a href="https://github.com/yuki-koike0626/SimplePallet">View on GitHub</a></span></div>
+            <div class="trust-item"><strong>macOS 13+</strong><span>Apple Silicon and Intel</span></div>
+        </div>
+    </section>
+
+    <section class="decision-section" aria-labelledby="recommended-heading">
+        <h2 id="recommended-heading">Who SimplePallet is for</h2>
+        <p>Some people only need macOS's built-in tiling. SimplePallet is for people who want fewer keys for common placements or regularly use one-third and two-thirds widths.</p>
+        <ul class="recommendation-list">
+            <li>You arrange Mac windows side by side throughout the day</li>
+            <li>You prefer a keyboard-only workflow</li>
+            <li>You want a simpler alternative to <code>Fn + Control + Arrow</code></li>
+            <li>You use one-third or two-thirds layouts for documents and chat</li>
+            <li>You want a free Mac window manager</li>
+            <li>You value memorable controls over a long feature list</li>
+        </ul>
+        <div class="standard-note">
+            <h3>How it differs from built-in macOS tiling</h3>
+            <p>macOS already includes window-tiling shortcuts: <code>Fn + Control + Left/Right Arrow</code> places the active window on the left or right half. SimplePallet shortens that action to <code>Cmd + Left/Right Arrow</code> and adds one-third and two-thirds placements.</p>
+        </div>
+    </section>
 
     <div class="features">
         <h2>Your Windows,<br>At Your Fingertips.</h2>
@@ -529,11 +567,19 @@
                         <span class="key-combo">⌥ ⌘ →</span>
                         <span>Right Third</span>
                     </li>
+                    <li class="shortcut-item">
+                        <span class="key-combo">⌃ ⌘ ←</span>
+                        <span>Left Two-Thirds</span>
+                    </li>
+                    <li class="shortcut-item">
+                        <span class="key-combo">⌃ ⌘ →</span>
+                        <span>Right Two-Thirds</span>
+                    </li>
                 </ul>
 
                 <div class="use-case">
                     <img src="../split-screen-usecase.png" alt="Lecture and Notes Split Screen" class="use-case-img">
-                    <h4 class="use-case-title">Lectures & Notes.<br>Side by Side, Efficiently.</h4>
+                    <h4 class="use-case-title">Lectures &amp; Notes.<br>Side by Side, Efficiently.</h4>
                     <p class="use-case-text">Watch a lecture on the left, take notes on the right.<br>Achieve the perfect "Mac Split Screen" setup in seconds.</p>
                 </div>
             </div>
@@ -569,7 +615,7 @@
                 <a href="https://github.com/yuki-koike0626/SimplePallet/releases/latest/download/SimplePallet-1.2.dmg" class="download-btn" onclick="gtag('event', 'download_click', {'event_category': 'download', 'event_label': 'v1.2_dmg_bottom'});">
                     Download SimplePallet
                 </a>
-                <p style="font-size: 0.8em; margin-top: 15px; color: #86868b;">Version 1.2 | macOS 13.0+ | Apple Silicon & Intel</p>
+                <p style="font-size: 0.8em; margin-top: 15px; color: #86868b;">Version 1.2 | macOS 13.0+ | Apple Silicon &amp; Intel</p>
             </div>
         </div>
 
@@ -593,62 +639,121 @@
         <div class="tips-section">
             <h2>Mac Split Screen Tips</h2>
 
+            <div class="table-scroll" role="region" aria-label="Comparison of built-in macOS tiling and SimplePallet" tabindex="0">
             <table class="comparison-table">
                 <thead>
                     <tr>
                         <th>Feature</th>
-                        <th>Mac Default (Split View)</th>
+                        <th>Built-in macOS tiling</th>
                         <th>SimplePallet</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Steps</td>
-                        <td>3 Steps<br><span style="font-size:0.8em; color:#888;">(Hold + Select)</span></td>
-                        <td><strong>1 Step</strong><br><span style="font-size:0.8em; color:#007AFF;">(Shortcut)</span></td>
+                        <td>Left/right half shortcut</td>
+                        <td><code>Fn + Control + ← / →</code></td>
+                        <td><strong><code>⌘ + ← / →</code></strong></td>
                     </tr>
                     <tr>
                         <td>Mouse Required</td>
-                        <td>Yes <span class="cross-mark">✗</span></td>
+                        <td>No <span class="check-mark">✓</span></td>
                         <td><strong>No</strong> <span class="check-mark">✓</span></td>
                     </tr>
                     <tr>
-                        <td>1/3 Split</td>
-                        <td>No <span class="cross-mark">✗</span></td>
-                        <td><strong>Yes</strong> <span class="check-mark">✓</span></td>
+                        <td>One-third width</td>
+                        <td>Not listed in Apple's shortcut guide</td>
+                        <td><strong><code>⌥ + ⌘ + ← / ↑ / →</code></strong></td>
+                    </tr>
+                    <tr>
+                        <td>Two-thirds width</td>
+                        <td>Not listed in Apple's shortcut guide</td>
+                        <td><strong><code>⌃ + ⌘ + ← / →</code></strong></td>
+                    </tr>
+                    <tr>
+                        <td>Best for</td>
+                        <td>People who only need built-in half-screen tiling</td>
+                        <td><strong>People who want fewer keys and third-based layouts</strong></td>
                     </tr>
                 </tbody>
             </table>
+            </div>
+            <p class="source-note">Source for built-in shortcuts: <a href="https://support.apple.com/guide/mac-help/mchl9674d0b0/mac">Apple's Mac window tiling icons and keyboard shortcuts</a> (checked August 16, 2026).</p>
 
-            <div class="faq-list">
+            <div class="faq-list" aria-labelledby="faq-heading">
+                <h3 id="faq-heading">Frequently asked questions</h3>
                 <div class="faq-item">
                     <div class="faq-question">Is there a shortcut key to split screen on Mac?</div>
-                    <div class="faq-answer">Not by default, but with SimplePallet you can instantly split screen using <code>Cmd + Arrow keys</code>.</div>
+                    <div class="faq-answer">Yes. Built-in macOS uses <code>Fn + Control + Left/Right Arrow</code>, while SimplePallet uses <code>Cmd + Left/Right Arrow</code> to place the active window on either half.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Who should use SimplePallet?</div>
+                    <div class="faq-answer">SimplePallet suits people who split their Mac screen often, want fewer keys, or use one-third and two-thirds widths. If left and right halves are all you need, built-in macOS tiling is also a good option.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Is SimplePallet free and safe to install?</div>
+                    <div class="faq-answer">SimplePallet is completely free (JPY 0). The current v1.2 DMG is Developer ID signed and notarized by Apple.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Does SimplePallet collect personal or usage data?</div>
+                    <div class="faq-answer">It does not collect personal data or usage analytics. Window positioning is processed on your Mac, although the app may contact the public update feed when checking for a new version.</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">Why is Mac split screen not working?</div>
-                    <div class="faq-answer">This is usually caused by insufficient Accessibility permissions. Go to "System Settings > Privacy & Security > Accessibility" and ensure SimplePallet is turned ON. If it is already ON, try turning it OFF and then ON again.</div>
+                    <div class="faq-answer">Open "System Settings &gt; Privacy &amp; Security &gt; Accessibility" and confirm that SimplePallet is turned on. If it is already on, turn it off and on again.</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">How do I check permissions or set auto-launch?</div>
-                    <div class="faq-answer">Click the SimplePallet icon in the menu bar at the top of the screen to check permissions. We also recommend checking "Launch at login" here for convenience.</div>
+                    <div class="faq-answer">Click the SimplePallet icon in the menu bar to check permissions. The same menu includes the "Launch at login" setting.</div>
                 </div>
             </div>
         </div>
+
+        <section class="about-section" aria-labelledby="about-heading">
+            <h2 id="about-heading">Developer and updates</h2>
+            <p>SimplePallet is a macOS app developed by Yuki Koike. Its source code, release history, and downloads are available on <a href="https://github.com/yuki-koike0626/SimplePallet">GitHub</a>.</p>
+            <ul>
+                <li><strong>Latest version:</strong> 1.2, published August 14, 2026</li>
+                <li><a href="https://github.com/yuki-koike0626/SimplePallet/releases/tag/v1.2">SimplePallet v1.2 release notes</a></li>
+                <li><a href="../privacy.html">Privacy policy</a></li>
+            </ul>
+            <p class="updated-note"><time datetime="2026-08-16">Last updated: August 16, 2026</time></p>
+        </section>
+    </main>
 
         <script type="application/ld+json">
         {
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
+          "@id": "https://yuki-koike0626.github.io/SimplePallet/#softwareapplication",
           "name": "SimplePallet",
-          "operatingSystem": "macOS",
-          "applicationCategory": "UtilitiesApplication",
+          "url": "https://yuki-koike0626.github.io/SimplePallet/en/",
+          "description": "A free Mac window manager for placing windows in halves, one-third, and two-thirds layouts with keyboard shortcuts.",
+          "image": "https://yuki-koike0626.github.io/SimplePallet/app-icon.png",
+          "screenshot": "https://yuki-koike0626.github.io/SimplePallet/split-screen-usecase.png",
+          "operatingSystem": "macOS 13.0 or later",
+          "softwareRequirements": "macOS 13.0 or later; Apple Silicon or Intel processor",
+          "softwareVersion": "1.2",
+          "dateModified": "2026-08-16",
+          "applicationCategory": "DesktopEnhancementApplication",
+          "downloadUrl": "https://github.com/yuki-koike0626/SimplePallet/releases/latest/download/SimplePallet-1.2.dmg",
+          "installUrl": "https://github.com/yuki-koike0626/SimplePallet/releases/latest/download/SimplePallet-1.2.dmg",
+          "releaseNotes": "https://github.com/yuki-koike0626/SimplePallet/releases/tag/v1.2",
+          "fileSize": "4388016 bytes",
+          "isAccessibleForFree": true,
           "offers": {
             "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
+            "price": 0,
+            "priceCurrency": "JPY",
+            "availability": "https://schema.org/InStock",
+            "url": "https://github.com/yuki-koike0626/SimplePallet/releases/latest/download/SimplePallet-1.2.dmg"
           },
-          "description": "Free Mac app to split screen instantly with shortcuts. Snap windows to halves or thirds easily."
+          "author": {
+            "@type": "Person",
+            "name": "Yuki Koike",
+            "url": "https://github.com/yuki-koike0626",
+            "sameAs": "https://github.com/yuki-koike0626"
+          },
+          "inLanguage": "en"
         }
         </script>
         <script type="application/ld+json">
@@ -660,28 +765,49 @@
             "name": "Is there a shortcut key to split screen on Mac?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Not by default, but with SimplePallet you can instantly split screen using Cmd + Arrow keys."
+              "text": "Yes. Built-in macOS uses Fn + Control + Left/Right Arrow, while SimplePallet uses Cmd + Left/Right Arrow to place the active window on either half."
+            }
+          }, {
+            "@type": "Question",
+            "name": "Who should use SimplePallet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SimplePallet suits people who split their Mac screen often, want fewer keys, or use one-third and two-thirds widths. If left and right halves are all you need, built-in macOS tiling is also a good option."
+            }
+          }, {
+            "@type": "Question",
+            "name": "Is SimplePallet free and safe to install?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SimplePallet is completely free (JPY 0). The current v1.2 DMG is Developer ID signed and notarized by Apple."
+            }
+          }, {
+            "@type": "Question",
+            "name": "Does SimplePallet collect personal or usage data?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It does not collect personal data or usage analytics. Window positioning is processed on your Mac, although the app may contact the public update feed when checking for a new version."
             }
           }, {
             "@type": "Question",
             "name": "Why is Mac split screen not working?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "This is usually caused by insufficient Accessibility permissions. Go to System Settings > Privacy & Security > Accessibility and ensure SimplePallet is turned ON."
+              "text": "Open \"System Settings > Privacy & Security > Accessibility\" and confirm that SimplePallet is turned on. If it is already on, turn it off and on again."
             }
           }, {
             "@type": "Question",
             "name": "How do I check permissions or set auto-launch?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Click the SimplePallet icon in the menu bar at the top of the screen to check permissions. We also recommend checking Launch at login here for convenience."
+              "text": "Click the SimplePallet icon in the menu bar to check permissions. The same menu includes the \"Launch at login\" setting."
             }
           }]
         }
         </script>
 
         <footer>
-        <p>&copy; 2025 Yuki Koike. All rights reserved.</p>
+        <p>&copy; 2025–2026 Yuki Koike. All rights reserved.</p>
         <p><a href="../privacy.html">Privacy Policy</a> | <a href="https://github.com/yuki-koike0626/SimplePallet">GitHub Repository</a></p>
     </footer>
 </body>

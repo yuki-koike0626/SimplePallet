@@ -17,14 +17,24 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../app-icon.png">
     <link rel="apple-touch-icon" href="../app-icon.png">
+    <link rel="stylesheet" href="../seo-aeo.css">
 
     <meta name="google-site-verification" content="x2J3BHoArRrFIN664RGVivhAYAvIGf_uhQ5Q05_92WQ" />
-    <meta name="description" content="맥(Mac) 화면 분할을 위한 최고의 무료 앱 'SimplePallet'. 단축키(Command+화살표)만으로 윈도우를 좌우 반, 또는 3분할로 즉시 정렬하세요. 윈도우 스냅 기능처럼 마우스 없이 빠르고 쾌적하게 멀티태스킹을 즐겨보세요.">
-    <meta property="og:title" content="SimplePallet - 단축키로 완성하는 맥 화면 분할">
-    <meta property="og:description" content="마우스 드래그는 이제 그만. 키보드 단축키만으로 맥의 윈도우를 깔끔하게 정리하는 무료 앱.">
-    <meta property="og:image" content="https://yuki-koike0626.github.io/SimplePallet/app-icon.png">
+    <meta name="description" content="SimplePallet은 Cmd+화살표로 Mac 창을 좌우 반, 1/3, 2/3에 배치하는 무료 앱입니다. macOS 13 이상, Apple Silicon·Intel 지원. 데이터 수집 없음, Apple 공증 완료.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://yuki-koike0626.github.io/SimplePallet/ko/">
+    <meta property="og:title" content="SimplePallet - Cmd+화살표로 간단한 Mac 화면 분할">
+    <meta property="og:description" content="좌우 반, 1/3, 2/3 배치를 지원하는 무료 Mac 창 관리 앱. Apple 공증 완료, 창 배치는 로컬에서 처리됩니다.">
+    <meta property="og:image" content="https://yuki-koike0626.github.io/SimplePallet/split-screen-usecase.png">
+    <meta property="og:image:width" content="1720">
+    <meta property="og:image:height" content="960">
     <meta property="og:url" content="https://yuki-koike0626.github.io/SimplePallet/ko/">
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="ko_KR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SimplePallet - Cmd+화살표로 간단한 Mac 화면 분할">
+    <meta name="twitter:description" content="무료·Apple 공증 완료. Mac 창을 좌우 반, 1/3, 2/3에 빠르게 배치하세요.">
+    <meta name="twitter:image" content="https://yuki-koike0626.github.io/SimplePallet/split-screen-usecase.png">
 
     <!-- hreflang tags for SEO -->
     <link rel="alternate" hreflang="ja" href="https://yuki-koike0626.github.io/SimplePallet/" />
@@ -475,20 +485,48 @@
     </style>
 </head>
 <body>
-    <div class="lang-switch">
-        <a href="../">日本語</a> | <a href="../en/">English</a> | <a href="#" class="active">한국어</a> | <a href="../zh/">中文</a>
-    </div>
+    <nav class="lang-switch" aria-label="표시 언어">
+        <a href="../">日本語</a> | <a href="../en/">English</a> | <a href="./" class="active" aria-current="page">한국어</a> | <a href="../zh/">中文</a>
+    </nav>
 
-    <div class="hero">
-        <img src="../app-icon.png" alt="SimplePallet Icon" class="app-icon">
-        <h1>맥 화면 분할,<br>가장 직관적인 방법.</h1>
+    <main>
+    <section class="hero" aria-labelledby="page-title">
+        <img src="../app-icon.png" alt="SimplePallet 앱 아이콘" class="app-icon" width="128" height="128">
+        <h1 id="page-title">맥 화면 분할,<br>가장 직관적인 방법.</h1>
         <p class="subtitle">단축키 하나로 1/2, 1/3 화면 분할.<br>마우스 없이 당신의 맥을 완벽하게 정리하세요.</p>
+        <p class="aeo-summary"><strong>SimplePallet은 키보드만으로 Mac 창을 좌우 반, 1/3, 2/3에 배치하는 무료(JPY 0) 창 관리 앱입니다.</strong> macOS 기본 <code>Fn + Control + 화살표</code>보다 키 수가 적은 <code>Cmd + 화살표</code>를 기본으로 사용하며, macOS 13 이상의 Apple Silicon 및 Intel Mac을 지원합니다.</p>
 
         <a href="https://github.com/yuki-koike0626/SimplePallet/releases/latest/download/SimplePallet-1.2.dmg" class="download-btn" onclick="gtag('event', 'download_click', {'event_category': 'download', 'event_label': 'v1.2_dmg'});">
             다운로드 (macOS 13.0+)
         </a>
-        <p style="font-size: 0.8em; margin-top: 10px; color: #888;">버전 1.2 | Apple Silicon & Intel 지원</p>
-    </div>
+        <p style="font-size: 0.8em; margin-top: 10px; color: #888;">버전 1.2 | Apple Silicon &amp; Intel 지원</p>
+
+        <div class="trust-grid" aria-label="보안 및 지원 환경">
+            <div class="trust-item"><strong>완전 무료</strong><span>JPY 0, 추가 요금 없음</span></div>
+            <div class="trust-item"><strong>Apple 공증 완료</strong><span>Developer ID 서명</span></div>
+            <div class="trust-item"><strong>데이터 수집 없음</strong><span>개인 정보·사용 통계를 수집하지 않음</span></div>
+            <div class="trust-item"><strong>로컬 처리</strong><span>창 배치는 Mac 안에서 처리</span></div>
+            <div class="trust-item"><strong>소스 코드 공개</strong><span><a href="https://github.com/yuki-koike0626/SimplePallet">GitHub에서 확인</a></span></div>
+            <div class="trust-item"><strong>macOS 13 이상</strong><span>Apple Silicon·Intel 지원</span></div>
+        </div>
+    </section>
+
+    <section class="decision-section" aria-labelledby="recommended-heading">
+        <h2 id="recommended-heading">SimplePallet이 잘 맞는 사람</h2>
+        <p>macOS 기본 화면 분할만으로 충분한 사람도 있습니다. SimplePallet은 자주 쓰는 배치의 키 수를 줄이거나, 1/3·2/3 너비를 일상적으로 사용하는 사람을 위한 앱입니다.</p>
+        <ul class="recommendation-list">
+            <li>Mac 창을 하루에도 여러 번 나란히 배치한다</li>
+            <li>마우스 없이 키보드만으로 조작하고 싶다</li>
+            <li><code>Fn + Control + 화살표</code>보다 간단한 조작을 원한다</li>
+            <li>문서와 채팅을 1/3·2/3 너비로 배치한다</li>
+            <li>무료 Mac 창 관리 앱을 찾고 있다</li>
+            <li>많은 기능보다 기억하기 쉬운 속도를 중시한다</li>
+        </ul>
+        <div class="standard-note">
+            <h3>macOS 기본 기능과의 차이</h3>
+            <p>macOS에도 화면 분할 단축키가 있습니다. <code>Fn + Control + 왼쪽/오른쪽 화살표</code>로 활성 창을 좌우 반에 배치합니다. SimplePallet은 이를 <code>Cmd + 왼쪽/오른쪽 화살표</code>로 줄이고 1/3·2/3 배치를 더합니다.</p>
+        </div>
+    </section>
 
     <div class="features">
         <h2>손끝 하나로,<br>원하는 레이아웃을.</h2>
@@ -524,6 +562,14 @@
                     <li class="shortcut-item">
                         <span class="key-combo">⌥ ⌘ →</span>
                         <span>오른쪽 1/3</span>
+                    </li>
+                    <li class="shortcut-item">
+                        <span class="key-combo">⌃ ⌘ ←</span>
+                        <span>왼쪽 2/3</span>
+                    </li>
+                    <li class="shortcut-item">
+                        <span class="key-combo">⌃ ⌘ →</span>
+                        <span>오른쪽 2/3</span>
                     </li>
                 </ul>
 
@@ -565,7 +611,7 @@
                 <a href="https://github.com/yuki-koike0626/SimplePallet/releases/latest/download/SimplePallet-1.2.dmg" class="download-btn" onclick="gtag('event', 'download_click', {'event_category': 'download', 'event_label': 'v1.2_dmg_bottom'});">
                     SimplePallet 다운로드
                 </a>
-                <p style="font-size: 0.8em; margin-top: 15px; color: #86868b;">버전 1.2 | macOS 13.0+ | Apple Silicon & Intel 지원</p>
+                <p style="font-size: 0.8em; margin-top: 15px; color: #86868b;">버전 1.2 | macOS 13.0+ | Apple Silicon &amp; Intel 지원</p>
             </div>
         </div>
 
@@ -589,62 +635,121 @@
         <div class="tips-section">
             <h2>맥 화면 분할 팁</h2>
 
+            <div class="table-scroll" role="region" aria-label="macOS 기본 타일링과 SimplePallet 비교" tabindex="0">
             <table class="comparison-table">
                 <thead>
                     <tr>
                         <th>기능</th>
-                        <th>Mac 기본 (Split View)</th>
+                        <th>macOS 기본 타일링</th>
                         <th>SimplePallet</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>조작 단계</td>
-                        <td>3단계<br><span style="font-size:0.8em; color:#888;">(길게 누르기 + 선택)</span></td>
-                        <td><strong>1단계</strong><br><span style="font-size:0.8em; color:#007AFF;">(단축키)</span></td>
+                        <td>좌우 반 단축키</td>
+                        <td><code>Fn + Control + ← / →</code></td>
+                        <td><strong><code>⌘ + ← / →</code></strong></td>
                     </tr>
                     <tr>
                         <td>마우스 필요</td>
-                        <td>필수 <span class="cross-mark">✗</span></td>
+                        <td>불필요 <span class="check-mark">✓</span></td>
                         <td><strong>불필요</strong> <span class="check-mark">✓</span></td>
                     </tr>
                     <tr>
-                        <td>3분할</td>
-                        <td>불가 <span class="cross-mark">✗</span></td>
-                        <td><strong>가능</strong> <span class="check-mark">✓</span></td>
+                        <td>1/3 너비 배치</td>
+                        <td>Apple 공식 단축키 목록에 기재 없음</td>
+                        <td><strong><code>⌥ + ⌘ + ← / ↑ / →</code></strong></td>
+                    </tr>
+                    <tr>
+                        <td>2/3 너비 배치</td>
+                        <td>Apple 공식 단축키 목록에 기재 없음</td>
+                        <td><strong><code>⌃ + ⌘ + ← / →</code></strong></td>
+                    </tr>
+                    <tr>
+                        <td>추천 대상</td>
+                        <td>기본 좌우 반 배치만 필요한 사람</td>
+                        <td><strong>적은 키 수와 1/3·2/3 배치를 원하는 사람</strong></td>
                     </tr>
                 </tbody>
             </table>
+            </div>
+            <p class="source-note">기본 단축키 출처: <a href="https://support.apple.com/ko-kr/guide/mac-help/mchl9674d0b0/mac">Apple의 Mac 창 타일링 아이콘 및 키보드 단축키</a> (2026년 8월 16일 확인).</p>
 
-            <div class="faq-list">
+            <div class="faq-list" aria-labelledby="faq-heading">
+                <h3 id="faq-heading">자주 묻는 질문</h3>
                 <div class="faq-item">
                     <div class="faq-question">맥에서 화면을 반으로 나누는 단축키가 있나요?</div>
-                    <div class="faq-answer">기본 기능에는 없지만, SimplePallet을 사용하면 <code>Cmd + 화살표</code>로 즉시 화면을 반으로 나눌 수 있습니다.</div>
+                    <div class="faq-answer">있습니다. macOS 기본 기능은 <code>Fn + Control + 왼쪽/오른쪽 화살표</code>, SimplePallet은 <code>Cmd + 왼쪽/오른쪽 화살표</code>로 활성 창을 좌우 반에 배치합니다.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">SimplePallet은 어떤 사람에게 적합한가요?</div>
+                    <div class="faq-answer">Mac 화면을 자주 분할하고 키 수를 줄이거나 1/3·2/3 너비를 쓰는 사람에게 적합합니다. 좌우 반만 필요하다면 macOS 기본 타일링도 좋은 선택입니다.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">SimplePallet은 무료이며 안전하게 설치할 수 있나요?</div>
+                    <div class="faq-answer">SimplePallet은 완전 무료(JPY 0)입니다. 현재 배포 중인 v1.2 DMG는 Developer ID로 서명되고 Apple 공증을 받았습니다.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">개인 정보나 사용 데이터를 수집하나요?</div>
+                    <div class="faq-answer">개인 정보나 사용 통계를 수집하지 않습니다. 창 배치는 Mac에서 처리되지만 새 버전을 확인할 때 공개 업데이트 피드에 연결할 수 있습니다.</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">맥 화면 분할이 안 될 때는 어떻게 하나요?</div>
-                    <div class="faq-answer">대부분 접근성 권한이 부족하기 때문입니다. "시스템 설정 > 개인정보 보호 및 보안 > 손쉬운 사용"에서 SimplePallet이 켜져 있는지 확인하세요. 이미 켜져 있다면 껐다가 다시 켜보세요.</div>
+                    <div class="faq-answer">"시스템 설정 &gt; 개인정보 보호 및 보안 &gt; 손쉬운 사용"에서 SimplePallet이 켜져 있는지 확인하세요. 이미 켜져 있다면 껐다가 다시 켜세요.</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">권한 확인이나 자동 실행 설정은 어디서 하나요?</div>
-                    <div class="faq-answer">화면 상단 메뉴 막대의 SimplePallet 아이콘을 클릭하여 권한을 확인하세요. 여기서 "로그인 시 실행(Launch at login)"을 체크하면 편리합니다.</div>
+                    <div class="faq-answer">메뉴 막대의 SimplePallet 아이콘을 클릭하면 권한을 확인할 수 있습니다. 같은 메뉴에서 "로그인 시 실행(Launch at login)"도 설정할 수 있습니다.</div>
                 </div>
             </div>
         </div>
+
+        <section class="about-section" aria-labelledby="about-heading">
+            <h2 id="about-heading">개발자 및 업데이트</h2>
+            <p>SimplePallet은 Yuki Koike가 개발하는 macOS 앱입니다. 소스 코드, 변경 이력, 배포 파일은 <a href="https://github.com/yuki-koike0626/SimplePallet">GitHub</a>에서 공개됩니다.</p>
+            <ul>
+                <li><strong>최신 버전:</strong> 1.2 (2026년 8월 14일 공개)</li>
+                <li><a href="https://github.com/yuki-koike0626/SimplePallet/releases/tag/v1.2">SimplePallet v1.2 릴리스 정보</a></li>
+                <li><a href="../privacy.html">개인정보 처리방침</a></li>
+            </ul>
+            <p class="updated-note"><time datetime="2026-08-16">최종 업데이트: 2026년 8월 16일</time></p>
+        </section>
+    </main>
 
         <script type="application/ld+json">
         {
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
+          "@id": "https://yuki-koike0626.github.io/SimplePallet/#softwareapplication",
           "name": "SimplePallet",
-          "operatingSystem": "macOS",
-          "applicationCategory": "UtilitiesApplication",
+          "url": "https://yuki-koike0626.github.io/SimplePallet/ko/",
+          "description": "키보드 단축키로 Mac 창을 좌우 반, 1/3, 2/3에 배치하는 무료 창 관리 앱.",
+          "image": "https://yuki-koike0626.github.io/SimplePallet/app-icon.png",
+          "screenshot": "https://yuki-koike0626.github.io/SimplePallet/split-screen-usecase.png",
+          "operatingSystem": "macOS 13.0 or later",
+          "softwareRequirements": "macOS 13.0 이상, Apple Silicon 또는 Intel 프로세서",
+          "softwareVersion": "1.2",
+          "dateModified": "2026-08-16",
+          "applicationCategory": "DesktopEnhancementApplication",
+          "downloadUrl": "https://github.com/yuki-koike0626/SimplePallet/releases/latest/download/SimplePallet-1.2.dmg",
+          "installUrl": "https://github.com/yuki-koike0626/SimplePallet/releases/latest/download/SimplePallet-1.2.dmg",
+          "releaseNotes": "https://github.com/yuki-koike0626/SimplePallet/releases/tag/v1.2",
+          "fileSize": "4388016 bytes",
+          "isAccessibleForFree": true,
           "offers": {
             "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "KRW"
+            "price": 0,
+            "priceCurrency": "JPY",
+            "availability": "https://schema.org/InStock",
+            "url": "https://github.com/yuki-koike0626/SimplePallet/releases/latest/download/SimplePallet-1.2.dmg"
           },
-          "description": "단축키로 맥 화면을 즉시 분할하는 무료 앱. 화면을 1/2, 1/3로 쉽게 정리하세요."
+          "author": {
+            "@type": "Person",
+            "name": "Yuki Koike",
+            "url": "https://github.com/yuki-koike0626",
+            "sameAs": "https://github.com/yuki-koike0626"
+          },
+          "inLanguage": "ko"
         }
         </script>
         <script type="application/ld+json">
@@ -656,28 +761,49 @@
             "name": "맥에서 화면을 반으로 나누는 단축키가 있나요?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "기본 기능에는 없지만, SimplePallet을 사용하면 Cmd + 화살표로 즉시 화면을 반으로 나눌 수 있습니다."
+              "text": "있습니다. macOS 기본 기능은 Fn + Control + 왼쪽/오른쪽 화살표, SimplePallet은 Cmd + 왼쪽/오른쪽 화살표로 활성 창을 좌우 반에 배치합니다."
+            }
+          }, {
+            "@type": "Question",
+            "name": "SimplePallet은 어떤 사람에게 적합한가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Mac 화면을 자주 분할하고 키 수를 줄이거나 1/3·2/3 너비를 쓰는 사람에게 적합합니다. 좌우 반만 필요하다면 macOS 기본 타일링도 좋은 선택입니다."
+            }
+          }, {
+            "@type": "Question",
+            "name": "SimplePallet은 무료이며 안전하게 설치할 수 있나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SimplePallet은 완전 무료(JPY 0)입니다. 현재 배포 중인 v1.2 DMG는 Developer ID로 서명되고 Apple 공증을 받았습니다."
+            }
+          }, {
+            "@type": "Question",
+            "name": "개인 정보나 사용 데이터를 수집하나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "개인 정보나 사용 통계를 수집하지 않습니다. 창 배치는 Mac에서 처리되지만 새 버전을 확인할 때 공개 업데이트 피드에 연결할 수 있습니다."
             }
           }, {
             "@type": "Question",
             "name": "맥 화면 분할이 안 될 때는 어떻게 하나요?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "대부분 접근성 권한이 부족하기 때문입니다. 시스템 설정 > 개인정보 보호 및 보안 > 손쉬운 사용에서 SimplePallet이 켜져 있는지 확인하세요."
+              "text": "\"시스템 설정 > 개인정보 보호 및 보안 > 손쉬운 사용\"에서 SimplePallet이 켜져 있는지 확인하세요. 이미 켜져 있다면 껐다가 다시 켜세요."
             }
           }, {
             "@type": "Question",
             "name": "권한 확인이나 자동 실행 설정은 어디서 하나요?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "화면 상단 메뉴 막대의 SimplePallet 아이콘을 클릭하여 권한을 확인하세요. 여기서 로그인 시 실행(Launch at login)을 체크하면 편리합니다."
+              "text": "메뉴 막대의 SimplePallet 아이콘을 클릭하면 권한을 확인할 수 있습니다. 같은 메뉴에서 \"로그인 시 실행(Launch at login)\"도 설정할 수 있습니다."
             }
           }]
         }
         </script>
 
         <footer>
-        <p>&copy; 2025 Yuki Koike. All rights reserved.</p>
+        <p>&copy; 2025–2026 Yuki Koike. All rights reserved.</p>
         <p><a href="../privacy.html">개인정보 처리방침</a> | <a href="https://github.com/yuki-koike0626/SimplePallet">GitHub 저장소</a></p>
     </footer>
 </body>
