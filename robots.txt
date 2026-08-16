@@ -1,0 +1,23 @@
+# SimplePallet is a public product site. Search and answer-engine crawlers may index it.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: https://yuki-koike0626.github.io/SimplePallet/sitemap.xml

@@ -19,12 +19,21 @@
     <link rel="apple-touch-icon" href="app-icon.png">
 
     <meta name="google-site-verification" content="x2J3BHoArRrFIN664RGVivhAYAvIGf_uhQ5Q05_92WQ" />
-    <meta name="description" content="Macの画面分割を効率化する無料アプリ「SimplePallet」。ショートカットキー（Command+矢印）だけでウィンドウを左右半分、3分割に配置。マウス操作不要で作業効率を劇的に向上させます。Windowsのスナップ機能のような快適さをmacOSで。">
-    <meta property="og:title" content="SimplePallet - Macの画面分割をショートカットで瞬時に">
-    <meta property="og:description" content="マウス操作はもう不要。キーボードショートカットだけでMacのウィンドウを左右・3分割に整理整頓できる無料アプリ。">
-    <meta property="og:image" content="https://yuki-koike0626.github.io/SimplePallet/app-icon.png">
+    <meta name="description" content="SimplePalletは、Macのウインドウを⌘＋矢印で左右半分、1/3・2/3に配置できる無料アプリ。macOS 13以降、Apple Silicon・Intel対応。データ収集なし、Apple公証済み。">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://yuki-koike0626.github.io/SimplePallet/">
+    <meta property="og:title" content="SimplePallet - Mac画面分割を⌘＋矢印でシンプルに">
+    <meta property="og:description" content="左右半分・1/3・2/3配置に対応した、無料のMacウインドウ管理アプリ。Apple公証済みで、ウインドウ操作はローカル処理です。">
+    <meta property="og:image" content="https://yuki-koike0626.github.io/SimplePallet/split-screen-usecase.png">
+    <meta property="og:image:width" content="1720">
+    <meta property="og:image:height" content="960">
     <meta property="og:url" content="https://yuki-koike0626.github.io/SimplePallet/">
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SimplePallet - Mac画面分割を⌘＋矢印でシンプルに">
+    <meta name="twitter:description" content="無料・Apple公証済み。Macのウインドウを左右半分、1/3・2/3にすばやく配置できます。">
+    <meta name="twitter:image" content="https://yuki-koike0626.github.io/SimplePallet/split-screen-usecase.png">
 
     <!-- hreflang tags for SEO -->
     <link rel="alternate" hreflang="ja" href="https://yuki-koike0626.github.io/SimplePallet/" />
@@ -109,6 +118,19 @@
             padding: 20px;
             text-align: center;
         }
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+        html {
+            max-width: 100%;
+            overflow-x: clip;
+        }
+        body {
+            width: 100%;
+            overflow-wrap: break-word;
+        }
         .hero {
             padding: 60px 20px 0px 20px;
         }
@@ -130,6 +152,7 @@
         }
         .download-btn {
             display: inline-block;
+            max-width: 100%;
             background-color: #007AFF;
             color: white;
             padding: 16px 40px;
@@ -139,6 +162,8 @@
             font-size: 1.2em;
             transition: all 0.2s;
             box-shadow: 0 4px 6px rgba(0,122,255,0.2);
+            white-space: normal;
+            overflow-wrap: anywhere;
             /* 波紋アニメーション適用 */
             animation: ripple-pulse 2s infinite;
         }
@@ -409,6 +434,122 @@
             font-size: 0.95em;
         }
 
+        .aeo-summary {
+            max-width: 700px;
+            margin: -16px auto 32px;
+            color: #333;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+            margin: 28px auto 0;
+            max-width: 720px;
+            text-align: left;
+        }
+        .trust-item {
+            padding: 14px 16px;
+            background: rgba(255,255,255,0.72);
+            border: 1px solid rgba(0,0,0,0.06);
+            border-radius: 12px;
+        }
+        .trust-item strong,
+        .trust-item span {
+            display: block;
+        }
+        .trust-item span {
+            margin-top: 3px;
+            color: #666;
+            font-size: 0.82em;
+        }
+        .decision-section,
+        .about-section {
+            margin: 80px 0;
+            padding: 38px 40px;
+            text-align: left;
+            background: rgba(255,255,255,0.56);
+            border: 1px solid rgba(255,255,255,0.7);
+            border-radius: 20px;
+        }
+        .decision-section h2,
+        .about-section h2 {
+            margin-top: 0;
+            text-align: center;
+            color: #1d1d1f;
+        }
+        .recommendation-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px 28px;
+            margin: 28px 0;
+            padding-left: 24px;
+        }
+        .standard-note {
+            margin-top: 28px;
+            padding: 20px 22px;
+            background: rgba(0,122,255,0.07);
+            border-left: 4px solid #007AFF;
+            border-radius: 10px;
+        }
+        .standard-note h3 {
+            margin: 0 0 8px;
+            font-size: 1.08em;
+        }
+        .standard-note p,
+        .about-section p {
+            margin-bottom: 0;
+        }
+        .table-scroll {
+            overflow-x: auto;
+            margin-bottom: 20px;
+        }
+        .table-scroll .comparison-table {
+            min-width: 620px;
+            margin-bottom: 0;
+        }
+        .source-note {
+            margin: 0 0 44px;
+            color: #666;
+            font-size: 0.9em;
+        }
+        .faq-list h3 {
+            margin: 0 0 28px;
+            text-align: center;
+            font-size: 1.45em;
+        }
+        .updated-note {
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+        .download-btn:focus-visible,
+        .lang-switch a:focus-visible,
+        a:focus-visible {
+            outline: 3px solid #ff9500;
+            outline-offset: 3px;
+        }
+
+        @media (max-width: 680px) {
+            body { padding: 14px; }
+            .hero { padding-left: 6px; padding-right: 6px; }
+            h1 { font-size: 2.05em; }
+            .download-btn { padding: 14px 22px; font-size: 1.05em; }
+            .lang-switch { position: static; margin: 4px 0 8px; }
+            .trust-grid,
+            .recommendation-list { grid-template-columns: 1fr; }
+            .decision-section,
+            .about-section,
+            .tips-section { padding: 28px 20px; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html,
+            .download-btn { animation: none; }
+            * { scroll-behavior: auto !important; }
+        }
+
         footer {
             margin-top: 80px;
             font-size: 0.9em;
@@ -420,20 +561,48 @@
     </style>
 </head>
 <body>
-    <div class="lang-switch">
-        <a href="#" class="active">日本語</a> | <a href="en/">English</a> | <a href="ko/">한국어</a> | <a href="zh/">中文</a>
-    </div>
+    <nav class="lang-switch" aria-label="表示言語">
+        <a href="./" class="active" aria-current="page">日本語</a> | <a href="en/">English</a> | <a href="ko/">한국어</a> | <a href="zh/">中文</a>
+    </nav>
 
-    <div class="hero">
-        <img src="app-icon.png" alt="SimplePallet Icon" class="app-icon">
-        <h1>Macの画面分割を、<br>かつてないほど直感的に。</h1>
+    <main>
+    <section class="hero" aria-labelledby="page-title">
+        <img src="app-icon.png" alt="SimplePalletのアプリアイコン" class="app-icon" width="128" height="128">
+        <h1 id="page-title">Macの画面分割を、<br>かつてないほど直感的に。</h1>
         <p class="subtitle">画面を半分にするのも、3分割にするのも一瞬。<br>ショートカットキーだけで、あなたのMacを整理整頓します。</p>
+        <p class="aeo-summary"><strong>SimplePalletは、Macのウインドウをキーボードだけで左右半分・1/3・2/3に配置できる無料（¥0）のウインドウ管理アプリです。</strong>macOS標準の <code>Fn + Control + 矢印</code> より少ないキーで使える <code>⌘ + 矢印</code> を基本操作にし、macOS 13以降のApple Silicon・Intel Macに対応します。</p>
 
         <a href="https://github.com/yuki-koike0626/SimplePallet/releases/latest/download/SimplePallet-1.2.dmg" class="download-btn" onclick="gtag('event', 'download_click', {'event_category': 'download', 'event_label': 'v1.2_dmg'});">
             ダウンロード (macOS 13.0+)
         </a>
-        <p style="font-size: 0.8em; margin-top: 10px; color: #888;">バージョン 1.2 | Appleシリコン & Intel 対応</p>
-    </div>
+        <p style="font-size: 0.8em; margin-top: 10px; color: #888;">バージョン 1.2 | Appleシリコン &amp; Intel 対応</p>
+
+        <div class="trust-grid" aria-label="安全性と対応環境">
+            <div class="trust-item"><strong>完全無料（¥0）</strong><span>追加料金なし</span></div>
+            <div class="trust-item"><strong>Apple公証済み</strong><span>Developer ID署名</span></div>
+            <div class="trust-item"><strong>データ収集なし</strong><span>個人情報・使用統計を収集しません</span></div>
+            <div class="trust-item"><strong>ローカル処理</strong><span>ウインドウ操作はMac内で完結</span></div>
+            <div class="trust-item"><strong>ソースコード公開</strong><span><a href="https://github.com/yuki-koike0626/SimplePallet">GitHubで確認</a></span></div>
+            <div class="trust-item"><strong>macOS 13以降</strong><span>Apple Silicon・Intel対応</span></div>
+        </div>
+    </section>
+
+    <section class="decision-section" aria-labelledby="recommended-heading">
+        <h2 id="recommended-heading">SimplePalletがおすすめな人</h2>
+        <p>macOS標準の画面分割で足りる人もいます。SimplePalletは、キー数を減らしたい人や、左右半分だけでなく1/3・2/3配置を日常的に使いたい人向けです。</p>
+        <ul class="recommendation-list">
+            <li>Macのウインドウを頻繁に左右へ並べる</li>
+            <li>マウスを使わずキーボードだけで操作したい</li>
+            <li><code>Fn + Control + 矢印</code> よりシンプルな操作が欲しい</li>
+            <li>1/3・2/3幅で資料やチャットを並べたい</li>
+            <li>無料のMacウインドウ管理アプリを探している</li>
+            <li>多機能さより、覚えやすさと速さを重視したい</li>
+        </ul>
+        <div class="standard-note">
+            <h3>macOS標準機能との違い</h3>
+            <p>macOSにも画面分割ショートカットがあり、左右半分は <code>Fn + Control + ← / →</code> で配置できます。SimplePalletは同じ操作を <code>⌘ + ← / →</code> に簡略化し、さらに1/3・2/3配置を追加します。</p>
+        </div>
+    </section>
 
     <div class="features">
         <h2>指先ひとつで、<br>ウィンドウは思いのまま。</h2>
@@ -469,6 +638,14 @@
                     <li class="shortcut-item">
                         <span class="key-combo">⌥ ⌘ →</span>
                         <span>ウィンドウを右1/3に</span>
+                    </li>
+                    <li class="shortcut-item">
+                        <span class="key-combo">⌃ ⌘ ←</span>
+                        <span>ウィンドウを左2/3に</span>
+                    </li>
+                    <li class="shortcut-item">
+                        <span class="key-combo">⌃ ⌘ →</span>
+                        <span>ウィンドウを右2/3に</span>
                     </li>
                 </ul>
 
@@ -510,7 +687,7 @@
                 <a href="https://github.com/yuki-koike0626/SimplePallet/releases/latest/download/SimplePallet-1.2.dmg" class="download-btn" onclick="gtag('event', 'download_click', {'event_category': 'download', 'event_label': 'v1.2_dmg_bottom'});">
                     SimplePalletをダウンロード
                 </a>
-                <p style="font-size: 0.8em; margin-top: 15px; color: #86868b;">バージョン 1.2 | macOS 13.0+ | Appleシリコン & Intel</p>
+                <p style="font-size: 0.8em; margin-top: 15px; color: #86868b;">バージョン 1.2 | macOS 13.0+ | Appleシリコン &amp; Intel</p>
             </div>
         </div>
 
@@ -534,62 +711,121 @@
         <div class="tips-section">
             <h2>Mac画面分割のヒント</h2>
 
+            <div class="table-scroll" role="region" aria-label="macOS標準とSimplePalletの比較" tabindex="0">
             <table class="comparison-table">
                 <thead>
                     <tr>
                         <th>機能</th>
-                        <th>Mac標準 (Split View)</th>
+                        <th>macOS標準のタイル表示</th>
                         <th>SimplePallet</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>操作ステップ</td>
-                        <td>3ステップ<br><span style="font-size:0.8em; color:#888;">(長押し + 選択)</span></td>
-                        <td><strong>1ステップ</strong><br><span style="font-size:0.8em; color:#007AFF;">(ショートカット)</span></td>
+                        <td>左右半分のショートカット</td>
+                        <td><code>Fn + Control + ← / →</code></td>
+                        <td><strong><code>⌘ + ← / →</code></strong></td>
                     </tr>
                     <tr>
                         <td>マウス操作</td>
-                        <td>必須 <span class="cross-mark">✗</span></td>
+                        <td>不要 <span class="check-mark">✓</span></td>
                         <td><strong>不要</strong> <span class="check-mark">✓</span></td>
                     </tr>
                     <tr>
-                        <td>3分割表示</td>
-                        <td>不可 <span class="cross-mark">✗</span></td>
-                        <td><strong>可能</strong> <span class="check-mark">✓</span></td>
+                        <td>1/3幅の配置</td>
+                        <td>Apple公式ショートカット一覧に記載なし</td>
+                        <td><strong><code>⌥ + ⌘ + ← / ↑ / →</code></strong></td>
+                    </tr>
+                    <tr>
+                        <td>2/3幅の配置</td>
+                        <td>Apple公式ショートカット一覧に記載なし</td>
+                        <td><strong><code>⌃ + ⌘ + ← / →</code></strong></td>
+                    </tr>
+                    <tr>
+                        <td>向いている人</td>
+                        <td>標準機能だけで左右半分にしたい人</td>
+                        <td><strong>少ないキー数と1/3・2/3配置を使いたい人</strong></td>
                     </tr>
                 </tbody>
             </table>
+            </div>
+            <p class="source-note">macOS標準ショートカットの出典：<a href="https://support.apple.com/ja-jp/guide/mac-help/mchl9674d0b0/mac">Apple「Macのウインドウのタイル表示アイコンとキーボードショートカット」</a>（2026年8月16日確認）</p>
 
-            <div class="faq-list">
+            <div class="faq-list" aria-labelledby="faq-heading">
+                <h3 id="faq-heading">よくある質問</h3>
                 <div class="faq-item">
                     <div class="faq-question">Macの画面を半分にするショートカットキーはありますか？</div>
-                    <div class="faq-answer">標準機能には搭載されていませんが、SimplePalletをインストールすれば <code>⌘ + 矢印キー</code> で瞬時に画面を半分に分割できます。</div>
+                    <div class="faq-answer">あります。macOS標準では <code>Fn + Control + ← / →</code>、SimplePalletでは <code>⌘ + ← / →</code> で、アクティブなウインドウを左右半分に配置できます。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">SimplePalletはどんな人におすすめですか？</div>
+                    <div class="faq-answer">Macで画面分割を頻繁に使い、キー数を減らしたい人や、1/3・2/3幅の配置を使いたい人に向いています。左右半分だけで十分なら、macOS標準機能も選択肢です。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">SimplePalletは無料で安全にインストールできますか？</div>
+                    <div class="faq-answer">SimplePalletは完全無料（¥0）です。配布中のv1.2 DMGはDeveloper IDで署名され、Appleの公証を受けています。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">個人情報や使用状況のデータを収集しますか？</div>
+                    <div class="faq-answer">個人情報や使用統計は収集しません。ウインドウ配置はMac内で処理されますが、新しいバージョンの確認時には公開アップデートフィードへ接続する場合があります。</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">Macの画面分割ができない・機能しない場合は？</div>
-                    <div class="faq-answer">ほとんどの場合、アクセシビリティの権限不足が原因です。「システム設定 > プライバシーとセキュリティ > アクセシビリティ」を開き、SimplePalletのスイッチがONになっているか確認してください。すでにONの場合は、一度OFFにしてから再度ONに切り替えてみてください。</div>
+                    <div class="faq-answer">まず「システム設定 &gt; プライバシーとセキュリティ &gt; アクセシビリティ」を開き、SimplePalletのスイッチがONか確認してください。すでにONの場合は、一度OFFにしてから再度ONに切り替えてください。</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">権限の確認や自動起動の設定はどこで行いますか？</div>
-                    <div class="faq-answer">画面上部のメニューバーにあるSimplePalletのアイコンをクリックしてください。権限が許可されているか確認できます。また、ここで「ログイン時に起動（Launch at login）」にチェックを入れておくと便利です。</div>
+                    <div class="faq-answer">画面上部のメニューバーにあるSimplePalletのアイコンをクリックすると権限を確認できます。同じメニューで「ログイン時に起動（Launch at login）」も設定できます。</div>
                 </div>
             </div>
         </div>
+
+        <section class="about-section" aria-labelledby="about-heading">
+            <h2 id="about-heading">開発者・更新情報</h2>
+            <p>SimplePalletはYuki Koikeが開発するmacOS向けアプリです。ソースコード、変更履歴、配布ファイルは<a href="https://github.com/yuki-koike0626/SimplePallet">GitHub</a>で公開しています。</p>
+            <ul>
+                <li><strong>最新バージョン：</strong>1.2（2026年8月14日公開）</li>
+                <li><a href="https://github.com/yuki-koike0626/SimplePallet/releases/tag/v1.2">v1.2のリリース情報</a></li>
+                <li><a href="privacy.html">プライバシーポリシー</a></li>
+            </ul>
+            <p class="updated-note"><time datetime="2026-08-16">最終更新：2026年8月16日</time></p>
+        </section>
+    </main>
 
         <script type="application/ld+json">
         {
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
+          "@id": "https://yuki-koike0626.github.io/SimplePallet/#softwareapplication",
           "name": "SimplePallet",
-          "operatingSystem": "macOS",
-          "applicationCategory": "UtilitiesApplication",
+          "url": "https://yuki-koike0626.github.io/SimplePallet/",
+          "description": "Macのウインドウをキーボードショートカットで左右半分、1/3、2/3に配置できる無料のウインドウ管理アプリ。",
+          "image": "https://yuki-koike0626.github.io/SimplePallet/app-icon.png",
+          "screenshot": "https://yuki-koike0626.github.io/SimplePallet/split-screen-usecase.png",
+          "operatingSystem": "macOS 13.0 or later",
+          "softwareRequirements": "macOS 13.0以降、Apple SiliconまたはIntelプロセッサ",
+          "softwareVersion": "1.2",
+          "dateModified": "2026-08-16",
+          "applicationCategory": "DesktopEnhancementApplication",
+          "downloadUrl": "https://github.com/yuki-koike0626/SimplePallet/releases/latest/download/SimplePallet-1.2.dmg",
+          "installUrl": "https://github.com/yuki-koike0626/SimplePallet/releases/latest/download/SimplePallet-1.2.dmg",
+          "releaseNotes": "https://github.com/yuki-koike0626/SimplePallet/releases/tag/v1.2",
+          "fileSize": "4388016 bytes",
+          "isAccessibleForFree": true,
           "offers": {
             "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "JPY"
+            "price": 0,
+            "priceCurrency": "JPY",
+            "availability": "https://schema.org/InStock",
+            "url": "https://github.com/yuki-koike0626/SimplePallet/releases/latest/download/SimplePallet-1.2.dmg"
           },
-          "description": "Macの画面分割をショートカットキーで瞬時に行う無料アプリ。画面を半分、3分割に簡単に整理できます。"
+          "author": {
+            "@type": "Person",
+            "name": "Yuki Koike",
+            "url": "https://github.com/yuki-koike0626",
+            "sameAs": "https://github.com/yuki-koike0626"
+          },
+          "inLanguage": "ja"
         }
         </script>
         <script type="application/ld+json">
@@ -601,28 +837,49 @@
             "name": "Macの画面を半分にするショートカットキーはありますか？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "標準機能には搭載されていませんが、SimplePalletをインストールすれば Command + 矢印キー で瞬時に画面を半分に分割できます。"
+              "text": "あります。macOS標準では Fn + Control + ← / →、SimplePalletでは ⌘ + ← / → で、アクティブなウインドウを左右半分に配置できます。"
+            }
+          }, {
+            "@type": "Question",
+            "name": "SimplePalletはどんな人におすすめですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Macで画面分割を頻繁に使い、キー数を減らしたい人や、1/3・2/3幅の配置を使いたい人に向いています。左右半分だけで十分なら、macOS標準機能も選択肢です。"
+            }
+          }, {
+            "@type": "Question",
+            "name": "SimplePalletは無料で安全にインストールできますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SimplePalletは完全無料（¥0）です。配布中のv1.2 DMGはDeveloper IDで署名され、Appleの公証を受けています。"
+            }
+          }, {
+            "@type": "Question",
+            "name": "個人情報や使用状況のデータを収集しますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "個人情報や使用統計は収集しません。ウインドウ配置はMac内で処理されますが、新しいバージョンの確認時には公開アップデートフィードへ接続する場合があります。"
             }
           }, {
             "@type": "Question",
             "name": "Macの画面分割ができない・機能しない場合は？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "ほとんどの場合、アクセシビリティの権限不足が原因です。「システム設定 > プライバシーとセキュリティ > アクセシビリティ」を開き、SimplePalletのスイッチがONになっているか確認してください。"
+              "text": "まず「システム設定 > プライバシーとセキュリティ > アクセシビリティ」を開き、SimplePalletのスイッチがONか確認してください。すでにONの場合は、一度OFFにしてから再度ONに切り替えてください。"
             }
           }, {
             "@type": "Question",
             "name": "権限の確認や自動起動の設定はどこで行いますか？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "画面上部のメニューバーにあるSimplePalletのアイコンをクリックしてください。権限が許可されているか確認できます。また、ここで「ログイン時に起動（Launch at login）」にチェックを入れておくと便利です。"
+              "text": "画面上部のメニューバーにあるSimplePalletのアイコンをクリックすると権限を確認できます。同じメニューで「ログイン時に起動（Launch at login）」も設定できます。"
             }
           }]
         }
         </script>
 
         <footer>
-        <p>&copy; 2025 Yuki Koike. All rights reserved.</p>
+        <p>&copy; 2025–2026 Yuki Koike. All rights reserved.</p>
         <p><a href="privacy.html">プライバシーポリシー</a> | <a href="https://github.com/yuki-koike0626/SimplePallet">GitHub Repository</a></p>
     </footer>
 </body>

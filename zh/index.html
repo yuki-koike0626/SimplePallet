@@ -17,14 +17,24 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../app-icon.png">
     <link rel="apple-touch-icon" href="../app-icon.png">
+    <link rel="stylesheet" href="../seo-aeo.css">
 
     <meta name="google-site-verification" content="x2J3BHoArRrFIN664RGVivhAYAvIGf_uhQ5Q05_92WQ" />
-    <meta name="description" content="Mac分屏神器SimplePallet免费下载。仅需快捷键（Command+方向键）即可瞬间将窗口二分屏或三分屏。告别鼠标拖拽，像Windows Snap一样高效管理您的Mac窗口。支持Apple Silicon与Intel芯片。">
-    <meta property="og:title" content="SimplePallet - Mac极速分屏快捷键工具">
-    <meta property="og:description" content="无需鼠标拖拽，仅用键盘快捷键即可轻松实现Mac窗口二分屏、三分屏。让您的工作效率倍增的免费工具。">
-    <meta property="og:image" content="https://yuki-koike0626.github.io/SimplePallet/app-icon.png">
+    <meta name="description" content="SimplePallet是一款免费Mac窗口管理工具，可用Cmd+方向键把窗口放到左右半屏、1/3或2/3。支持macOS 13以上、Apple Silicon与Intel，不收集使用数据并已通过Apple公证。">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://yuki-koike0626.github.io/SimplePallet/zh/">
+    <meta property="og:title" content="SimplePallet - 用Cmd+方向键轻松管理Mac分屏">
+    <meta property="og:description" content="支持左右半屏、1/3和2/3布局的免费Mac窗口管理工具。已通过Apple公证，窗口操作在本机完成。">
+    <meta property="og:image" content="https://yuki-koike0626.github.io/SimplePallet/split-screen-usecase.png">
+    <meta property="og:image:width" content="1720">
+    <meta property="og:image:height" content="960">
     <meta property="og:url" content="https://yuki-koike0626.github.io/SimplePallet/zh/">
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_CN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SimplePallet - 用Cmd+方向键轻松管理Mac分屏">
+    <meta name="twitter:description" content="免费且已通过Apple公证。快速将Mac窗口放到左右半屏、1/3或2/3。">
+    <meta name="twitter:image" content="https://yuki-koike0626.github.io/SimplePallet/split-screen-usecase.png">
 
     <!-- hreflang tags for SEO -->
     <link rel="alternate" hreflang="ja" href="https://yuki-koike0626.github.io/SimplePallet/" />
@@ -475,20 +485,48 @@
     </style>
 </head>
 <body>
-    <div class="lang-switch">
-        <a href="../">日本語</a> | <a href="../en/">English</a> | <a href="../ko/">한국어</a> | <a href="#" class="active">中文</a>
-    </div>
+    <nav class="lang-switch" aria-label="显示语言">
+        <a href="../">日本語</a> | <a href="../en/">English</a> | <a href="../ko/">한국어</a> | <a href="./" class="active" aria-current="page">中文</a>
+    </nav>
 
-    <div class="hero">
-        <img src="../app-icon.png" alt="SimplePallet Icon" class="app-icon">
-        <h1>Mac分屏，<br>前所未有的直观体验。</h1>
+    <main>
+    <section class="hero" aria-labelledby="page-title">
+        <img src="../app-icon.png" alt="SimplePallet应用图标" class="app-icon" width="128" height="128">
+        <h1 id="page-title">Mac分屏，<br>前所未有的直观体验。</h1>
         <p class="subtitle">只需一个快捷键，即可将窗口二分或三分。<br>无需鼠标，轻松整理您的Mac桌面。</p>
+        <p class="aeo-summary"><strong>SimplePallet是一款免费（JPY 0）的Mac窗口管理工具，只用键盘即可把窗口放到左右半屏、1/3或2/3。</strong>它以按键更少的<code>Cmd + 方向键</code>替代macOS内置的<code>Fn + Control + 方向键</code>作为基础操作，支持macOS 13以上的Apple Silicon与Intel Mac。</p>
 
         <a href="https://github.com/yuki-koike0626/SimplePallet/releases/latest/download/SimplePallet-1.2.dmg" class="download-btn" onclick="gtag('event', 'download_click', {'event_category': 'download', 'event_label': 'v1.2_dmg'});">
             下载 (macOS 13.0+)
         </a>
-        <p style="font-size: 0.8em; margin-top: 10px; color: #888;">版本 1.2 | 支持Apple Silicon & Intel</p>
-    </div>
+        <p style="font-size: 0.8em; margin-top: 10px; color: #888;">版本 1.2 | 支持Apple Silicon &amp; Intel</p>
+
+        <div class="trust-grid" aria-label="安全性与兼容性">
+            <div class="trust-item"><strong>完全免费</strong><span>JPY 0，无额外费用</span></div>
+            <div class="trust-item"><strong>Apple公证</strong><span>Developer ID签名</span></div>
+            <div class="trust-item"><strong>不收集数据</strong><span>不收集个人信息或使用统计</span></div>
+            <div class="trust-item"><strong>本机处理</strong><span>窗口操作在Mac内完成</span></div>
+            <div class="trust-item"><strong>源代码公开</strong><span><a href="https://github.com/yuki-koike0626/SimplePallet">在GitHub查看</a></span></div>
+            <div class="trust-item"><strong>macOS 13以上</strong><span>支持Apple Silicon与Intel</span></div>
+        </div>
+    </section>
+
+    <section class="decision-section" aria-labelledby="recommended-heading">
+        <h2 id="recommended-heading">SimplePallet适合哪些人</h2>
+        <p>对部分用户来说，macOS内置分屏已经足够。SimplePallet更适合希望减少常用布局按键数量，或经常使用1/3与2/3宽度的用户。</p>
+        <ul class="recommendation-list">
+            <li>每天多次并排整理Mac窗口</li>
+            <li>希望只用键盘、不用鼠标操作</li>
+            <li>想要比<code>Fn + Control + 方向键</code>更简单的操作</li>
+            <li>需要用1/3与2/3宽度排列文档或聊天窗口</li>
+            <li>正在寻找免费的Mac窗口管理工具</li>
+            <li>比起功能数量，更重视易记与速度</li>
+        </ul>
+        <div class="standard-note">
+            <h3>与macOS内置功能的区别</h3>
+            <p>macOS也提供分屏快捷键：<code>Fn + Control + 左/右方向键</code>可把活动窗口放到左右半屏。SimplePallet将它简化为<code>Cmd + 左/右方向键</code>，并增加1/3与2/3布局。</p>
+        </div>
+    </section>
 
     <div class="features">
         <h2>指尖轻触，<br>窗口随心所欲。</h2>
@@ -524,6 +562,14 @@
                     <li class="shortcut-item">
                         <span class="key-combo">⌥ ⌘ →</span>
                         <span>右三分之一</span>
+                    </li>
+                    <li class="shortcut-item">
+                        <span class="key-combo">⌃ ⌘ ←</span>
+                        <span>左侧三分之二</span>
+                    </li>
+                    <li class="shortcut-item">
+                        <span class="key-combo">⌃ ⌘ →</span>
+                        <span>右侧三分之二</span>
                     </li>
                 </ul>
 
@@ -565,7 +611,7 @@
                 <a href="https://github.com/yuki-koike0626/SimplePallet/releases/latest/download/SimplePallet-1.2.dmg" class="download-btn" onclick="gtag('event', 'download_click', {'event_category': 'download', 'event_label': 'v1.2_dmg_bottom'});">
                     下载 SimplePallet
                 </a>
-                <p style="font-size: 0.8em; margin-top: 15px; color: #86868b;">版本 1.2 | macOS 13.0+ | 支持 Apple Silicon & Intel</p>
+                <p style="font-size: 0.8em; margin-top: 15px; color: #86868b;">版本 1.2 | macOS 13.0+ | 支持 Apple Silicon &amp; Intel</p>
             </div>
         </div>
 
@@ -589,62 +635,121 @@
         <div class="tips-section">
             <h2>Mac分屏小技巧</h2>
 
+            <div class="table-scroll" role="region" aria-label="macOS内置分屏与SimplePallet对比" tabindex="0">
             <table class="comparison-table">
                 <thead>
                     <tr>
                         <th>功能</th>
-                        <th>Mac自带 (Split View)</th>
+                        <th>macOS内置窗口平铺</th>
                         <th>SimplePallet</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>操作步骤</td>
-                        <td>3步<br><span style="font-size:0.8em; color:#888;">(长按 + 选择)</span></td>
-                        <td><strong>1步</strong><br><span style="font-size:0.8em; color:#007AFF;">(快捷键)</span></td>
+                        <td>左右半屏快捷键</td>
+                        <td><code>Fn + Control + ← / →</code></td>
+                        <td><strong><code>⌘ + ← / →</code></strong></td>
                     </tr>
                     <tr>
                         <td>鼠标操作</td>
-                        <td>必须 <span class="cross-mark">✗</span></td>
+                        <td>无需 <span class="check-mark">✓</span></td>
                         <td><strong>无需</strong> <span class="check-mark">✓</span></td>
                     </tr>
                     <tr>
-                        <td>三分屏</td>
-                        <td>不支持 <span class="cross-mark">✗</span></td>
-                        <td><strong>支持</strong> <span class="check-mark">✓</span></td>
+                        <td>1/3宽度</td>
+                        <td>Apple官方快捷键列表未列出</td>
+                        <td><strong><code>⌥ + ⌘ + ← / ↑ / →</code></strong></td>
+                    </tr>
+                    <tr>
+                        <td>2/3宽度</td>
+                        <td>Apple官方快捷键列表未列出</td>
+                        <td><strong><code>⌃ + ⌘ + ← / →</code></strong></td>
+                    </tr>
+                    <tr>
+                        <td>适合用户</td>
+                        <td>只需要内置左右半屏的用户</td>
+                        <td><strong>希望按键更少并使用1/3、2/3布局的用户</strong></td>
                     </tr>
                 </tbody>
             </table>
+            </div>
+            <p class="source-note">内置快捷键来源：<a href="https://support.apple.com/zh-cn/guide/mac-help/mchl9674d0b0/mac">Apple《Mac窗口平铺图标和键盘快捷键》</a>（2026年8月16日核对）。</p>
 
-            <div class="faq-list">
+            <div class="faq-list" aria-labelledby="faq-heading">
+                <h3 id="faq-heading">常见问题</h3>
                 <div class="faq-item">
                     <div class="faq-question">Mac有分屏快捷键吗？</div>
-                    <div class="faq-answer">系统默认没有，但使用SimplePallet可以通过 <code>Cmd + 方向键</code> 瞬间实现分屏。</div>
+                    <div class="faq-answer">有。macOS内置功能使用<code>Fn + Control + 左/右方向键</code>，SimplePallet使用<code>Cmd + 左/右方向键</code>把活动窗口放到左右半屏。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">SimplePallet适合哪些人？</div>
+                    <div class="faq-answer">它适合经常在Mac上分屏、希望减少按键数量，或需要1/3与2/3宽度的用户。如果只需要左右半屏，macOS内置平铺也是合适的选择。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">SimplePallet免费且安装安全吗？</div>
+                    <div class="faq-answer">SimplePallet完全免费（JPY 0）。当前v1.2 DMG使用Developer ID签名，并已通过Apple公证。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">SimplePallet会收集个人信息或使用数据吗？</div>
+                    <div class="faq-answer">不会收集个人信息或使用统计。窗口操作在Mac本机处理，但检查新版本时可能会连接公开的更新信息源。</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">Mac分屏无法使用怎么办？</div>
-                    <div class="faq-answer">这通常是因为辅助功能权限不足。请打开“系统设置 > 隐私与安全性 > 辅助功能”，确保SimplePallet已开启。如果已开启，请尝试先关闭再重新开启。</div>
+                    <div class="faq-answer">请打开“系统设置 &gt; 隐私与安全性 &gt; 辅助功能”，确认SimplePallet已开启。如果已经开启，请先关闭再重新开启。</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">如何检查权限或设置自动启动？</div>
-                    <div class="faq-answer">点击屏幕顶部菜单栏中的SimplePallet图标即可检查权限。建议在此处勾选“登录时启动（Launch at login）”以便日常使用。</div>
+                    <div class="faq-answer">点击菜单栏中的SimplePallet图标即可检查权限。同一菜单中也可以设置“登录时启动（Launch at login）”。</div>
                 </div>
             </div>
         </div>
+
+        <section class="about-section" aria-labelledby="about-heading">
+            <h2 id="about-heading">开发者与更新信息</h2>
+            <p>SimplePallet是Yuki Koike开发的macOS应用。源代码、更新记录和安装文件均发布在<a href="https://github.com/yuki-koike0626/SimplePallet">GitHub</a>。</p>
+            <ul>
+                <li><strong>最新版本：</strong>1.2（2026年8月14日发布）</li>
+                <li><a href="https://github.com/yuki-koike0626/SimplePallet/releases/tag/v1.2">SimplePallet v1.2发布说明</a></li>
+                <li><a href="../privacy.html">隐私政策</a></li>
+            </ul>
+            <p class="updated-note"><time datetime="2026-08-16">最后更新：2026年8月16日</time></p>
+        </section>
+    </main>
 
         <script type="application/ld+json">
         {
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
+          "@id": "https://yuki-koike0626.github.io/SimplePallet/#softwareapplication",
           "name": "SimplePallet",
-          "operatingSystem": "macOS",
-          "applicationCategory": "UtilitiesApplication",
+          "url": "https://yuki-koike0626.github.io/SimplePallet/zh/",
+          "description": "使用键盘快捷键将Mac窗口放到左右半屏、1/3或2/3的免费窗口管理工具。",
+          "image": "https://yuki-koike0626.github.io/SimplePallet/app-icon.png",
+          "screenshot": "https://yuki-koike0626.github.io/SimplePallet/split-screen-usecase.png",
+          "operatingSystem": "macOS 13.0 or later",
+          "softwareRequirements": "macOS 13.0以上，Apple Silicon或Intel处理器",
+          "softwareVersion": "1.2",
+          "dateModified": "2026-08-16",
+          "applicationCategory": "DesktopEnhancementApplication",
+          "downloadUrl": "https://github.com/yuki-koike0626/SimplePallet/releases/latest/download/SimplePallet-1.2.dmg",
+          "installUrl": "https://github.com/yuki-koike0626/SimplePallet/releases/latest/download/SimplePallet-1.2.dmg",
+          "releaseNotes": "https://github.com/yuki-koike0626/SimplePallet/releases/tag/v1.2",
+          "fileSize": "4388016 bytes",
+          "isAccessibleForFree": true,
           "offers": {
             "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "CNY"
+            "price": 0,
+            "priceCurrency": "JPY",
+            "availability": "https://schema.org/InStock",
+            "url": "https://github.com/yuki-koike0626/SimplePallet/releases/latest/download/SimplePallet-1.2.dmg"
           },
-          "description": "免费的Mac分屏快捷键应用。轻松将窗口分为二分之一或三分之一。"
+          "author": {
+            "@type": "Person",
+            "name": "Yuki Koike",
+            "url": "https://github.com/yuki-koike0626",
+            "sameAs": "https://github.com/yuki-koike0626"
+          },
+          "inLanguage": "zh-Hans"
         }
         </script>
         <script type="application/ld+json">
@@ -656,28 +761,49 @@
             "name": "Mac有分屏快捷键吗？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "系统默认没有，但使用SimplePallet可以通过 Cmd + 方向键 瞬间实现分屏。"
+              "text": "有。macOS内置功能使用Fn + Control + 左/右方向键，SimplePallet使用Cmd + 左/右方向键把活动窗口放到左右半屏。"
+            }
+          }, {
+            "@type": "Question",
+            "name": "SimplePallet适合哪些人？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "它适合经常在Mac上分屏、希望减少按键数量，或需要1/3与2/3宽度的用户。如果只需要左右半屏，macOS内置平铺也是合适的选择。"
+            }
+          }, {
+            "@type": "Question",
+            "name": "SimplePallet免费且安装安全吗？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SimplePallet完全免费（JPY 0）。当前v1.2 DMG使用Developer ID签名，并已通过Apple公证。"
+            }
+          }, {
+            "@type": "Question",
+            "name": "SimplePallet会收集个人信息或使用数据吗？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "不会收集个人信息或使用统计。窗口操作在Mac本机处理，但检查新版本时可能会连接公开的更新信息源。"
             }
           }, {
             "@type": "Question",
             "name": "Mac分屏无法使用怎么办？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "这通常是因为辅助功能权限不足。请打开“系统设置 > 隐私与安全性 > 辅助功能”，确保SimplePallet已开启。"
+              "text": "请打开“系统设置 > 隐私与安全性 > 辅助功能”，确认SimplePallet已开启。如果已经开启，请先关闭再重新开启。"
             }
           }, {
             "@type": "Question",
             "name": "如何检查权限或设置自动启动？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "点击屏幕顶部菜单栏中的SimplePallet图标即可检查权限。建议在此处勾选“登录时启动（Launch at login）”以便日常使用。"
+              "text": "点击菜单栏中的SimplePallet图标即可检查权限。同一菜单中也可以设置“登录时启动（Launch at login）”。"
             }
           }]
         }
         </script>
 
         <footer>
-        <p>&copy; 2025 Yuki Koike. All rights reserved.</p>
+        <p>&copy; 2025–2026 Yuki Koike. All rights reserved.</p>
         <p><a href="../privacy.html">隐私政策</a> | <a href="https://github.com/yuki-koike0626/SimplePallet">GitHub 仓库</a></p>
     </footer>
 </body>

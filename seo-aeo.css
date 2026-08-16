@@ -1,0 +1,153 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+body {
+    width: 100%;
+    overflow-wrap: break-word;
+}
+
+.download-btn {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+.aeo-summary {
+    max-width: 700px;
+    margin: -16px auto 32px;
+    color: #333;
+    font-size: 1.05em;
+    line-height: 1.8;
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin: 28px auto 0;
+    max-width: 720px;
+    text-align: left;
+}
+
+.trust-item {
+    padding: 14px 16px;
+    background: rgba(255,255,255,0.72);
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 12px;
+}
+
+.trust-item strong,
+.trust-item span {
+    display: block;
+}
+
+.trust-item span {
+    margin-top: 3px;
+    color: #666;
+    font-size: 0.82em;
+}
+
+.decision-section,
+.about-section {
+    margin: 80px 0;
+    padding: 38px 40px;
+    text-align: left;
+    background: rgba(255,255,255,0.56);
+    border: 1px solid rgba(255,255,255,0.7);
+    border-radius: 20px;
+}
+
+.decision-section h2,
+.about-section h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #1d1d1f;
+}
+
+.recommendation-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 28px;
+    margin: 28px 0;
+    padding-left: 24px;
+}
+
+.standard-note {
+    margin-top: 28px;
+    padding: 20px 22px;
+    background: rgba(0,122,255,0.07);
+    border-left: 4px solid #007AFF;
+    border-radius: 10px;
+}
+
+.standard-note h3 {
+    margin: 0 0 8px;
+    font-size: 1.08em;
+}
+
+.standard-note p,
+.about-section p {
+    margin-bottom: 0;
+}
+
+.table-scroll {
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.table-scroll .comparison-table {
+    min-width: 620px;
+    margin-bottom: 0;
+}
+
+.source-note {
+    margin: 0 0 44px;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.faq-list h3 {
+    margin: 0 0 28px;
+    text-align: center;
+    font-size: 1.45em;
+}
+
+.updated-note {
+    text-align: center;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.download-btn:focus-visible,
+.lang-switch a:focus-visible,
+a:focus-visible {
+    outline: 3px solid #ff9500;
+    outline-offset: 3px;
+}
+
+@media (max-width: 680px) {
+    body { padding: 14px; }
+    .hero { padding-left: 6px; padding-right: 6px; }
+    h1 { font-size: 2.05em; }
+    .download-btn { padding: 14px 22px; font-size: 1.05em; }
+    .lang-switch { position: static; margin: 4px 0 8px; }
+    .trust-grid,
+    .recommendation-list { grid-template-columns: 1fr; }
+    .decision-section,
+    .about-section,
+    .tips-section { padding: 28px 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html,
+    .download-btn { animation: none; }
+    * { scroll-behavior: auto !important; }
+}
