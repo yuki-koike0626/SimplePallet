@@ -4,7 +4,7 @@
 
 ## Product facts
 
-- Current release: SimplePallet 1.2, published on 2026-08-14.
+- Current release: SimplePallet 1.3.
 - System requirements: macOS 13 or later; Apple Silicon and Intel Macs are supported.
 - Price: JPY 0. The app is completely free.
 - Default half-screen shortcuts: Command + Left/Right Arrow.
@@ -28,7 +28,7 @@ macOS also provides built-in window tiling. Current Apple documentation lists Fn
 - English page: https://yuki-koike0626.github.io/SimplePallet/en/
 - Privacy policy: https://yuki-koike0626.github.io/SimplePallet/privacy.html
 - Source and releases: https://github.com/yuki-koike0626/SimplePallet
-- Current release: https://github.com/yuki-koike0626/SimplePallet/releases/tag/v1.2
+- Current release: https://github.com/yuki-koike0626/SimplePallet/releases/tag/v1.3
 - Apple window tiling shortcuts: https://support.apple.com/guide/mac-help/mchl9674d0b0/mac
 
 Last updated: 2026-08-16
