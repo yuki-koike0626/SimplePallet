@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://yuki-koike0626.github.io/SimplePallet/"
 DOWNLOAD_URL = (
     "https://github.com/yuki-koike0626/SimplePallet/releases/download/"
-    "v1.3/SimplePallet-1.3.dmg"
+    "v1.3/SimplePallet-1.3.zip"
 )
 
 PAGES = {

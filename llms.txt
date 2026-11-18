@@ -11,7 +11,7 @@
 - Default one-third shortcuts: Option + Command + Left/Up/Right Arrow.
 - Default two-thirds shortcuts: Control + Command + Left/Right Arrow.
 - Shortcuts can be changed in the app settings.
-- The distributed DMG is signed with a Developer ID and notarized by Apple.
+- The distributed app is signed with a Developer ID and notarized by Apple.
 - The app does not collect personal data or usage analytics.
 - Window positioning is processed locally on the Mac. The app may contact the public update feed to check for a new release.
 - Source code and release history are available on GitHub.
@@ -31,4 +31,4 @@ macOS also provides built-in window tiling. Current Apple documentation lists Fn
 - Current release: https://github.com/yuki-koike0626/SimplePallet/releases/tag/v1.3
 - Apple window tiling shortcuts: https://support.apple.com/guide/mac-help/mchl9674d0b0/mac
 
-Last updated: 2026-08-16
+Last updated: 2026-11-18

@@ -11,7 +11,7 @@ macOS 向けのシンプルなウィンドウ管理アプリ。キーボード�
 [![最新リリース](https://img.shields.io/github/v/release/yuki-koike0626/SimplePallet?label=最新版&logo=apple&color=blue)](https://github.com/yuki-koike0626/SimplePallet/releases/latest)
 [![ダウンロード数](https://img.shields.io/github/downloads/yuki-koike0626/SimplePallet/total?label=ダウンロード数&logo=github&color=green)](https://github.com/yuki-koike0626/SimplePallet/releases/latest)
 
-**[SimplePallet-1.3.dmg をダウンロード](https://github.com/yuki-koike0626/SimplePallet/releases/download/v1.3/SimplePallet-1.3.dmg)**
+**[SimplePallet-1.3.zip をダウンロード](https://github.com/yuki-koike0626/SimplePallet/releases/download/v1.3/SimplePallet-1.3.zip)**
 
 ### システム要件
 - macOS 13 (Ventura) 以降
@@ -20,8 +20,8 @@ macOS 向けのシンプルなウィンドウ管理アプリ。キーボード�
 ## 📖 使い方
 
 ### 1. インストール
-1. ダウンロードしたDMGファイルを開きます。
-2. アプリコンを「Applications」フォルダにドラッグ＆ドロップします。
+1. ダウンロードしたZIPを展開します。
+2. `SimplePallet.app` を「アプリケーション」フォルダへ移動します。
 3. アプリを起動し、アクセシビリティ権限を許可してください。
 
 ### 2. キーボードショートカット
