@@ -14,8 +14,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://yuki-koike0626.github.io/SimplePallet/"
 DOWNLOAD_URL = (
-    "https://github.com/yuki-koike0626/SimplePallet/releases/latest/"
-    "download/SimplePallet-1.2.dmg"
+    "https://github.com/yuki-koike0626/SimplePallet/releases/download/"
+    "v1.3/SimplePallet-1.3.zip"
 )
 
 PAGES = {
@@ -83,7 +83,7 @@ class PublicPageTests(unittest.TestCase):
 
                 self.assertEqual(software["@id"], f"{BASE_URL}#softwareapplication")
                 self.assertEqual(software["url"], canonical)
-                self.assertEqual(software["softwareVersion"], "1.2")
+                self.assertEqual(software["softwareVersion"], "1.3")
                 self.assertEqual(software["applicationCategory"], "DesktopEnhancementApplication")
                 self.assertEqual(software["offers"]["price"], 0)
                 self.assertEqual(software["downloadUrl"], DOWNLOAD_URL)
@@ -155,7 +155,7 @@ class CrawlSurfaceTests(unittest.TestCase):
     def test_llms_summary_contains_only_verified_product_facts(self) -> None:
         source = (ROOT / "llms.txt").read_text(encoding="utf-8")
         for fact in (
-            "SimplePallet 1.2",
+            "SimplePallet 1.3",
             "macOS 13",
             "Apple Silicon",
             "Intel",
